@@ -10,14 +10,14 @@ const Main = ({ siteTitle }) => (
       <div class="flex align-items-end relative w-100 md:w-55 pb-4 xs:w-95 mx-auto">
           <div class="w-50 pt-16">
              <div class="pt-5">
-             <h1 class="text-7xl pt-6">Economics, Financial, Legal and IT axperts</h1>
-              <p class="w-60 text-light pt-6">Discover where your leads come from, what it
+             <h1 class="text-6xl pt-6 font-primary text-primary w-75">Economics, Financial, Legal and IT axperts</h1>
+              <p class="w-60 text-light pt-6 font-light">Discover where your leads come from, what it
 costs to getthem, and how they interact with your
 website before contacting you. Discover where 
 your leads come from, them.</p>
              </div>
              <div class="w-100 pt-16 text-right">
-            <button class="btn bg-red py-3 px-6 text-white rounded-full text-xs text-light mx-auto">LEARN MORE</button>
+            <button class="btn bg-primary py-3 px-12 text-white rounded-full text-xs text-light mx-auto shadow-primary">LEARN MORE</button>
           </div>
           </div>
           <div class="w-50 pt-16 text-right">

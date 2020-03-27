@@ -15,14 +15,14 @@ const Service = ({ siteTitle }) => (
         </div>
         <div class="w-40">
             <div class="pt-16">
-                <h2 class="text-red text-center">Information Consulting</h2>
-                <p class="text-center font-primary pt-6">
+                <h4 class="text-primary text-2xl font-bold text-center font-secondary">Information Consulting</h4>
+                <p class="text-center font-light pt-4 leading-loose">
                 Discover where your leads come from, what it costs to 
 getthem,  and how they interact with your website before contacting you. 
 Discover where  your leads come from, them.
                 </p>
                 <div class="w-100 text-center pt-12">
-            <button class="btn bg-none  py-3 px-6 text-red rounded-full border-1 border-solid border-red text-xs text-light mx-auto">READ MORE</button>
+            <button class="btn bg-none  py-3 px-8 text-primary rounded-full border-1 border-solid border-primary text-xs text-light mx-auto">READ MORE</button>
           </div>
             </div>
         </div>
