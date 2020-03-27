@@ -20,10 +20,16 @@ your leads come from, them.</p>
             <button class="btn bg-red py-3 px-6 text-white rounded-full text-xs text-light mx-auto">LEARN MORE</button>
           </div>
           </div>
-          <div class="w-50 text-right pt-16">
+          <div class="w-50 pt-16 text-right">
+            <div class="text-right">
             <img src={'/img/group.png'}/>
+            </div>
+            <div classs="w-30 ">
+            <img src={'/img/rw-2009.gif'} class="w-5 mr-6" />
+          </div>
           </div> 
           </div>
+         
        
   </div>
 
