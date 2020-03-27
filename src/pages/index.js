@@ -10,6 +10,7 @@ import Service from "../components/sections/service"
 import Information from "../components/sections/information"
 import Team from "../components/sections/team"
 import Value from "../components/sections/value"
+import Member from "../components/sections/member"
 import Footer from "../components/sections/footer"
 
 
@@ -23,6 +24,7 @@ const IndexPage = () => (
     <Information />
     <Team />
     <Value />
+    <Member />
     <Footer />
   
   </Layout>
