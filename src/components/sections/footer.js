@@ -13,13 +13,13 @@ const Footer = ({ siteTitle }) => (
       <div class="w-auto h-40 bg-primary align-items-end relative w-100 md:w-55 xs:w-95 mx-auto">
           <div class="text-left p-20 font-secondary font-normal">
               <p class="text-white text-lg">
-                <span class="w-rem-10 inline-block">   <FontAwesomeIcon icon="coffee" /></span>
+                <span class="w-rem-10 inline-block">   <FontAwesomeIcon icon="map-marker-alt" /></span>
                 27 Kg 8 Ave Kigali, Rwanda</p>
                 <p class="text-white text-base text-lg">
-                <span class="w-rem-10 inline-block">    <FontAwesomeIcon icon="coffee" /></span>
+                <span class="w-rem-10 inline-block">    <FontAwesomeIcon icon="phone-alt" /></span>
                 +25078501891</p>
                 <p class="text-white text-base text-lg">
-                <span class="w-rem-10 inline-block">    <FontAwesomeIcon icon="coffee" /></span>
+                <span class="w-rem-10 inline-block">    <FontAwesomeIcon icon="envelope" /></span>
                 landos007@gmail.com</p>
           </div>
           </div>
