@@ -9,7 +9,7 @@ class Member extends React.Component {
 
   render() {
     return (
-      <div class="p-2 mx-4 my-12 xl:w-30 lg:w-45 md:w-45 sm:w-45  rounded-lg overflow-hidden bg-transparent inline-block ">
+      <div class="p-2 rounded-lg overflow-hidden bg-transparent w-100">
         <div class="h-rem-74 w-rem-74 sm:h-64 sm:w-rem-64 xxs:h-48 xxs:w-rem-48 overflow-hidden centered mx-auto my-2">
           <img src={this.props.imageUrl} alt="team-member" />
         </div>

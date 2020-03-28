@@ -112,7 +112,7 @@ Information.propTypes = {
 }
 
 Information.defaultProps = {
-  siteTitle: "Discover",
+  title: "Discover",
   cards: [
     {
       text:
