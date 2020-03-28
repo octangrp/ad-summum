@@ -8,23 +8,23 @@ const Navbar = ({ siteTitle }) => (
       <ul class="list text-left w-50 lg:w-60  mr-auto p-0 m-0 hidden xl:block lg:block px-0 mr-0  text-sm">
         <li class="inline-block px-5 bg-primary text-white my-0 mr-5">
           <button class="px-5 py-3">
-            <a href="" class="inherit-color no-underline">
+            <a href="#" class="inherit-color no-underline">
               Home
             </a>
           </button>
         </li>
         <li class="inline-block  px-5 my-0 mr-5">
-          <a href="" class="inherit-color no-underline">
+          <a href="#" class="inherit-color no-underline">
             Services
           </a>
         </li>
         <li class="inline-block  px-5 my-0 mr-5">
-          <a href="" class="inherit-color no-underline">
+          <a href="#" class="inherit-color no-underline">
             Team
           </a>
         </li>
         <li class="inline-block  px-5 my-0 mr-5">
-          <a href="" class="inherit-color no-underline">
+          <a href="#" class="inherit-color no-underline">
             About us
           </a>
         </li>
