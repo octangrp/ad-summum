@@ -62,8 +62,8 @@ const Member = ({ siteTitle }) => (
                                                                                  </div>
                             
                                 </div>
-                                <div class="w-5">
-                                    <p><FontAwesomeIcon icon="coffee" /></p>
+                                <div class="w-5 text-red">
+                                    <p><FontAwesomeIcon icon="times" /></p>
                                 </div>
                               </div> 
 
