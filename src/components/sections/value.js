@@ -4,6 +4,13 @@ import React from "react"
 const Value = ({ siteTitle }) => (
   <div class="panel z-10 px-0 pt-32 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
     <div class="panel mt-0 py-4 w-85 mx-auto md:w-95 xs:w-100 sm:w-100 centered">
+      <h1 class=" font-semiBold text-4xl text-primary my-0">our core values</h1>
+      <div class="w-50 py-5">
+        <p>
+          Discover where your leads come from, what it costs to getthem, .
+          Discover where your leads come from, what it costs to getthem, .
+        </p>
+      </div>
       <div class="panel panel-default p-2 xl:w-30 lg:w-45 md:w-45 sm:w-45 md:mr-2  rounded-lg overflow-hidden bg-transparent xl:inline-block lg:inline-block md:inline-block sm:inline-block sm:m-2 xl:m-2 lg:m-2 mt-3">
         <div class="sm:h-64 sm:w-rem-64 xxs:h-48 xxs:w-rem-48 overflow-hidden centered mx-auto my-2">
           <img src={"/img/Group-5.png"} />
