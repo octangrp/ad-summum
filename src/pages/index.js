@@ -22,39 +22,15 @@ const IndexPage = ({ data }) => (
         your leads come from, them.
       </p>
     </Main>
-
-    {/* Fetching services */}
-    <StaticQuery
-      query={graphql`
-        query services {
-          allWordpressPost(
-            filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
-          ) {
-            nodes {
-              id
-              title
-              content
-              featured_media {
-                source_url
-              }
-            }
-          }
-          wordpressCategory(slug: { eq: "services" }) {
-            id
-            name
-          }
-        }
-      `}
-      render={data => (
-        <Service
-          id="services"
-          title={data.wordpressCategory.name}
-          services={data.allWordpressPost.nodes}
-        ></Service>
-      )}
+    <Service
+      id="services"
+      title={data.serviceCategory.title}
+      services={data.services.list}
+    ></Service>
+    <Information
+      title={data.discoverCategory.title}
+      cards={data.discoverContent.list}
     />
-
-    <Information />
     <Team />
     <Value id="about-us" title="Gakindi Vincent">
       <p>Discover where your leads come from, what it costs to getthem, .</p>
@@ -64,3 +40,32 @@ const IndexPage = ({ data }) => (
 )
 
 export default IndexPage
+
+export const queries = graphql`
+  query data {
+    services: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
+    ) {
+      list: nodes {
+        title
+        content
+        featured_media {
+          source_url
+        }
+      }
+    }
+    serviceCategory: wordpressCategory(slug: { eq: "services" }) {
+      title: name
+    }
+    discoverContent: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "discover" } } } }
+    ) {
+      list: nodes {
+        content
+      }
+    }
+    discoverCategory: wordpressCategory(slug: { eq: "discover" }) {
+      title: name
+    }
+  }
+`

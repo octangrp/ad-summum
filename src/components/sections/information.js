@@ -78,7 +78,7 @@ class Information extends React.Component {
                 </div>
               </div>
               <div class="w-60  bg-white absolute t-25 mx-16 py-10 text-black font-secondary font-bold text-2xl body-text">
-                {ReactHtmlParser(this.currentCard().text)}
+                {ReactHtmlParser(this.currentCard().content)}
               </div>
             </div>
             <div class="flex w-100 text-center relative pt-12">
@@ -115,15 +115,15 @@ Information.defaultProps = {
   title: "Discover",
   cards: [
     {
-      text:
+      content:
         "<p>Discover where your leads come from, what it costs to get them, and how they interact with your websitebefore contacting you.</p>",
     },
     {
-      text:
+      content:
         "<p>We do software testing for flawless products. With a purpose.</p>",
     },
     {
-      text:
+      content:
         "<p>Our expert testers handle quality assurance so you can focus on building your ideas.</p>",
     },
   ],
