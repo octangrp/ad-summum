@@ -9,8 +9,9 @@ import Information from "../components/sections/information"
 import Team from "../components/sections/team"
 import Value from "../components/sections/value"
 import Footer from "../components/sections/footer"
+import { graphql, StaticQuery } from "gatsby"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <Main title="Economics, Financial, Legal and IT axperts">
@@ -21,7 +22,38 @@ const IndexPage = () => (
         your leads come from, them.
       </p>
     </Main>
-    <Service id="services" title="What We Do"></Service>
+
+    {/* Fetching services */}
+    <StaticQuery
+      query={graphql`
+        query services {
+          allWordpressPost(
+            filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
+          ) {
+            nodes {
+              id
+              title
+              content
+              featured_media {
+                source_url
+              }
+            }
+          }
+          wordpressCategory(slug: { eq: "services" }) {
+            id
+            name
+          }
+        }
+      `}
+      render={data => (
+        <Service
+          id="services"
+          title={data.wordpressCategory.name}
+          services={data.allWordpressPost.nodes}
+        ></Service>
+      )}
+    />
+
     <Information />
     <Team />
     <Value id="about-us" title="Gakindi Vincent">

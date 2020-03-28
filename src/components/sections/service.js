@@ -39,9 +39,13 @@ class Service extends React.Component {
               <ServiceCard
                 key={this.state.index}
                 title={this.currentService().title}
-                image={this.currentService().image}
+                image={
+                  this.currentService().featured_media
+                    ? this.currentService().featured_media.source_url
+                    : null
+                }
               >
-                {ReactHtmlParser(this.currentService().body)}
+                {ReactHtmlParser(this.currentService().content)}
               </ServiceCard>
             ) : null}
             <div class="w-100 text-center mt-12">
@@ -76,13 +80,13 @@ Service.defaultProps = {
     {
       image: "/img/Untitled-1.png",
       title: "Information Consulting fsd",
-      body:
+      content:
         "<p>Discover where your leads come from, what it costs to get them, and how they interact with your website before contacting you. Discover where  your leads come from, them.</p>",
     },
     {
       image: "/img/Untitled-1.png",
       title: "Information Consultin dfsd",
-      body:
+      content:
         "<p>Discover where your leads come from, what it costs to get them, and how they interact with your website before contacting you. Discover where  your leads come from, them.</p>",
     },
   ],
