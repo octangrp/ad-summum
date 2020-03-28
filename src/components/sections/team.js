@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-const Team = ({ siteTitle }) => (
+const Team = ( props ) => (
   <div
     class="panel z-10 px-0 pt-32 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto"
     style={{ background: "#F4F4F4" }}
@@ -12,7 +12,7 @@ const Team = ({ siteTitle }) => (
           <img src={"/img/lewis.jpg"} alt="team-member" />
         </div>
         <div class="panel-body bg-white center text-center py-2">
-          <h5 class="my-2">Gakindi Vincent</h5>
+          <h5 class="my-2">{props.title}</h5>
           <p class>Consultant</p>
         </div>
       </div>
@@ -21,7 +21,7 @@ const Team = ({ siteTitle }) => (
           <img src={"/img/lewis.jpg"} alt="team-member" />
         </div>
         <div class="panel-body bg-white center text-center py-2">
-          <h5 class="my-2">Gakindi Vincent</h5>
+          <h5 class="my-2">{props.title}</h5>
           <p class>Consultant</p>
         </div>
       </div>
@@ -30,7 +30,7 @@ const Team = ({ siteTitle }) => (
           <img src={"/img/lewis.jpg"} alt="team-member" />
         </div>
         <div class="panel-body bg-white center text-center py-2">
-          <h5 class="my-2">Gakindi Vincent</h5>
+          <h5 class="my-2">{props.title}</h5>
           <p class>Consultant</p>
         </div>
       </div>
@@ -39,7 +39,7 @@ const Team = ({ siteTitle }) => (
           <img src={"/img/lewis.jpg"} alt="team-member" />
         </div>
         <div class="panel-body bg-white center text-center py-2">
-          <h5 class="my-2">Gakindi Vincent</h5>
+          <h5 class="my-2">{props.title}</h5>
           <p class>Consultant</p>
         </div>
       </div>
@@ -48,7 +48,7 @@ const Team = ({ siteTitle }) => (
           <img src={"/img/lewis.jpg"} alt="team-member" />
         </div>
         <div class="panel-body bg-white center text-center py-2">
-          <h5 class="my-2">Gakindi Vincent</h5>
+          <h5 class="my-2">{props.title}</h5>
           <p class>Consultant</p>
         </div>
       </div>
@@ -57,7 +57,7 @@ const Team = ({ siteTitle }) => (
           <img src={"/img/lewis.jpg"} alt="team-member" />
         </div>
         <div class="panel-body bg-white center text-center py-2">
-          <h5 class="my-2">Gakindi Vincent</h5>
+          <h5 class="my-2">{props.title}</h5>
           <p class>Consultant</p>
         </div>
       </div>

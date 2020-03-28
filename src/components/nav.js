@@ -14,7 +14,7 @@ const Navbar = ({ siteTitle }) => (
           </button>
         </li>
         <li class="inline-block  px-5 my-0 mr-5">
-          <a href="#" class="inherit-color no-underline">
+          <a href="#services" class="inherit-color no-underline">
             Services
           </a>
         </li>
@@ -24,7 +24,7 @@ const Navbar = ({ siteTitle }) => (
           </a>
         </li>
         <li class="inline-block  px-5 my-0 mr-5">
-          <a href="#" class="inherit-color no-underline">
+          <a href="#about-us" class="inherit-color no-underline">
             About us
           </a>
         </li>

@@ -26,9 +26,9 @@ class Service extends React.Component {
 
   render() {
     return (
-      <div class="panel z-10 px-0 pt-32 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
+      <div id={this.props.id} class="panel z-10 px-0 pt-32 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
         <div class="panel-body min-h-screen  sm:min-h-auto xs:min-h-auto h-100 w-90 lg:w-90 -mt-24 lg:-mt-32 md:-mt-3  xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 mx-auto md:w-90 xs:w-100 sm:w-95 relative">
-          <h1 class="text-center font-semiBold text-4xl pb-24">What We Do</h1>
+          <h1 class="text-center font-semiBold text-4xl pb-24">{this.props.title}</h1>
           <div>
             {this.currentService() ? (
               <ServiceCard
@@ -61,10 +61,12 @@ class Service extends React.Component {
 Service.propTypes = {
   siteTitle: PropTypes.string,
   services: PropTypes.array,
+  id : PropTypes.string
 }
 
 Service.defaultProps = {
   siteTitle: ``,
+  id : null,
   services: [
     {
       image: "/img/Untitled-1.png",
@@ -79,6 +81,7 @@ Service.defaultProps = {
         "<p>Discover where your leads come from, what it costs to get them, and how they interact with your website before contacting you. Discover where  your leads come from, them.</p>",
     },
   ],
+
 }
 
 export default Service
