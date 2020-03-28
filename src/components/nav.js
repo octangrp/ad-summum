@@ -25,6 +25,7 @@ const Navbar = ({ siteTitle }) => (
                                             <a><img src={'/img/735145cfe0a4.png'}/></a>
                                             </li>
                                           </ul>
+                                       
                                          </div>
                                          </nav>
     
