@@ -2,6 +2,12 @@
 @import '~og-css/sass/og';
 
 
-.shadow-primary{
+.shadow-primary {
   box-shadow: 0px 6px 20px rgba(44, 186, 231, 0.3);
+}
+
+.body-text {
+  &>p {
+    margin: 0;
+  }
 }
