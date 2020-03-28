@@ -16,6 +16,7 @@
     "gatsby-plugin-sass": "^2.1.29",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-source-wordpress": "^3.2.2",
     "gatsby-transformer-sharp": "^2.3.13",
     "lint-staged": "^10.0.9",
     "node-sass": "^4.13.1",
