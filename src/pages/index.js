@@ -13,9 +13,6 @@ import Value from "../components/sections/value"
 import Member from "../components/sections/member"
 import Footer from "../components/sections/footer"
 
-
-
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -26,7 +23,6 @@ const IndexPage = () => (
     <Value />
     <Member />
     <Footer />
-  
   </Layout>
 )
 
