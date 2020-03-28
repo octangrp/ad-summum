@@ -45,7 +45,7 @@
     "serve": "gatsby serve",
     "precommit": "cross-env NODE_ENV=production lint-staged",
     "lint": "eslint --ext .js,.vue src ",
-    "lint-format": "prettier --check",
+    "lint-format": "prettier --check \"**/*.{js,jsx,json,md}\"",
     "clean": "gatsby clean",
     "test": "npm run lint & npm run lint-format"
   },
