@@ -29,13 +29,20 @@ const Navbar = ({ siteTitle }) => (
           </a>
         </li>
       </ul>
-      <ul class="list text-right w-50 lg:w-60  mr-auto p-0 mt-3 hidden xl:block lg:block px-0 mr-0  text-sm">
+      <ul class="list text-right w-40 lg:w-60  mr-auto p-0 mt-3 hidden xl:block lg:block px-0 mr-0  text-sm">
         <li class="inline-block my-0">
           <a>
             <img src={"/img/735145cfe0a4.png"} />
           </a>
         </li>
       </ul>
+
+      <div class="w-10 text-right mr-auto p-0 mt-3 hidden xl:block lg:block px-0 mr-0  text-sm">
+        <select id="cars" class="border-0">
+          <option value="volvo">English</option>
+          <option value="saab">French</option>
+        </select>
+      </div>
     </div>
   </nav>
 )
