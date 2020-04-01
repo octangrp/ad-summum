@@ -22,7 +22,7 @@ const Main = props => (
         </div>
         <div class="w-50 xs:hidden pt-16 text-right">
           <div class="text-right">
-            <img src={"/img/group.png"} />
+            <img src={"/img/group.png"} class="clip-full" />
           </div>
         </div>
       </div>

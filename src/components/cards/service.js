@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const ServiceCard = ({ title, image, children }) => (
-  <div class="flex xs:block align-items-end relative w-100 md:w-55 pb-4 xs:w-95 mx-auto">
+  <div class="flex xs:block align-items-end relative w-95 md:w-55 pb-4 xs:w-95 mx-auto">
     <div class="w-60 xs:hidden ">
       <img src={image} />
     </div>
