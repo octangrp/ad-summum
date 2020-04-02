@@ -8,19 +8,16 @@ import Service from "../components/sections/service"
 import Information from "../components/sections/information"
 import Team from "../components/sections/team"
 import Value from "../components/sections/value"
-import Footer from "../components/sections/footer"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Main title="Economics, Financial, Legal and IT axperts">
-      <p>
-        {" "}
-        Discover where your leads come from, what it costs to getthem, and how
-        they interact with your website before contacting you. Discover where
-        your leads come from, them.
-      </p>
+    <Main
+      title={data.mainSection.title}
+      buttonText={data.mainSection.button.text}
+    >
+      {data.mainSection.description}
     </Main>
     <Service
       id="services"
@@ -31,11 +28,10 @@ const IndexPage = ({ data }) => (
       title={data.discoverCategory.title}
       cards={data.discoverContent.list}
     />
-    <Team />
-    <Value id="about-us" title="Gakindi Vincent">
+    <Team members={data.team.members} />
+    <Value id="about-us" title="Gakindi Vincent" values={data.values.list}>
       <p>Discover where your leads come from, what it costs to getthem, .</p>
     </Value>
-    <Footer />
   </Layout>
 )
 
@@ -43,6 +39,15 @@ export default IndexPage
 
 export const queries = graphql`
   query data {
+    mainSection: wordpressPost(
+      categories: { elemMatch: { slug: { eq: "main-section" } } }
+    ) {
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+    }
     services: allWordpressPost(
       filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
     ) {
@@ -64,8 +69,41 @@ export const queries = graphql`
         content
       }
     }
-    discoverCategory: wordpressCategory(slug: { eq: "discover" }) {
+    discoverCategory: wordpressCategory {
       title: name
+    }
+    team: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
+    ) {
+      members: nodes {
+        name: title
+        description: content
+        attributes: acf {
+          position
+        }
+        image: featured_media {
+          url: source_url
+        }
+      }
+    }
+    values: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "values-section" } } } }
+    ) {
+      list: nodes {
+        title
+        description: content
+        image: featured_media {
+          url: source_url
+        }
+      }
+    }
+    footer: wordpressPost(slug: { eq: "footer" }) {
+      id
+      attributes: acf {
+        address
+        email
+        phone_number
+      }
     }
   }
 `
