@@ -30,8 +30,8 @@ class Service extends React.Component {
         id={this.props.id}
         class="panel z-10 px-0 pt-32 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto"
       >
-        <div class="panel-body min-h-screen  sm:min-h-auto xs:min-h-auto h-100 w-90 lg:w-90 -mt-24 lg:-mt-32 md:-mt-3  xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 mx-auto md:w-90 xs:w-100 sm:w-95 relative">
-          <h1 class="text-center font-semiBold text-4xl pb-24">
+        <div class="panel-body min-h-screen  sm:min-h-auto xs:min-h-auto h-100 w-95 lg:w-90 -mt-24 lg:-mt-32 md:-mt-3  xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 mx-auto md:w-90 xs:w-100 sm:w-95 relative">
+          <h1 class="text-center font-semiBold text-4xl pb-24 xs:pb-0">
             {this.props.title}
           </h1>
           <div>
