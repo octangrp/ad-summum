@@ -48,7 +48,7 @@ class Team extends React.Component {
         class="panel px-0 py-12 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto relative"
         style={{ background: "#F4F4F4" }}
       >
-        <div class="panel mt-0 py-4 w-85 mx-auto md:w-95 xs:w-100 sm:w-100 mx-auto text-center relative">
+        <div class="panel mt-0 py-4 w-95 mx-auto md:w-95 xs:w-100 sm:w-100 mx-auto text-center relative">
           {this.props.members.map((member, index) => (
             <div
               class="mx-4 my-12 xl:w-30 lg:w-45 md:w-45 sm:w-45 inline-block cursor-pointer"
