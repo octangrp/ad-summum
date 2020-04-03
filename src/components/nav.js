@@ -37,10 +37,17 @@ const Navbar = ({ siteTitle }) => (
         </li>
       </ul>
 
-      <div class="w-10 text-right mr-auto p-0 mt-3 hidden xl:block lg:block px-0 mr-0  text-sm">
-        <select id="cars" class="border-0">
-          <option value="volvo">English</option>
-          <option value="saab">French</option>
+      <div class="w-10 text-right mr-auto p-0 hidden xl:block lg:block px-0 mr-0  text-sm">
+        <select
+          id="cars"
+          class="border-0 py-0 h-100 form-input t-0 w-90 mx-5 inherit-color"
+        >
+          <option value="0 " class="inherit-color form-input">
+            English
+          </option>
+          <option value="1" class="inherit-color form-input">
+            French
+          </option>
         </select>
       </div>
     </div>
