@@ -2,10 +2,10 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Value = ({ siteTitle }) => (
-  <div class="panel z-10 px-0 pt-32 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
-    <div class="panel mt-0 py-4 w-85 mx-auto md:w-95 xs:w-100 sm:w-100 centered">
+  <div class="panel z-10 px-0  t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
+    <div class="panel mt-0 py-20 w-85 mx-auto md:w-95 xs:w-100 sm:w-100 centered">
       <h1 class=" font-semiBold text-4xl text-primary my-0">our core values</h1>
-      <div class="w-50 py-5">
+      <div class="w-50 py-12">
         <p>
           Discover where your leads come from, what it costs to getthem, .
           Discover where your leads come from, what it costs to getthem, .
