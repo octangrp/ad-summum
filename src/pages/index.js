@@ -8,27 +8,102 @@ import Service from "../components/sections/service"
 import Information from "../components/sections/information"
 import Team from "../components/sections/team"
 import Value from "../components/sections/value"
-import Footer from "../components/sections/footer"
+import { graphql } from "gatsby"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Main title="Economics, Financial, Legal and IT axperts">
-      <p>
-        {" "}
-        Discover where your leads come from, what it costs to getthem, and how
-        they interact with your website before contacting you. Discover where
-        your leads come from, them.
-      </p>
+    <Main
+      title={data.mainSection.title}
+      buttonText={data.mainSection.button.text}
+    >
+      {data.mainSection.description}
     </Main>
-    <Service id="services" title="What We Do"></Service>
-    <Information />
-    <Team />
-    <Value id="about-us" title="Gakindi Vincent">
+    <Service
+      id="services"
+      title={data.serviceCategory.title}
+      services={data.services.list}
+    ></Service>
+    <Information
+      title={data.discoverCategory.title}
+      cards={data.discoverContent.list}
+    />
+    <Team members={data.team.members} />
+    <Value id="about-us" title="Gakindi Vincent" values={data.values.list}>
       <p>Discover where your leads come from, what it costs to getthem, .</p>
     </Value>
-    <Footer />
   </Layout>
 )
 
 export default IndexPage
+
+export const queries = graphql`
+  query data {
+    mainSection: wordpressPost(
+      categories: { elemMatch: { slug: { eq: "main-section" } } }
+    ) {
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+    }
+    services: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
+    ) {
+      list: nodes {
+        title
+        content
+        featured_media {
+          source_url
+        }
+      }
+    }
+    serviceCategory: wordpressCategory(slug: { eq: "services" }) {
+      title: name
+    }
+    discoverContent: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "discover" } } } }
+    ) {
+      list: nodes {
+        content
+      }
+    }
+    discoverCategory: wordpressCategory {
+      title: name
+    }
+    team: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
+    ) {
+      members: nodes {
+        name: title
+        description: content
+        attributes: acf {
+          position
+        }
+        image: featured_media {
+          url: source_url
+        }
+      }
+    }
+    values: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "values-section" } } } }
+    ) {
+      list: nodes {
+        title
+        description: content
+        image: featured_media {
+          url: source_url
+        }
+      }
+    }
+    footer: wordpressPost(slug: { eq: "footer" }) {
+      id
+      attributes: acf {
+        address
+        email
+        phone_number
+      }
+    }
+  }
+`

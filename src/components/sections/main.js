@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
+import ReactHtmlParser from "react-html-parser"
 
 const Main = props => (
   <div class="panel z-10 px-0 pt-32 xs:pt-0 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
@@ -11,12 +12,12 @@ const Main = props => (
               {props.title}
             </h1>
             <div class="w-60 text-light pt-6 xs:pt-0 xs:w-100 font-light">
-              {props.children}
+              {ReactHtmlParser(props.children)}
             </div>
           </div>
           <div class="w-100 pt-16 xs:pt-5 text-right xs:text-left">
             <button class="btn bg-primary py-3 px-12 text-white rounded-full text-xs text-light mx-auto shadow-primary">
-              LEARN MORE
+              {props.buttonText}
             </button>
           </div>
         </div>
@@ -32,10 +33,12 @@ const Main = props => (
 
 Main.propTypes = {
   siteTitle: PropTypes.string,
+  buttonText: PropTypes.string,
 }
 
 Main.defaultProps = {
   siteTitle: ``,
+  buttonText: `Read more`,
 }
 
 export default Main

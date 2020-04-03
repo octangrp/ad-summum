@@ -13,13 +13,22 @@ import "../utils/fontawesome"
 
 import Navbar from "./nav"
 import "../styles/app.scss"
+import Footer from "../components/sections/footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+    query siteTitleQuery {
+      site: wordpressSiteMetadata {
+        id
+        name
+        description
+      }
+      footer: wordpressPost(slug: { eq: "footer" }) {
+        id
+        attributes: acf {
+          address
+          email
+          phone_number
         }
       }
     }
@@ -30,6 +39,11 @@ const Layout = ({ children }) => {
       <div class="relative">
         <Navbar />
         <main class="relative">{children}</main>
+        <Footer
+          address={data.footer.attributes.address}
+          email={data.footer.attributes.email}
+          phoneNumber={data.footer.attributes.phone_number}
+        />
       </div>
     </>
   )

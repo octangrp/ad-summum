@@ -32,8 +32,8 @@ class Team extends React.Component {
       return (
         <MemberExpanded
           name={this.currentMember().name}
-          position={this.currentMember().position}
-          imageUrl={this.currentMember().imageUrl}
+          position={this.currentMember().attributes.position}
+          imageUrl={this.currentMember().image.url}
           onCloseModal={this.closeModal}
         >
           {this.currentMember().description}
@@ -57,8 +57,8 @@ class Team extends React.Component {
             >
               <Member
                 name={member.name}
-                position={member.position}
-                imageUrl={member.imageUrl}
+                position={member.attributes.position}
+                imageUrl={member.image.url}
               />
             </div>
           ))}
@@ -76,43 +76,7 @@ Team.propTypes = {
 
 Team.defaultProps = {
   title: ``,
-  members: [
-    {
-      name: "Rutabingwa Jean Paul",
-      position: "Consultant",
-      imageUrl: "/img/lewis.jpg",
-      description:
-        "<p>Discover where your leads come from what it costs to getthem, and how they interact with your website before contacting you. Discover where  your leads come from them. </p>",
-    },
-    {
-      name: "Munyankindi Pascal",
-      position: "Consultant",
-      imageUrl: "/img/lewis.jpg",
-      description:
-        "<p>Discover where your leads come from what it costs to getthem, and how they interact with your website before contacting you. Discover where  your leads come from them. </p>",
-    },
-    {
-      name: "Gakindi Vincent",
-      position: "Consultant",
-      imageUrl: "/img/lewis.jpg",
-      description:
-        "<p>Discover where your leads come from what it costs to getthem, and how they interact with your website before contacting you. Discover where  your leads come from them. </p>",
-    },
-    {
-      name: "Rutabingwa Jean Paul",
-      position: "Consultant",
-      imageUrl: "/img/lewis.jpg",
-      description:
-        "<p>Discover where your leads come from what it costs to getthem, and how they interact with your website before contacting you. Discover where  your leads come from them. </p>",
-    },
-    {
-      name: "Rutabingwa Jean Paul",
-      position: "Consultant",
-      imageUrl: "/img/lewis.jpg",
-      description:
-        "<p>Discover where your leads come from what it costs to getthem, and how they interact with your website before contacting you. Discover where  your leads come from them. </p>",
-    },
-  ],
+  members: [],
 }
 
 export default Team
