@@ -69,8 +69,7 @@ class MemberExpanded extends React.Component {
                       </a>
                     </div>
                     <div class="text-blue text-right ml-auto w-100 underline">
-                      {" "}
-                      <Link to="/member/">read more</Link>
+                      <Link to="/member">read more</Link>
                     </div>
                   </div>
                 </div>
