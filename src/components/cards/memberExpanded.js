@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ReactHtmlParser from "react-html-parser"
+import { Link } from "gatsby"
 
 class MemberExpanded extends React.Component {
   constructor(props) {
@@ -66,6 +67,9 @@ class MemberExpanded extends React.Component {
                           F
                         </button>
                       </a>
+                    </div>
+                    <div class="text-blue text-right ml-auto w-100 underline">
+                      <Link to="/member">read more</Link>
                     </div>
                   </div>
                 </div>
