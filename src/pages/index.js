@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 import Main from "../components/sections/main"
 import Service from "../components/sections/service"
-import Information from "../components/sections/information"
+
 import Team from "../components/sections/team"
 import Value from "../components/sections/value"
 import { graphql } from "gatsby"
@@ -24,10 +24,7 @@ const IndexPage = ({ data }) => (
       title={data.serviceCategory.title}
       services={data.services.list}
     ></Service>
-    <Information
-      title={data.discoverCategory.title}
-      cards={data.discoverContent.list}
-    />
+
     <Team members={data.team.members} />
     <Value id="about-us" title="Gakindi Vincent" values={data.values.list}>
       <p>Discover where your leads come from, what it costs to getthem, .</p>
