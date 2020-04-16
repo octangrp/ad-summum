@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -13,9 +14,11 @@ const ServiceCard = ({ title, image, children }) => (
         </h4>
         {children}
         <div class="w-100 text-center pt-12">
-          <button class="btn bg-none  py-3 px-8 text-primary rounded-full border-1 border-solid border-primary text-xs text-light mx-auto">
-            READ MORE
-          </button>
+          <Link to="/service">
+            <button class="btn bg-none  py-3 px-8 text-primary rounded-full border-1 border-solid border-primary text-xs text-light mx-auto">
+              READ MORE
+            </button>
+          </Link>
         </div>
       </div>
     </div>
