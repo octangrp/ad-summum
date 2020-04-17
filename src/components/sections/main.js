@@ -16,7 +16,6 @@ const Main = props => (
               though, the unity and coherence of ideas among sentences is what
               constitutes a paragraph. A paragraph is defined as “a group of
               sentences or a single sentence that forms a unit” (Lunsford and
-
               Connors 116). Paragraphs are the building blocks of papers. Many
               students define paragraphs in terms of length: a paragraph is a
               group of at least five sentences, a paragraph is half a page long,
