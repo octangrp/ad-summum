@@ -4,9 +4,9 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const ServiceCard = ({ title, image, children }) => (
-  <div class="flex flex-wrap xs:block w-95 md:w-55 pb-4 xs:w-95 mx-auto">
-    <div clas="w-40 px-4">
-      <div class="w-80 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4 mr-auto md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
+  <div class="flex flex-wrap xs:block w-95 md:w-55 pb-4 xs:w-95 mx-auto justify-center text-center">
+    <div class="w-30">
+      <div class="w-90 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4  md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
         <div class="-mt-10  mx-auto  w-100 ">
           <div class="rounded-full mt-0 mb-0 h-rem-16 w-rem-16  bg-primary mx-auto text-center  flex align-items-center shadow justify-content-center text-2xl text-white">
             <span class="cursor-pointer pl-6 pt-3">
@@ -15,7 +15,7 @@ const ServiceCard = ({ title, image, children }) => (
           </div>
         </div>
         <div class="text-center text-black mx-auto">
-          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-10 m-0 leading-loose">
+          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-5 m-0 leading-loose">
             {title}
           </h4>
           <p class="w-100 mx-auto xs:my-3 sm:text-sm text-base pt-2 m-0 xs:w-90 font-normal ">
@@ -32,8 +32,8 @@ const ServiceCard = ({ title, image, children }) => (
         </div>
       </div>
     </div>
-    <div clas="w-40">
-      <div class="w-80 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4 ml-auto md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
+    <div class="w-30">
+      <div class="w-90 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4  md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
         <div class=" -mt-10  mx-auto  w-100 ">
           <div class="rounded-full mt-0 mb-0 h-rem-16 w-rem-16  bg-primary mx-auto text-center  flex align-items-center shadow justify-content-center text-2xl text-white">
             <span class="cursor-pointer pl-6 pt-3">
@@ -42,7 +42,7 @@ const ServiceCard = ({ title, image, children }) => (
           </div>
         </div>
         <div class="text-center text-black mx-auto">
-          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-10 m-0 leading-loose">
+          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-5 m-0 leading-loose">
             {title}
           </h4>
           <p class="w-100 mx-auto xs:my-3 sm:text-sm text-base pt-2 m-0 xs:w-90 font-normal ">
@@ -59,8 +59,8 @@ const ServiceCard = ({ title, image, children }) => (
         </div>
       </div>
     </div>
-    <div clas="w-40">
-      <div class="w-80 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4 ml-auto md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
+    <div class="w-30">
+      <div class="w-90 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4 md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
         <div class=" -mt-10  mx-auto  w-100 ">
           <div class="rounded-full mt-0 mb-0 h-rem-16 w-rem-16  bg-primary mx-auto text-center  flex align-items-center shadow justify-content-center text-2xl text-white">
             <span class="cursor-pointer pl-6 pt-3">
@@ -69,7 +69,7 @@ const ServiceCard = ({ title, image, children }) => (
           </div>
         </div>
         <div class="text-center text-black mx-auto">
-          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-10 m-0 leading-loose">
+          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-5 m-0 leading-loose">
             {title}
           </h4>
           <p class="w-100 mx-auto xs:my-3 sm:text-sm text-base pt-2 m-0 xs:w-90 font-normal ">
@@ -86,8 +86,8 @@ const ServiceCard = ({ title, image, children }) => (
         </div>
       </div>
     </div>
-    <div clas="w-40">
-      <div class="w-80 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4 ml-auto md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
+    <div class="w-30 pt-12">
+      <div class="w-90 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4 md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
         <div class=" -mt-10  mx-auto  w-100 ">
           <div class="rounded-full mt-0 mb-0 h-rem-16 w-rem-16  bg-primary mx-auto text-center  flex align-items-center shadow justify-content-center text-2xl text-white">
             <span class="cursor-pointer pl-6 pt-3">
@@ -96,7 +96,7 @@ const ServiceCard = ({ title, image, children }) => (
           </div>
         </div>
         <div class="text-center text-black mx-auto">
-          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-10 m-0 leading-loose">
+          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-5 m-0 leading-loose">
             {title}
           </h4>
           <p class="w-100 mx-auto xs:my-3 sm:text-sm text-base pt-2 m-0 xs:w-90 font-normal ">
@@ -113,8 +113,8 @@ const ServiceCard = ({ title, image, children }) => (
         </div>
       </div>
     </div>
-    <div clas="w-40">
-      <div class="w-80 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4 ml-auto md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
+    <div class="w-30 pt-12">
+      <div class="w-90 h-58 lg:h-64 md:h-64 mt-10 lg:mt-4 md:w-100 mt-5 sm:w-100  md:mt-0 sm:mt-0  rounded-xxl   bg-white  relative  lg:l-1 xs:hidden">
         <div class="-mt-10  mx-auto  w-100 ">
           <div class="rounded-full mt-0 mb-0 h-rem-16 w-rem-16  bg-primary mx-auto text-center  flex align-items-center shadow justify-content-center text-2xl text-white">
             <span class="cursor-pointer pl-6 pt-3">
@@ -123,7 +123,7 @@ const ServiceCard = ({ title, image, children }) => (
           </div>
         </div>
         <div class="text-center text-black mx-auto">
-          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-10 m-0 leading-loose">
+          <h4 class="text-primary text-xl text-center font-primary font-normal text-center font-light pt-5 m-0 leading-loose">
             {title}
           </h4>
           <p class="w-100 mx-auto xs:my-3 sm:text-sm text-base pt-2 m-0 xs:w-90 font-normal ">
