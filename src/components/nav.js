@@ -37,9 +37,9 @@ const Navbar = ({ siteTitle }) => (
         </li>
       </ul>
 
-      <div class="w-10 text-right mr-auto p-0 hidden xl:block lg:block px-0 mr-0  text-sm">
-        <p>
-          <span class="pr-3">🇫🇷</span>
+      <div class="w-10 text-right mr-auto pt-2 hidden xl:block lg:block px-0 mr-0  text-sm">
+        <p class="text-xl p-0 m-0">
+          <span class="">🇫🇷</span>
           <span class="">🇺🇸</span>
         </p>
       </div>
