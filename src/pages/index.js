@@ -20,15 +20,17 @@ const IndexPage = ({ data }) => (
     >
       {data.mainSection.description}
     </Main>
-    <More></More>
+    <More id="about-us" title={data.aboutUs.title}>
+      {data.aboutUs.description}
+    </More>
     <Service
       id="services"
       title={data.serviceCategory.title}
       services={data.services.list}
     ></Service>
 
-    <Team members={data.team.members} />
-    <Value id="about-us" title="Gakindi Vincent" values={data.values.list}>
+    <Team id="team" members={data.team.members} />
+    <Value title="Gakindi Vincent" values={data.values.list}>
       <p>Discover where your leads come from, what it costs to getthem, .</p>
     </Value>
   </Layout>
@@ -41,6 +43,13 @@ export const queries = graphql`
     mainSection: wordpressPost(
       categories: { elemMatch: { slug: { eq: "main-section" } } }
     ) {
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+    }
+    aboutUs: wordpressPost(slug: { eq: "about-us" }) {
       title
       description: content
       button: acf {
@@ -81,6 +90,8 @@ export const queries = graphql`
       filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
     ) {
       members: nodes {
+        id
+        slug
         name: title
         description: content
         attributes: acf {

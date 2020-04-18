@@ -40,6 +40,7 @@ const Layout = ({ children }) => {
         <Navbar />
         <main class="relative">{children}</main>
         <Footer
+          siteTitle={data.site.name}
           address={data.footer.attributes.address}
           email={data.footer.attributes.email}
           phoneNumber={data.footer.attributes.phone_number}

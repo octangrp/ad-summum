@@ -31,6 +31,7 @@ class Team extends React.Component {
     if (this.state.showModal) {
       return (
         <MemberExpanded
+          slug={this.currentMember().slug}
           name={this.currentMember().name}
           position={this.currentMember().attributes.position}
           imageUrl={this.currentMember().image.url}
@@ -45,6 +46,7 @@ class Team extends React.Component {
   render() {
     return (
       <div
+        id={this.props.id}
         class="panel px-0 py-12 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto relative"
         style={{ background: "#F4F4F4" }}
       >
