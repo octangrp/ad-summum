@@ -8,35 +8,27 @@ const Navbar = ({ siteTitle }) => (
       <ul class="list text-left w-50 lg:w-60  mr-auto p-0 m-0 hidden xl:block lg:block px-0 mr-0  text-sm">
         <li class="inline-block px-8 bg-primary text-white my-0 mr-5">
           <button class="px-5 py-3">
-            <a href="#" class="inherit-color no-underline">
+            <Link to="/" className="inherit-color no-underline">
               Home
-            </a>
+            </Link>
           </button>
         </li>
         <li class="inline-block  px-8 my-0 mr-5">
-          <a href="#services" class="inherit-color no-underline">
+          <Link to="/#services" className="inherit-color no-underline">
             Services
-          </a>
+          </Link>
         </li>
         <li class="inline-block  px-8 my-0 mr-5">
-          <a href="#" class="inherit-color no-underline">
+          <Link to="/#team" className="inherit-color no-underline">
             Team
-          </a>
+          </Link>
         </li>
         <li class="inline-block  px-8 my-0 mr-5">
-          <a href="#about-us" class="inherit-color no-underline">
+          <Link to="/#about-us" className="inherit-color no-underline">
             About us
-          </a>
+          </Link>
         </li>
       </ul>
-      <ul class="list text-right w-40 lg:w-60  mr-auto p-0 mt-3 hidden xl:block lg:block px-0 mr-0  text-sm">
-        <li class="inline-block my-0">
-          <a>
-            <img src={"/img/735145cfe0a4.png"} />
-          </a>
-        </li>
-      </ul>
-
       <div class="w-10 text-right mr-auto pt-2 hidden xl:block lg:block px-0 mr-0  text-sm">
         <p class="text-xl p-0 m-0">
           <span class="pr-2">🇫🇷</span>

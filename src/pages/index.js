@@ -49,10 +49,16 @@ export const queries = graphql`
       filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
     ) {
       list: nodes {
+        id
+        slug
         title
         content
-        featured_media {
-          source_url
+        image: featured_media {
+          url: source_url
+        }
+        attributes: acf {
+          button_text
+          summary
         }
       }
     }
