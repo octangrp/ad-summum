@@ -36,9 +36,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div class="relative">
+      <div className="relative">
         <Navbar />
-        <main class="relative">{children}</main>
+        <main className="relative">{children}</main>
         <Footer
           siteTitle={data.site.name}
           address={data.footer.attributes.address}

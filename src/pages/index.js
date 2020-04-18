@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Main from "../components/sections/main"
 import More from "../components/sections/more"
 import Service from "../components/sections/service"
+import AnimationWrapper from "../components/sections/animationWrapper"
 
 import Team from "../components/sections/team"
 import Value from "../components/sections/value"
@@ -14,25 +15,34 @@ import { graphql } from "gatsby"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Main
-      title={data.mainSection.title}
-      buttonText={data.mainSection.button.text}
-    >
-      {data.mainSection.description}
-    </Main>
-    <More id="about-us" title={data.aboutUs.title}>
-      {data.aboutUs.description}
-    </More>
-    <Service
-      id="services"
-      title={data.serviceCategory.title}
-      services={data.services.list}
-    ></Service>
-
-    <Team id="team" members={data.team.members} />
-    <Value title="Gakindi Vincent" values={data.values.list}>
-      <p>Discover where your leads come from, what it costs to getthem, .</p>
-    </Value>
+    <AnimationWrapper>
+      <Main
+        title={data.mainSection.title}
+        buttonText={data.mainSection.button.text}
+      >
+        {data.mainSection.description}
+      </Main>
+    </AnimationWrapper>
+    <AnimationWrapper>
+      <More id="about-us" title={data.aboutUs.title}>
+        {data.aboutUs.description}
+      </More>
+    </AnimationWrapper>
+    <AnimationWrapper>
+      <Service
+        id="services"
+        title={data.serviceCategory.title}
+        services={data.services.list}
+      ></Service>
+    </AnimationWrapper>
+    <AnimationWrapper>
+      <Team id="team" members={data.team.members} />
+    </AnimationWrapper>
+    <AnimationWrapper>
+      <Value title="Gakindi Vincent" values={data.values.list}>
+        <p>Discover where your leads come from, what it costs to getthem, .</p>
+      </Value>
+    </AnimationWrapper>
   </Layout>
 )
 

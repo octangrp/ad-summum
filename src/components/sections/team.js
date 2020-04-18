@@ -47,16 +47,16 @@ class Team extends React.Component {
     return (
       <div
         id={this.props.id}
-        class="panel px-0 py-12 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto relative"
+        className="panel px-0 py-12 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto relative"
         style={{ background: "#F4F4F4" }}
       >
-        <h1 class="text-center font-semiBold text-6xl pb-24 xs:pb-0">
+        <h1 className="text-center font-semiBold text-6xl pb-24 xs:pb-0">
           Our Team
         </h1>
-        <div class="mt-0 w-95 mx-auto md:w-95 xs:w-100 sm:w-100 mx-auto text-center relative">
+        <div className="mt-0 w-95 mx-auto md:w-95 xs:w-100 sm:w-100 mx-auto text-center relative">
           {this.props.members.map((member, index) => (
             <div
-              class="mx-4 pb-12 xl:w-30 lg:w-45 md:w-45 sm:w-45 inline-block cursor-pointer"
+              className="mx-4 pb-12 xl:w-30 lg:w-45 md:w-45 sm:w-45 inline-block cursor-pointer"
               key={index}
               onClick={() => this.showMember(index)}
             >
