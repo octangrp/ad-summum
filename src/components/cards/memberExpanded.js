@@ -23,7 +23,7 @@ class MemberExpanded extends React.Component {
             onClick={this.closeModal}
             class="bg-black-darkest z-0 absolute h-100 w-100 opacity-50"
           ></div>
-          <div class="w-70 panel-default py-5 relative z-10">
+          <div class="w-75 panel-default py-5 relative z-10">
             <div class="w-100 lg:w-80 md:w-85 sm:w-90 xs:w-100 bg-white mx-auto shadow-lg border-1 border-grey border-solid">
               <div class="xl:flex sm:flex lg:flex md:flex xs:p-0">
                 <div class="w-40 xs:w-100 xs:p-4">
@@ -42,11 +42,18 @@ class MemberExpanded extends React.Component {
                       {this.props.position}
                     </h5>
                     <div class="w-100 xs:w-100 mt-4 mx-auto leading-normal xs:text-base md:text-base xs:p-4 text-lg">
-                      {ReactHtmlParser(this.props.children)}
+                      <p class="text-sm">
+                        Mr Rutayisire Musoni Jean is an economist and currently
+                        work as an independent consultant and researcher. In his
+                        most recent work experience, he has served in the
+                        Central Bank of Rwanda as an Advisor to the chief
+                        Economist of the Central Bank and as Director of the
+                        Research Department.
+                      </p>
                     </div>
                   </div>
 
-                  <div class="flex justify-content-center mt-12">
+                  <div class="flex justify-content-center mt-6">
                     <div class="mx-2">
                       <a target="_blank" href="#">
                         <button class="btn bg-red text-white h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
@@ -68,8 +75,13 @@ class MemberExpanded extends React.Component {
                         </button>
                       </a>
                     </div>
-                    <div class="text-blue text-right ml-auto w-100 underline">
-                      <Link to="/member">read more</Link>
+                    <div class="text-blue text-right ml-auto w-100 pt-3 underline">
+                      <Link
+                        to="/member"
+                        class="border-1 border-solid border-primary p-2 text-primary rounded-full"
+                      >
+                        read more
+                      </Link>
                     </div>
                   </div>
                 </div>
