@@ -6,7 +6,7 @@ import ReactHtmlParser from "react-html-parser"
 
 const ServiceCard = ({ service }) => (
   <div className="w-30 mx-auto">
-    <div className="w-100 flex mt-4 mb-12">
+    <div className="w-100 flex mt-4 mb-16">
       <div className="w-35 pr-4 flex items-center">
         <div className="w-100">
           <img src={service.image ? service.image.url : ""} />
