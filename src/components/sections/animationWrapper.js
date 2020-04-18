@@ -9,7 +9,7 @@ class AnimationWrapper extends React.Component {
   }
 
   onChange(isVisible) {
-    // this.setState({ animate: isVisible })
+    this.setState({ animate: isVisible })
   }
 
   render() {
@@ -19,7 +19,11 @@ class AnimationWrapper extends React.Component {
         minTopValue={10}
         partialVisibility={true}
       >
-        <div className={this.state.animate ? "visible" : "invisible"}>
+        <div
+          className={
+            this.state.animate ? "animated slow fadeIn visible" : "invisible"
+          }
+        >
           {this.props.children}
         </div>
       </VisibilitySensor>

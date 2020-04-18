@@ -18,27 +18,27 @@ class MemberExpanded extends React.Component {
 
   render() {
     return (
-      <div class="w-100 z-9999 overflow-hidden min-h-screen fixed t-0 l-0">
-        <div class="z-10 relative w-100 min-h-screen flex items-center justify-center">
+      <div className="w-100 z-9999 overflow-hidden min-h-screen fixed t-0 l-0">
+        <div className="z-10 relative w-100 min-h-screen flex items-center justify-center">
           <div
             onClick={this.closeModal}
-            class="bg-black-darkest z-0 absolute h-100 w-100 opacity-50"
+            className="bg-black-darkest z-0 absolute h-100 w-100 opacity-50"
           ></div>
-          <div class="w-70 panel-default py-5 relative z-10">
-            <div class="w-100 lg:w-80 md:w-85 sm:w-90 xs:w-100 bg-white mx-auto shadow-lg border-1 border-grey border-solid">
-              <div class="xl:flex sm:flex lg:flex md:flex xs:p-0">
-                <div class="w-40 xs:w-100 xs:p-4 flex items-center justify-center">
+          <div className="w-70 panel-default py-5 relative z-10">
+            <div className="w-100 lg:w-80 md:w-85 sm:w-90 xs:w-100 bg-white mx-auto shadow-lg border-1 border-grey border-solid">
+              <div className="xl:flex sm:flex lg:flex md:flex xs:p-0">
+                <div className="w-40 xs:w-100 xs:p-4 flex items-center justify-center">
                   <div className="w-rem-64 h-rem-64 rounded-full overflow-hidden">
                     <img
                       src={this.props.imageUrl}
-                      class="clip-full "
+                      className="clip-full "
                       alt="team-member"
                     />
                   </div>
                 </div>
-                <div class="w-60 py-8 px-6 relative">
+                <div className="w-60 py-8 px-6 relative">
                   <div
-                    class="absolute r-0 t-0 text-black text-2xl my-0"
+                    className="absolute r-0 t-0 text-black text-2xl my-0"
                     onClick={this.closeModal}
                   >
                     <div className="cursor-pointer p-5">
@@ -46,11 +46,11 @@ class MemberExpanded extends React.Component {
                     </div>
                   </div>
                   <div className="w-100 relative">
-                    <h4 class="text-5xl mt-0 mb-0 text-primary-darkest font-primary">
+                    <h4 className="text-5xl mt-0 mb-0 text-primary-darkest font-primary">
                       {this.props.name}
                     </h4>
-                    <div class="">
-                      <h5 class="text-2xl m-0 xs:text-sm p-0 md:text-base text-grey-darker">
+                    <div className="">
+                      <h5 className="text-2xl m-0 xs:text-sm p-0 md:text-base text-grey-darker">
                         {this.props.position}
                       </h5>
                       <TruncateMarkup lines={6}>
@@ -59,22 +59,22 @@ class MemberExpanded extends React.Component {
                     </div>
                   </div>
 
-                  <div class="flex justify-content-center mt-12 mb-3">
-                    <div class="mx-2">
+                  <div className="flex justify-content-center mt-12 mb-3">
+                    <div className="mx-2">
                       <a target="_blank" href="#">
-                        <button class="btn btn-outline-white border-1 border-solid border-black text-black h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
+                        <button className="btn btn-outline-white border-1 border-solid border-black text-black h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
                           <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
                         </button>
                       </a>
                     </div>
-                    <div class="mx-2">
+                    <div className="mx-2">
                       <a target="_blank" href="#">
-                        <button class="btn btn-outline-white border-1 border-solid border-black text-black h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
+                        <button className="btn btn-outline-white border-1 border-solid border-black text-black h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
                           <FontAwesomeIcon icon={["fas", "envelope"]} />
                         </button>
                       </a>
                     </div>
-                    <div class="text-blue text-right ml-auto w-100 underline flex items-end justify-end">
+                    <div className="text-blue text-right ml-auto w-100 underline flex items-end justify-end">
                       <Link to={`/members/${this.props.slug}`}>Read more</Link>
                     </div>
                   </div>
