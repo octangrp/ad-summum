@@ -9,21 +9,10 @@ const Main = props => (
         <div class="w-50 xs:w-100 xs:pt-0">
           <div class=" xs:pt-0">
             <div class="w-90 h-px-500 leafing-loose text-light xs:pt-0 xs:w-100 font-light">
+              <h1 class="pt-18 text-9xl w-95 text-primary">
+                Economics, Financial, Legal and IT axperts
+              </h1>
               {ReactHtmlParser(props.children)}
-              Paragraphs are the building blocks of papers. Many students define
-              paragraphs in terms of length: a paragraph is a group of at least
-              five sentences, a paragraph is half a page long, etc. In reality,
-              though, the unity and coherence of ideas among sentences is what
-              constitutes a paragraph. A paragraph is defined as “a group of
-              sentences or a single sentence that forms a unit” (Lunsford and
-              Connors 116). Paragraphs are the building blocks of papers. Many
-              students define paragraphs in terms of length: a paragraph is a
-              group of at least five sentences, a paragraph is half a page long,
-              etc. In reality, though, the unity and coherence of ideas among
-              sentences is what constitutes a paragraph. In reality, though, the
-              unity and coherence of ideas among sentences is what constitutes a
-              paragraph. In reality, though, the unity and coherence of ideas
-              among sentences is what constitutes a paragraph.
             </div>
           </div>
           <div class="w-100 pt-16 xs:pt-5 text-right xs:text-left"></div>
