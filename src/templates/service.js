@@ -23,7 +23,7 @@ class Service extends Component {
 
                 <div className="w-60 py-32 bg-primary-dark">
                   <div className="px-16">
-                    <h1 className="text-center p-0 m-0 text-white text-9xl font-primary pb-24 xs:pb-0">
+                    <h1 className="p-0 m-0 text-white text-9xl font-primary pb-24 xs:pb-0">
                       {post.title}
                     </h1>
                     <div className="text-white text-left font-light leading-normal py-6 m-0 text-lg">
