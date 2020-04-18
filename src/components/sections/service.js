@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
 import ServiceCard from "../cards/service"
-import ReactHtmlParser from "react-html-parser"
 
 class Service extends React.Component {
   constructor(props) {

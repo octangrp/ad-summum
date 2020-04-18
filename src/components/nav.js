@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import PropTypes from "prop-types"
 import React from "react"
 

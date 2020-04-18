@@ -3,6 +3,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ReactHtmlParser from "react-html-parser"
 import { Link } from "gatsby"
+import TruncateMarkup from "react-truncate-markup"
 
 class MemberExpanded extends React.Component {
   constructor(props) {
@@ -45,38 +46,36 @@ class MemberExpanded extends React.Component {
                     </div>
                   </div>
                   <div className="w-100 relative">
-                    <h4 class="xl:text-5xl mt-0 mb-0 text-primary-darkest font-primary sm:text-3xl lg:text-4xl xs:text-4xl md:text-4xl font-bold">
+                    <h4 class="text-5xl mt-0 mb-0 text-primary-darkest font-primary">
                       {this.props.name}
                     </h4>
                     <div class="">
-                      <h5 class="text-2xl m-0 xs:text-sm p-0 md:text-base font-bold text-grey-darker">
+                      <h5 class="text-2xl m-0 xs:text-sm p-0 md:text-base text-grey-darker">
                         {this.props.position}
                       </h5>
-                      <div class="w-100 xs:w-100 mt-4 mx-auto leading-normal text-lg font-light">
-                        {ReactHtmlParser(this.props.children)}
-                      </div>
+                      <TruncateMarkup lines={6}>
+                        <div>{ReactHtmlParser(this.props.children)}</div>
+                      </TruncateMarkup>
                     </div>
+                  </div>
 
-                    <div class="flex justify-content-center mt-12 mb-3">
-                      <div class="mx-2">
-                        <a target="_blank" href="#">
-                          <button class="btn btn-outline-white border-1 border-solid border-black text-black h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
-                            <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
-                          </button>
-                        </a>
-                      </div>
-                      <div class="mx-2">
-                        <a target="_blank" href="#">
-                          <button class="btn btn-outline-white border-1 border-solid border-black text-black h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
-                            <FontAwesomeIcon icon={["fas", "envelope"]} />
-                          </button>
-                        </a>
-                      </div>
-                      <div class="text-blue text-right ml-auto w-100 underline flex items-end justify-end">
-                        <Link to={`/members/${this.props.slug}`}>
-                          Read more
-                        </Link>
-                      </div>
+                  <div class="flex justify-content-center mt-12 mb-3">
+                    <div class="mx-2">
+                      <a target="_blank" href="#">
+                        <button class="btn btn-outline-white border-1 border-solid border-black text-black h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
+                          <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+                        </button>
+                      </a>
+                    </div>
+                    <div class="mx-2">
+                      <a target="_blank" href="#">
+                        <button class="btn btn-outline-white border-1 border-solid border-black text-black h-rem-12 w-rem-12 p-0 rounded-full text-xl text-center">
+                          <FontAwesomeIcon icon={["fas", "envelope"]} />
+                        </button>
+                      </a>
+                    </div>
+                    <div class="text-blue text-right ml-auto w-100 underline flex items-end justify-end">
+                      <Link to={`/members/${this.props.slug}`}>Read more</Link>
                     </div>
                   </div>
                 </div>
