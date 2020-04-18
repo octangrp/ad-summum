@@ -4,8 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Main from "../components/sections/main"
+import More from "../components/sections/more"
 import Service from "../components/sections/service"
-import Information from "../components/sections/information"
+
 import Team from "../components/sections/team"
 import Value from "../components/sections/value"
 import { graphql } from "gatsby"
@@ -19,15 +20,13 @@ const IndexPage = ({ data }) => (
     >
       {data.mainSection.description}
     </Main>
+    <More></More>
     <Service
       id="services"
       title={data.serviceCategory.title}
       services={data.services.list}
     ></Service>
-    <Information
-      title={data.discoverCategory.title}
-      cards={data.discoverContent.list}
-    />
+
     <Team members={data.team.members} />
     <Value id="about-us" title="Gakindi Vincent" values={data.values.list}>
       <p>Discover where your leads come from, what it costs to getthem, .</p>
@@ -52,10 +51,16 @@ export const queries = graphql`
       filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
     ) {
       list: nodes {
+        id
+        slug
         title
         content
-        featured_media {
-          source_url
+        image: featured_media {
+          url: source_url
+        }
+        attributes: acf {
+          button_text
+          summary
         }
       }
     }
