@@ -13,22 +13,20 @@ class Service extends Component {
       <Layout>
         <SEO title="Home" />
 
-        <div class="z-10 px-0 pt-32 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
-          <div class="min-h-screen  sm:min-h-auto xs:min-h-auto h-100 w-100 lg:w-90 -mt-24 lg:-mt-32 md:-mt-3  xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 ml-auto md:w-90 xs:w-100 sm:w-95 relative">
-            <div class="w-100 mx-auto pt-3 text-center">
-              <div class="flex">
-                <div class="w-40 pt-48">
-                  <img src={"/img/Untitled-1.png"} class="" />
-                </div>
+        <div class="z-10 px-0 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
+          <div class="w-100 mx-auto pt-3 text-center">
+            <div class="flex min-h-screen">
+              <div class="w-40 pt-48">
+                <img src={"/img/Untitled-1.png"} class="" />
+              </div>
 
-                <div class="w-60 py-18 bg-primary">
-                  <div class="px-16">
-                    <h1 class="text-center font-Bold p-0 m-0 text-white text-6xl pb-24 xs:pb-0">
-                      {post.title}
-                    </h1>
-                    <div class="text-white text-left font-light leading-normal py-6 m-0 text-xl">
-                      {ReactHtmlParser(post.content)}
-                    </div>
+              <div class="w-60 py-32 bg-primary">
+                <div class="px-16">
+                  <h1 class="text-center p-0 m-0 text-white text-9xl font-primary pb-24 xs:pb-0">
+                    {post.title}
+                  </h1>
+                  <div class="text-white text-left font-light leading-normal py-6 m-0 text-lg">
+                    {ReactHtmlParser(post.content)}
                   </div>
                 </div>
               </div>

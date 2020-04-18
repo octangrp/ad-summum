@@ -8,7 +8,7 @@ const Main = props => (
       <div class="flex xs:block align-items-end relative pt-16 w-100 md:w-55 pb-4 xs:w-90 mx-auto">
         <div class="w-50 xs:w-100 xs:pt-0">
           <div class=" xs:pt-0">
-            <div class="w-90 h-px-500 leafing-loose text-light xs:pt-0 xs:w-100 font-light">
+            <div class="w-90 h-px-500 leafing-loose text-light text-xl xs:pt-0 xs:w-100 font-light">
               <h1 class="pt-18 text-9xl w-95 text-primary">
                 Economics, Financial, Legal and IT axperts
               </h1>

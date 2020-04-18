@@ -81,6 +81,8 @@ export const queries = graphql`
       filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
     ) {
       members: nodes {
+        id
+        slug
         name: title
         description: content
         attributes: acf {

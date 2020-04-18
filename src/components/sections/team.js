@@ -31,6 +31,7 @@ class Team extends React.Component {
     if (this.state.showModal) {
       return (
         <MemberExpanded
+          slug={this.currentMember().slug}
           name={this.currentMember().name}
           position={this.currentMember().attributes.position}
           imageUrl={this.currentMember().image.url}
