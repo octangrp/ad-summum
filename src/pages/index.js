@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Main from "../components/sections/main"
+import More from "../components/sections/more"
 import Service from "../components/sections/service"
 
 import Team from "../components/sections/team"
@@ -19,6 +20,7 @@ const IndexPage = ({ data }) => (
     >
       {data.mainSection.description}
     </Main>
+    <More></More>
     <Service
       id="services"
       title={data.serviceCategory.title}
