@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
     >
       {data.mainSection.description}
     </Main>
-    <More></More>
+    <More title={data.aboutUs.title}>{data.aboutUs.description}</More>
     <Service
       id="services"
       title={data.serviceCategory.title}
@@ -41,6 +41,13 @@ export const queries = graphql`
     mainSection: wordpressPost(
       categories: { elemMatch: { slug: { eq: "main-section" } } }
     ) {
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+    }
+    aboutUs: wordpressPost(slug: { eq: "about-us" }) {
       title
       description: content
       button: acf {
