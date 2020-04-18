@@ -20,15 +20,17 @@ const IndexPage = ({ data }) => (
     >
       {data.mainSection.description}
     </Main>
-    <More title={data.aboutUs.title}>{data.aboutUs.description}</More>
+    <More id="about-us" title={data.aboutUs.title}>
+      {data.aboutUs.description}
+    </More>
     <Service
       id="services"
       title={data.serviceCategory.title}
       services={data.services.list}
     ></Service>
 
-    <Team members={data.team.members} />
-    <Value id="about-us" title="Gakindi Vincent" values={data.values.list}>
+    <Team id="team" members={data.team.members} />
+    <Value title="Gakindi Vincent" values={data.values.list}>
       <p>Discover where your leads come from, what it costs to getthem, .</p>
     </Value>
   </Layout>

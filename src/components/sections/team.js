@@ -46,6 +46,7 @@ class Team extends React.Component {
   render() {
     return (
       <div
+        id={this.props.id}
         class="panel px-0 py-12 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto relative"
         style={{ background: "#F4F4F4" }}
       >
