@@ -4,11 +4,11 @@ import ReactHtmlParser from "react-html-parser"
 
 const Main = props => (
   <div class="panel z-10 px-0 pt-32 xs:pt-0 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
-    <div class="panel-body min-h-screen  sm:min-h-auto xs:min-h-auto h-100 w-95 lg:w-90 -mt-24 lg:-mt-32 md:-mt-3 xs:pt-0 xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 ml-auto md:w-90 xs:w-100 sm:w-95 xl:flex md:flex  lg:flex sm:flex relative">
+    <div class="min-h-screen  sm:min-h-auto xs:min-h-auto h-100 w-95 lg:w-90 -mt-24 lg:-mt-32 md:-mt-3 xs:pt-0 xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 ml-auto md:w-90 xs:w-100 sm:w-95 xl:flex md:flex  lg:flex sm:flex relative">
       <div class="flex xs:block align-items-end relative pt-16 w-100 md:w-55 pb-4 xs:w-90 mx-auto">
         <div class="w-50 xs:w-100 xs:pt-0">
           <div class=" xs:pt-0">
-            <div class="w-90 h-px-500 leafing-loose text-light xs:pt-0 xs:w-100 font-light">
+            <div class="w-90 h-px-500 leafing-loose text-light xs:pt-0 xs:w-100">
               <h1 class="pt-18 text-9xl w-95 text-primary">
                 Economics, Financial, Legal and IT axperts
               </h1>
