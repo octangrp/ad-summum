@@ -37,15 +37,12 @@ class MemberExpanded extends React.Component {
                   </div>
                 </div>
                 <div className="w-60 py-8 px-6 relative">
-                  <div
-                    className="absolute r-0 t-0 text-black text-2xl my-0"
-                    onClick={this.closeModal}
-                  >
-                    <div className="cursor-pointer p-5">
+                  <div className="absolute z-10 r-0 t-0 text-black text-2xl my-0 p-5">
+                    <div onClick={this.closeModal} className="cursor-pointer">
                       <FontAwesomeIcon icon={["far", "times-circle"]} />
                     </div>
                   </div>
-                  <div className="w-100 relative">
+                  <div className="w-100 z-5 relative">
                     <h4 className="text-5xl mt-0 mb-0 text-primary-darkest font-primary">
                       {this.props.name}
                     </h4>

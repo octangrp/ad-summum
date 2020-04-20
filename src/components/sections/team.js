@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Member from "../cards/member"
 import MemberExpanded from "../cards/memberExpanded"
+import SectionWrapper from "./sectionWrapper"
 
 class Team extends React.Component {
   constructor(props) {
@@ -45,18 +46,15 @@ class Team extends React.Component {
   }
   render() {
     return (
-      <div
+      <SectionWrapper
         id={this.props.id}
-        className="panel px-0 py-12 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto relative"
-        style={{ background: "#F4F4F4" }}
+        title="Our Team"
+        backgroundClass="bg-grey-lightest text-black"
       >
-        <h1 className="text-center font-semiBold text-6xl pb-24 xs:pb-0">
-          Our Team
-        </h1>
-        <div className="mt-0 w-95 mx-auto md:w-95 xs:w-100 sm:w-100 mx-auto text-center relative">
+        <div className="w-100 relative text-center">
           {this.props.members.map((member, index) => (
             <div
-              className="mx-4 pb-12 xl:w-30 lg:w-45 md:w-45 sm:w-45 inline-block cursor-pointer"
+              className="mx-4 pb-12 w-25 inline-block cursor-pointer"
               key={index}
               onClick={() => this.showMember(index)}
             >
@@ -69,7 +67,7 @@ class Team extends React.Component {
           ))}
         </div>
         {this.renderModal()}
-      </div>
+      </SectionWrapper>
     )
   }
 }
