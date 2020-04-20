@@ -11,7 +11,10 @@ const Navbar = ({ siteTitle, items }) => (
             key={index}
             className="inline-block  px-12 text-center m-0 py-4 text-base hover:bg-primary hover:text-white"
           >
-            <Link to={item.link} className="inherit-color no-underline">
+            <Link
+              to={item.link}
+              className="inherit-color no-underline leading-none"
+            >
               {item.label}
             </Link>
           </li>

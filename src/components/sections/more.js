@@ -1,27 +1,16 @@
 import PropTypes from "prop-types"
 import React from "react"
 import ReactHtmlParser from "react-html-parser"
+import SectionWrapper from "./sectionWrapper"
 
 const More = props => (
-  <div
+  <SectionWrapper
     id={props.id}
-    className="panel z-10 px-0 pt-32 bg-primary t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto"
+    title={props.title}
+    backgroundClass="bg-primary text-white"
   >
-    <div className="min-h-screen  sm:min-h-auto xs:min-h-auto h-100 lg:w-90 -mt-24 lg:-mt-32 md:-mt-3 xs:pt-0 xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 ml-auto md:w-90 xs:w-100 sm:w-95 xl:flex md:flex  lg:flex sm:flex relative">
-      <div className="xs:block align-items-end relative w-90 mx-auto">
-        <div className=" xs:pt-0 ">
-          <div className="leafing-loose text-white text-xl text-left text-light xs:pt-0 xs:w-100 ">
-            <h1 className="text-center font-semiBold text-6xl pb-24 xs:pb-0">
-              {props.title}
-            </h1>
-            <div className="text-lg font-light">
-              {ReactHtmlParser(props.children)}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    {ReactHtmlParser(props.children)}
+  </SectionWrapper>
 )
 
 More.propTypes = {
