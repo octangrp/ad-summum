@@ -9,10 +9,8 @@ const Main = props => (
         <div className="w-55 xs:w-100 xs:pt-0">
           <div className=" xs:pt-0">
             <div className="w-90 h-px-500 text-lg xs:pt-0 xs:w-100 font-light">
-              <h1 className="pt-18 text-9xl w-95 text-primary">
-                {props.title}
-              </h1>
-              <div className="leading-loose">
+              <h1 className="pt-8 text-6xl w-95 text-primary">{props.title}</h1>
+              <div className="leading-loose ">
                 {ReactHtmlParser(props.children)}
               </div>
             </div>
