@@ -25,7 +25,7 @@ class MemberExpanded extends React.Component {
             className="bg-black-darkest z-0 absolute h-100 w-100 opacity-50"
           ></div>
           <div className="w-70 panel-default py-5 relative z-10">
-            <div className="w-100 lg:w-80 md:w-85 sm:w-90 xs:w-100 bg-white mx-auto shadow-lg border-1 border-grey border-solid">
+            <div className="w-100 lg:w-80 z-999 md:w-85 sm:w-90 xs:w-100 bg-white mx-auto shadow-lg border-1 border-grey border-solid">
               <div className="xl:flex sm:flex lg:flex md:flex xs:p-0">
                 <div className="w-40 xs:w-100 xs:p-4 flex items-center justify-center">
                   <div className="w-rem-64 h-rem-64 rounded-full overflow-hidden">
@@ -37,13 +37,13 @@ class MemberExpanded extends React.Component {
                   </div>
                 </div>
                 <div className="w-60 py-8 px-6 relative">
-                  <div className="absolute z-10 r-0 t-0 text-black text-2xl my-0 p-5">
+                  <div className="absolute z-10 r-0 t-0 text-black text-2xl mt-5 p-5">
                     <div onClick={this.closeModal} className="cursor-pointer">
                       <FontAwesomeIcon icon={["far", "times-circle"]} />
                     </div>
                   </div>
                   <div className="w-100 z-5 relative">
-                    <h4 className="text-5xl mt-0 mb-0 text-primary-darkest font-primary">
+                    <h4 className="text-5xl w-80 mt-0 mb-0 text-primary-darkest font-primary">
                       {this.props.name}
                     </h4>
                     <div className="">

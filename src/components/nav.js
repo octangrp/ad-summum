@@ -5,15 +5,15 @@ import React from "react"
 const Navbar = ({ siteTitle, items }) => (
   <nav className="z-99 transition-500ms w-100 text-primary fixed bg-white m-0 t-0 l-0 r-0  border-0 border-b-1 border-solid border-primary ">
     <div className="xl:w-90 lg:w-90 xs:w-90 sm:w-90 md:w-90 flex mx-auto py-0 mx-0">
-      <ul className="list text-left w-50 lg:w-60  mr-auto p-0 m-0 hidden xl:block lg:block px-0 mr-0  text-sm">
+      <ul className="list text-left w-50 lg:w-90  mr-auto p-0 m-0 hidden xl:block lg:block px-0 mr-0  text-sm">
         {items.map((item, index) => (
           <li
             key={index}
-            className="inline-block  px-12 text-center m-0 py-4 text-base hover:bg-primary hover:text-white"
+            className="inline-block  text-center m-0 py-4 text-base hover:bg-primary hover:text-white"
           >
             <Link
               to={item.link}
-              className="inherit-color no-underline leading-none"
+              className="inherit-color  px-12 no-underline leading-none"
             >
               {item.label}
             </Link>

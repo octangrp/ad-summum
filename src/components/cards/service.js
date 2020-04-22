@@ -14,7 +14,7 @@ const ServiceCard = ({ service }) => (
       </div>
 
       <div className="w-65">
-        <div className="text-left text-black mx-auto">
+        <div className="text-left text-black mx-auto p-0">
           <h4 className="text-primary text-xl font-primary font-normal font-light p-0 m-0 leading-loose">
             {service.title}
           </h4>
@@ -24,9 +24,9 @@ const ServiceCard = ({ service }) => (
             </TruncateHtml>
           </div>
         </div>
-        <div className="w-100 text-left pt-3">
+        <div className="w-100 text-left pt-4">
           <Link to={`/service/${service.slug}`}>
-            <button className="btn bg-none  py-2 px-4 text-primary rounded-full border-1 border-solid border-primary text-xxs text-light mx-auto">
+            <button className="btn bg-none  py-2 px-4 text-primary rounded-full border-1 border-solid border-primary text-xs text-light mx-auto">
               {service.attributes.button_text}
             </button>
           </Link>
