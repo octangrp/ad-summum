@@ -14,8 +14,12 @@ class Member extends React.Component {
           <img src={this.props.imageUrl} alt="team-member" />
         </div>
         <div className="bg-white center text-center py-3">
-          <h5 className="mb-2 mt-0 text-2xl">{this.props.name}</h5>
-          <p className="font-light text-lg m-0">{this.props.position}</p>
+          <h5 className="mb-2 mt-0 text-2xl xs:text-xl md:text-xl sm:text-lg">
+            {this.props.name}
+          </h5>
+          <p className="font-light text-lg xs:text-base md:text-base sm:text-sm m-0">
+            {this.props.position}
+          </p>
         </div>
       </div>
     )

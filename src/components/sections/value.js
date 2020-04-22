@@ -5,7 +5,7 @@ import SectionWrapper from "./sectionWrapper"
 
 const Value = props => (
   <SectionWrapper id={props.id} title="Our core values">
-    <div className="flex flex-wrap justify-center ">
+    <div className="xl:flex md:flex lg:flex flex-wrap justify-center ">
       {props.values.map((item, index) => (
         <ValueCard key={index} title={item.title} imageUrl={item.image.url}>
           {item.description}
