@@ -5,10 +5,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ReactHtmlParser from "react-html-parser"
 import AnimationWrapper from "../components/sections/animationWrapper"
+import { connect } from "react-redux"
+import Translator from "../utils/translator"
 
 class Member extends Component {
   render() {
-    const member = this.props.data.wordpressPost
+    const member = Translator.process(
+      this.props.lang,
+      this.props.data.wordpressPost.translations
+    )
 
     return (
       <Layout>
@@ -54,20 +59,27 @@ Member.propTypes = {
   edges: PropTypes.array,
 }
 
-export default Member
+const mapStateToProps = state => ({
+  lang: state.lang,
+})
+
+export default connect(mapStateToProps)(Member)
 
 export const postQuery = graphql`
   query($id: String!) {
     wordpressPost(id: { eq: $id }) {
-      id
-      slug
-      name: title
-      description: content
-      attributes: acf {
-        position
-      }
-      image: featured_media {
-        url: source_url
+      translations: polylang_translations {
+        lang: polylang_current_lang
+        id
+        slug
+        name: title
+        description: content
+        attributes: acf {
+          position
+        }
+        image: featured_media {
+          url: source_url
+        }
       }
     }
     site {
