@@ -11,7 +11,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "animate.css": "^3.7.2",
-    "gatsby": "^2.19.7",
+    "gatsby": "^2.20.25",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-anchor-links": "^1.1.1",
     "gatsby-plugin-manifest": "^2.2.39",
@@ -23,7 +23,7 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-source-wordpress": "^3.2.2",
     "gatsby-transformer-sharp": "^2.3.13",
-    "lint-staged": "^10.0.9",
+    "lint-staged": "^10.1.7",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "og-css": "^3.0.3",
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
-    "husky": "^4.2.3",
+    "husky": "^4.2.5",
     "prettier": "^1.19.1"
   },
   "keywords": [
