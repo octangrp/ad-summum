@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../utils/fontawesome"
 
 import Navbar from "./nav"
+import NavMobile from "./navMobile"
 import "../styles/app.scss"
 import Footer from "../components/sections/footer"
 
@@ -38,6 +39,7 @@ const Layout = ({ children }) => {
     <>
       <div className="relative">
         <Navbar />
+        <NavMobile />
         <main className="relative">{children}</main>
         <Footer
           siteTitle={data.site.name}

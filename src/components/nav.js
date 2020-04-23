@@ -1,9 +1,10 @@
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import PropTypes from "prop-types"
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Navbar = ({ siteTitle, items }) => (
-  <nav className="z-99 transition-500ms w-100 text-primary fixed bg-white m-0 t-0 l-0 r-0  border-0 border-b-1 border-solid border-primary ">
+  <nav className="z-99 transition-500ms xs:hidden w-100 text-primary fixed bg-white m-0 t-0 l-0 r-0  border-0 border-b-1 border-solid border-primary ">
     <div className="xl:w-90 lg:w-90 xs:w-90 sm:w-90 md:w-90 flex mx-auto py-0 mx-0">
       <ul className="list text-left w-50 lg:w-90  mr-auto p-0 m-0 hidden xl:block lg:block px-0 mr-0  text-sm">
         {items.map((item, index) => (
@@ -36,6 +37,25 @@ const Navbar = ({ siteTitle, items }) => (
       </div>
     </div>
   </nav>
+
+  // <nav class="z-99 w-100 text-primary border-primary border-solid border-0 border-b-1 absolute xl:hidden lg:hidden md:hidden m-0 t-0 l-0 r-0">
+  //   <div class="w-90 flex mx-auto py-2 mx-0">
+
+  //                     <ul class="mr-auto list w-50 text-left px-0 ml-1 xl:hidden lg:hidden py-0 my-2">
+  //                       <li class="my-0">
+  //                         <button class="px-0 pt-m-2 py-l-4 py-0 my-0">
+  //                         <FontAwesomeIcon icon={["fas", "bars"]} />
+  //                           </button>
+  //                           </li>
+  //                           </ul>
+
+  //       <ul class="w-50 lg:w-40 list mx-0 px-0 text-right">
+  //       <li class="w-25 xs:w-50 text-black mx-0 px-0  ml-auto">
+  //         <a href="#"> logo</a>
+  //             </li>
+  //             </ul>
+  //                           </div>
+  //                           </nav>
 )
 
 Navbar.propTypes = {

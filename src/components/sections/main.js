@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import ReactHtmlParser from "react-html-parser"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Main = props => (
   <div className="panel z-10 px-0 pt-32 xs:pt-0 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
