@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ReactHtmlParser from "react-html-parser"
 import { Link } from "gatsby"
 import TruncateMarkup from "react-truncate-markup"
+import Translator from "../../utils/translator"
+import { connect } from "react-redux"
 
 class MemberExpanded extends React.Component {
   constructor(props) {
@@ -17,6 +19,10 @@ class MemberExpanded extends React.Component {
   }
 
   render() {
+    const details = Translator.process(
+      this.props.lang,
+      this.props.details.translations
+    )
     return (
       <div className="w-100 z-9999 overflow-hidden min-h-screen fixed t-0 l-0">
         <div className="z-10 relative w-100 min-h-screen flex items-center justify-center">
@@ -30,7 +36,7 @@ class MemberExpanded extends React.Component {
                 <div className="w-40 xs:w-100 xs:p-4 flex items-center justify-center">
                   <div className="w-rem-64 h-rem-64 rounded-full overflow-hidden">
                     <img
-                      src={this.props.imageUrl}
+                      src={details.image.url}
                       className="clip-full "
                       alt="team-member"
                     />
@@ -44,14 +50,14 @@ class MemberExpanded extends React.Component {
                   </div>
                   <div className="w-100 z-5 relative">
                     <h4 className="text-5xl w-80 mt-0 mb-0 text-primary-darkest font-primary">
-                      {this.props.name}
+                      {details.name}
                     </h4>
                     <div className="">
                       <h5 className="text-2xl m-0 xs:text-sm p-0 md:text-base text-grey-darker">
-                        {this.props.position}
+                        {details.attributes.position}
                       </h5>
                       <TruncateMarkup lines={6}>
-                        <div>{ReactHtmlParser(this.props.children)}</div>
+                        <div>{ReactHtmlParser(details.description)}</div>
                       </TruncateMarkup>
                     </div>
                   </div>
@@ -72,7 +78,7 @@ class MemberExpanded extends React.Component {
                       </a>
                     </div>
                     <div className="text-blue text-right ml-auto w-100 underline flex items-end justify-end">
-                      <Link to={`/members/${this.props.slug}`}>Read more</Link>
+                      <Link to={`/members/${details.slug}`}>Read more</Link>
                     </div>
                   </div>
                 </div>
@@ -86,17 +92,17 @@ class MemberExpanded extends React.Component {
 }
 
 MemberExpanded.propTypes = {
-  slug: PropTypes.string,
-  name: PropTypes.string,
-  position: PropTypes.string,
-  imageUrl: PropTypes.string,
+  details: PropTypes.object,
 }
 
 MemberExpanded.defaultProps = {
-  slug: `Name`,
-  name: `Name`,
-  position: `Position`,
-  imageUrl: ``,
+  details: {
+    translation: [],
+  },
 }
 
-export default MemberExpanded
+const mapStateToProps = state => ({
+  lang: state.lang,
+})
+
+export default connect(mapStateToProps)(MemberExpanded)

@@ -5,11 +5,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ReactHtmlParser from "react-html-parser"
 import AnimationWrapper from "../components/sections/animationWrapper"
+import { connect } from "react-redux"
+import Translator from "../utils/translator"
 
 class Service extends Component {
   render() {
-    const post = this.props.data.wordpressPost
-
+    const post = Translator.process(
+      this.props.lang,
+      this.props.data.wordpressPost.translations
+    )
     return (
       <Layout>
         <SEO title="Home" />
@@ -45,13 +49,20 @@ Service.propTypes = {
   edges: PropTypes.array,
 }
 
-export default Service
+const mapStateToProps = state => ({
+  lang: state.lang,
+})
+
+export default connect(mapStateToProps)(Service)
 
 export const postQuery = graphql`
   query($id: String!) {
     wordpressPost(id: { eq: $id }) {
-      title
-      content
+      translations: polylang_translations {
+        lang: polylang_current_lang
+        title
+        content
+      }
     }
     site {
       siteMetadata {

@@ -32,14 +32,9 @@ class Team extends React.Component {
     if (this.state.showModal) {
       return (
         <MemberExpanded
-          slug={this.currentMember().slug}
-          name={this.currentMember().name}
-          position={this.currentMember().attributes.position}
-          imageUrl={this.currentMember().image.url}
+          details={this.currentMember()}
           onCloseModal={this.closeModal}
-        >
-          {this.currentMember().description}
-        </MemberExpanded>
+        />
       )
     }
     return null
@@ -58,11 +53,7 @@ class Team extends React.Component {
               key={index}
               onClick={() => this.showMember(index)}
             >
-              <Member
-                name={member.name}
-                position={member.attributes.position}
-                imageUrl={member.image.url}
-              />
+              <Member details={member} />
             </div>
           ))}
         </div>
