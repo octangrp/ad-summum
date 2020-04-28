@@ -11,7 +11,7 @@ const SectionWrapper = props => (
     ].join(" ")}
   >
     <div className="min-h-screen relative">
-      <div className="xs:block align-items-end relative w-90 mx-auto">
+      <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto">
         <div className=" xs:pt-0 ">
           <div className="leading-loosexs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100 ">
             <h1 className="text-center font-semiBold text-6xl xs:text-3xl sm:text-xl md:text-3xl my-0 py-12 xs:pb-0">
