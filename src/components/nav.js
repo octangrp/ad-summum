@@ -7,6 +7,9 @@ const Navbar = ({ siteTitle, items }) => (
   <nav className="z-99 transition-500ms xs:hidden w-100 text-primary fixed bg-white m-0 t-0 l-0 r-0  border-0 border-b-1 border-solid border-primary ">
     <div className="xl:w-90 lg:w-90 xs:w-90 sm:w-90 md:w-90 flex mx-auto py-0 mx-0">
       <ul className="list text-left w-50 lg:w-90  mr-auto p-0 m-0 hidden xl:block lg:block px-0 mr-0  text-sm">
+        <li className="inline-block  text-center m-0 py-0 text-base pr-2">
+          <img src={Logo} alt="ad-summum-logo" width="50" />
+        </li>
         {items.map((item, index) => (
           <li
             key={index}
@@ -25,13 +28,15 @@ const Navbar = ({ siteTitle, items }) => (
         <img
           src={"/img/united-states.svg"}
           width="20"
-          className="mt-3 mx-4"
+          onClick={() => this.props.switchLanguage("en_US")}
+          className="mt-3 mx-4 cursor-pointer"
           alt="english-language"
         />
         <img
           src={"/img/france.svg"}
           width="20"
-          className="mt-3"
+          onClick={() => this.props.switchLanguage("fr_FR")}
+          className="mt-3 cursor-pointer"
           alt="french-language"
         />
       </div>
@@ -85,4 +90,14 @@ Navbar.defaultProps = {
   ],
 }
 
-export default Navbar
+const mapDispatchToProps = dispatch => {
+  return {
+    switchLanguage: lang =>
+      dispatch({
+        type: "SET_LANGUAGE",
+        lang: lang,
+      }),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Navbar)

@@ -20,7 +20,7 @@ class Service extends React.Component {
       >
         <div className="xl:flex md:flex lg:flex sm:flex flex-wrap justify-center text-center w-100">
           {this.props.services.map((service, index) => (
-            <ServiceCard key={index} service={service} />
+            <ServiceCard key={index} details={service} />
           ))}
         </div>
       </SectionWrapper>

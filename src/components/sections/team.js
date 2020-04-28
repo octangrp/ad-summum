@@ -33,14 +33,9 @@ class Team extends React.Component {
     if (this.state.showModal) {
       return (
         <MemberExpanded
-          slug={this.currentMember().slug}
-          name={this.currentMember().name}
-          position={this.currentMember().attributes.position}
-          imageUrl={this.currentMember().image.url}
+          details={this.currentMember()}
           onCloseModal={this.closeModal}
-        >
-          {this.currentMember().description}
-        </MemberExpanded>
+        />
       )
     }
     return null
@@ -62,19 +57,11 @@ class Team extends React.Component {
                 className="w-100 xs:hidden"
                 onClick={() => this.showMember(index)}
               >
-                <Member
-                  name={member.name}
-                  position={member.attributes.position}
-                  imageUrl={member.image.url}
-                />
+                <Member details={member} />
               </div>
               <div class="hidden xs:block">
                 <Link to={`/members/${member.slug}`}>
-                  <Member
-                    name={member.name}
-                    position={member.attributes.position}
-                    imageUrl={member.image.url}
-                  />
+                  <Member details={member} />
                 </Link>
               </div>
             </div>
