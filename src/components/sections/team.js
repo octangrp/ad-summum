@@ -3,6 +3,7 @@ import React from "react"
 import Member from "../cards/member"
 import MemberExpanded from "../cards/memberExpanded"
 import SectionWrapper from "./sectionWrapper"
+import { Link } from "gatsby"
 
 class Team extends React.Component {
   constructor(props) {
@@ -56,13 +57,26 @@ class Team extends React.Component {
             <div
               className="mx-4 xs:mx-0 sm:mx-2 pb-12 w-25 md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer"
               key={index}
-              onClick={() => this.showMember(index)}
             >
-              <Member
-                name={member.name}
-                position={member.attributes.position}
-                imageUrl={member.image.url}
-              />
+              <div
+                className="w-100 xs:hidden"
+                onClick={() => this.showMember(index)}
+              >
+                <Member
+                  name={member.name}
+                  position={member.attributes.position}
+                  imageUrl={member.image.url}
+                />
+              </div>
+              <div class="hidden xs:block">
+                <Link to={`/members/${member.slug}`}>
+                  <Member
+                    name={member.name}
+                    position={member.attributes.position}
+                    imageUrl={member.image.url}
+                  />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
