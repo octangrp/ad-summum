@@ -55,7 +55,7 @@ class Team extends React.Component {
         <div className="w-100 relative text-center">
           {this.props.members.map((member, index) => (
             <div
-              className="mx-4 xs:h pb-12 w-25 inline-block cursor-pointer"
+              className="mx-4 xs:mx-0 sm:mx-2 pb-12 w-25 md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer"
               key={index}
             >
               <div

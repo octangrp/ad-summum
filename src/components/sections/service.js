@@ -18,7 +18,7 @@ class Service extends React.Component {
         title={this.props.title}
         backgroundClass="bg-white text-black"
       >
-        <div className="flex flex-wrap justify-center text-center w-100">
+        <div className="xl:flex md:flex lg:flex sm:flex flex-wrap justify-center text-center w-100">
           {this.props.services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}

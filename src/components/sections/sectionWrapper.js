@@ -11,13 +11,13 @@ const SectionWrapper = props => (
     ].join(" ")}
   >
     <div className="min-h-screen relative">
-      <div className="xs:block align-items-end relative w-90 mx-auto">
+      <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto">
         <div className=" xs:pt-0 ">
-          <div className="leafing-loose text-xl text-left text-light xs:pt-0 xs:w-100 ">
-            <h1 className="text-center font-semiBold text-6xl my-0 py-12 xs:pb-0">
+          <div className="leading-loosexs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100 ">
+            <h1 className="text-center font-semiBold text-6xl xs:text-3xl sm:text-xl md:text-3xl my-0 py-12 xs:pb-0">
               {props.title}
             </h1>
-            <div className="text-lg font-light section-content mt-5">
+            <div className="text-lg sm:text-sm font-light section-content mt-5 sm:mt-0 md:text-0">
               {props.children}
             </div>
           </div>
