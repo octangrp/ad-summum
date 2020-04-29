@@ -15,8 +15,8 @@ const Main = props => (
         <div className="w-55 xs:w-100 xs:pt-0">
           <div className=" xs:pt-0">
             <div className="w-90 h-px-500 text-lg xs:pt-0 xs:w-100 font-light">
-              <h1 className="pt-18 xs:pt-8 md:pt-8 sm:pt-2 text-9xl xs:text-3xl md:text-sm sm:text-2xl w-95 xs:w-90 text-primary">
-                {props.title}
+              <h1 className="p-12 xs:pt-8 md:pt-8 sm:pt-2 text-9xl xs:text-3xl md:text-sm sm:text-2xl w-95 xs:w-90 text-primary">
+                <img src={"/img/logo.png"} className="w-35" />
               </h1>
               <div className="xl:leading-loose xs:text-base md:text-sm sm:text-sm xs:w-90">
                 {ReactHtmlParser(props.children)}

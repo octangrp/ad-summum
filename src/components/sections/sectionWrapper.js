@@ -17,7 +17,13 @@ const SectionWrapper = props => (
             <h1 className="text-center font-semiBold text-6xl xs:text-3xl sm:text-xl md:text-3xl my-0 py-12 xs:pb-0">
               {props.title}
             </h1>
-            <div className="text-lg sm:text-sm font-light section-content mt-5 sm:mt-0 md:text-0">
+            <p class="text-base text-center w-80 mx-auto pb-32">
+              ASC Ltd brings together with professional skills and extensive
+              experience in the areas of central banking, commercial banking and
+              financial system in general, legal issues and those related to
+              information technology and organization.
+            </p>
+            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0">
               {props.children}
             </div>
           </div>
