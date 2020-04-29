@@ -7,6 +7,7 @@ const More = props => (
   <SectionWrapper
     id={props.id}
     title={props.title}
+    showSubtitle={false}
     backgroundClass="bg-primary text-white p-0 m-0"
   >
     {ReactHtmlParser(props.children)}

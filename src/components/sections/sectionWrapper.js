@@ -17,7 +17,12 @@ const SectionWrapper = props => (
             <h1 className="text-center font-semiBold text-6xl xs:text-3xl sm:text-xl md:text-3xl my-0 py-12 xs:pb-0">
               {props.title}
             </h1>
-            <p class="text-base text-center w-80 mx-auto pb-32">
+            <p
+              className={[
+                "text-base text-center w-80 mx-auto pb-32",
+                !props.showSubtitle ? "hidden" : null,
+              ].join(" ")}
+            >
               ASC Ltd brings together with professional skills and extensive
               experience in the areas of central banking, commercial banking and
               financial system in general, legal issues and those related to
@@ -36,11 +41,13 @@ const SectionWrapper = props => (
 SectionWrapper.propTypes = {
   title: PropTypes.string,
   backgroundClass: PropTypes.string,
+  showSubtitle: PropTypes.bool,
 }
 
 SectionWrapper.defaultProps = {
   title: ``,
   backgroundClass: `bg-white text-black`,
+  showSubtitle: true,
 }
 
 export default SectionWrapper

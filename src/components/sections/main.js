@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import ReactHtmlParser from "react-html-parser"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Logo from "../../images/logo-full.png"
 
 const Main = props => (
   <div className="panel z-10 px-0 pt-32 xs:pt-0 sm:pt-12 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto sm:h-auto">
@@ -16,7 +16,7 @@ const Main = props => (
           <div className=" xs:pt-0">
             <div className="w-90 h-px-500 text-lg xs:pt-0 xs:w-100 font-light">
               <h1 className="p-12 xs:pt-8 md:pt-8 sm:pt-2 text-9xl xs:text-3xl md:text-sm sm:text-2xl w-95 xs:w-90 text-primary">
-                <img src={"/img/logo.png"} className="w-35" />
+                <img src={Logo} className="clip-full" alt="" className="w-35" />
               </h1>
               <div className="xl:leading-loose xs:text-base md:text-sm sm:text-sm xs:w-90">
                 {ReactHtmlParser(props.children)}
