@@ -7,6 +7,7 @@ import ReactHtmlParser from "react-html-parser"
 import AnimationWrapper from "../components/sections/animationWrapper"
 import { connect } from "react-redux"
 import Translator from "../utils/translator"
+import Logo from "../images/logo-full.png"
 
 class Member extends Component {
   render() {
@@ -22,7 +23,16 @@ class Member extends Component {
           <div className="z-10 px-0 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
             <div className="w-100 mx-auto pt-3 text-center">
               <div className="xl:flex lg:flex md:flex min-h-screen">
-                <div className="w-40 xs:w-80 sm:w-100 xs:mx-auto pt-48 sm:pb-12 sm:pt-20 xs:pt-18 xs:pb-8">
+                <div className="w-40 xs:w-80 sm:w-100 xs:mx-auto pt-18 sm:pb-12 sm:pt-20 xs:pt-18 xs:pb-8">
+                  <h1 className="xs:pt-8 md:pt-8 sm:pt-2 text-9xl text-left ml-auto xs:hidden sm:hidden xs:text-3xl md:text-sm sm:text-2xl w-90 xs:w-90 text-primary">
+                    <img
+                      src={Logo}
+                      className="clip-full"
+                      alt=""
+                      className="w-35"
+                    />
+                  </h1>
+
                   <div className="w-rem-84 h-rem-84 xs:w-rem-54 xs:h-rem-54 md:w-rem-54 md:h-rem-54 sm:w-rem-54 sm:h-rem-54  mx-auto rounded-full overflow-hidden">
                     <img
                       src={member.image.url}
