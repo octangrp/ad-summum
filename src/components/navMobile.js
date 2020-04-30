@@ -1,6 +1,7 @@
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import PropTypes from "prop-types"
 import React from "react"
+import { connect } from "react-redux"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class NavMobile extends React.Component {
@@ -62,38 +63,35 @@ class NavMobile extends React.Component {
               </span>
             </div>
             <ul className="py-2 text-left text-white pt-2 -mt-3 p-0 pb-3 mx-auto w-80 relative xl:hidden lg:hidden">
-              <li className="my-3 text-xl">
-                <a href="#" className="inherit-color  no-underline">
-                  Home
-                </a>
-              </li>
-              <li className="my-3 text-xl">
-                <a href="#" className="inherit-color  no-underline">
-                  Team
-                </a>
-              </li>
-              <li className="my-3 text-xl">
-                <a href="" className="inherit-color o-underline">
-                  Service
-                </a>
-              </li>
-              <li className="my-3 text-xl">
-                <a href="#" className="inherit-color no-underline">
-                  Contact Us
-                </a>
-              </li>
+              {this.props.items.map((item, index) => (
+                <li
+                  key={index}
+                  className="inline-block  text-center m-0 py-4 text-base hover:bg-primary hover:text-white"
+                  onClick={() => this.closeNav()}
+                >
+                  <Link
+                    to={item.link}
+                    className="inherit-color  px-12 no-underline leading-none"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+
               <li className="my-3 text-xl">
                 <div className="w-100 text-left ml-auto pt-2 px-0 mr-0  text-sm">
                   <img
                     src={"/img/united-states.svg"}
                     width="20"
-                    className="mt-3 mx-4"
+                    onClick={() => this.props.switchLanguage("en_US")}
+                    className="mt-3 mx-4 cursor-pointer"
                     alt="english-language"
                   />
                   <img
                     src={"/img/france.svg"}
                     width="20"
-                    className="mt-3"
+                    onClick={() => this.props.switchLanguage("fr_FR")}
+                    className="mt-3 cursor-pointer"
                     alt="french-language"
                   />
                 </div>

@@ -54,12 +54,12 @@ class Team extends React.Component {
               key={index}
             >
               <div
-                className="w-100 xs:hidden"
+                className="w-100 xs:hidden sm:hidden"
                 onClick={() => this.showMember(index)}
               >
                 <Member details={member} />
               </div>
-              <div class="hidden xs:block">
+              <div class="hidden xs:block sm:block">
                 <Link to={`/members/${member.slug}`}>
                   <Member details={member} />
                 </Link>
