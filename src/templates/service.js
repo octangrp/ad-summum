@@ -20,17 +20,17 @@ class Service extends Component {
         <AnimationWrapper>
           <div className="z-10 px-0 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
             <div className="w-100 mx-auto pt-3 text-center">
-              <div className="xl:flex md:flex lg:flex min-h-screen">
-                <div className="w-40 xs:w-90 py-48 xs:py-12 xs:mx-auto">
+              <div className="xl:flex md:flex lg:flex sm:flex sm:pt-12 min-h-screen">
+                <div className="w-40 xs:w-90 py-48 sm:py-18 xs:py-12 xs:mx-auto">
                   <img src={"/img/Untitled-1.png"} className="" />
                 </div>
 
-                <div className="w-60 xs:w-100 py-32 xs:py-12 bg-primary-dark text-left text-white">
+                <div className="w-60 xs:w-100 py-32 sm:py-12 xs:py-12 bg-primary-dark text-left text-white">
                   <div className="px-16">
-                    <h1 className="p-0 m-0 text-9xl xs:text-2xl font-primary pb-24 xs:pb-0">
+                    <h1 className="p-0 m-0 text-9xl sm:text-xl xs:text-2xl font-primary pb-24 xs:pb-0">
                       {post.title}
                     </h1>
-                    <div className="text-left font-light leading-normal py-6 m-0 xs:text-sm text-lg">
+                    <div className="text-left font-light leading-normal py-6 m-0 xs:text-sm sm:text-sm text-lg">
                       {ReactHtmlParser(post.content)}
                     </div>
                   </div>
