@@ -26,7 +26,10 @@ class NavMobile extends React.Component {
           <div className="w-90 flex mx-auto py-2 mx-0">
             <ul className="w-50 list mx-0 px-0 text-left">
               <li className="w-25 xs:w-50 text-black mx-0 px-0">
-                <a href="#"> logo</a>
+                <a href="#">
+                  {" "}
+                  <img src={"/img/logo.png"} className="w-50" />
+                </a>
               </li>
             </ul>
 

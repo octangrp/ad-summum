@@ -13,7 +13,7 @@ class ServiceCard extends React.Component {
     )
     return (
       <div className="w-30 xs:w-100 mx-auto">
-        <div className="w-100 xl:flex lg:flex xs:flex md:flex mt-4 mb-16">
+        <div className="w-100 xl:flex lg:flex xs:flex md:flex pt-12">
           <div className="w-35 pr-4 flex items-center">
             <div className="w-100">
               <img src={details.image ? details.image.url : ""} />
@@ -22,7 +22,7 @@ class ServiceCard extends React.Component {
 
           <div className="w-65">
             <div className="text-left text-black mx-auto p-0">
-              <h4 className="text-primary text-xl font-primary font-normal font-light p-0 m-0 leading-loose sm:leading-normal">
+              <h4 className="text-primary text-xl font-primary font-normal font-light p-0 m-0 leading-loose sm:leading-normal xs:leading-normal">
                 {details.title}
               </h4>
               <div className="w-100 mx-auto xs:my-3 sm:text-sm text-base pt-2 m-0 xs:w-90 font-light ">
