@@ -21,7 +21,7 @@ class Service extends Component {
           <div className="z-10 px-0 t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto">
             <div className="w-100 mx-auto pt-3 text-center">
               <div className="xl:flex md:flex lg:flex min-h-screen">
-                <div className="w-40 xs:w-90 pt-48">
+                <div className="w-40 xs:w-90 py-48 xs:py-12 xs:mx-auto">
                   <img src={"/img/Untitled-1.png"} className="" />
                 </div>
 
