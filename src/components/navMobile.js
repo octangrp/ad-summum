@@ -49,7 +49,7 @@ class NavMobile extends React.Component {
 
         <div
           className={[
-            "xl:hidden lg:hidden w-100 h-100 fixed z-999",
+            "xl:hidden md:hidden lg:hidden w-100 h-100 fixed z-999",
             !this.state.show ? "hidden" : null,
           ].join(" ")}
         >
@@ -62,7 +62,7 @@ class NavMobile extends React.Component {
                 <FontAwesomeIcon icon={["far", "times-circle"]} />
               </span>
             </div>
-            <ul className="py-2 text-left text-white pt-2 -mt-3 p-0 pb-3 mx-auto w-80 relative xl:hidden lg:hidden">
+            <ul className="py-2 text-left text-white pt-2 -mt-3 p-0 pb-3 mx-auto w-80 relative xl:hidden lg:hidden md:hidden">
               {this.props.items.map((item, index) => (
                 <li
                   key={index}
