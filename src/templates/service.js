@@ -23,7 +23,7 @@ class Service extends Component {
             <div className="w-100 mx-auto pt-3 text-center">
               <div className="xl:flex md:flex lg:flex sm:flex sm:pt-12 min-h-screen">
                 <div className="w-40 xs:w-90 py-18 sm:py-18 xs:py-12 xs:mx-auto">
-                  <h1 className="xs:pt-8 md:pt-8 sm:pt-2 text-9xl text-left ml-auto xs:hidden sm:hidden xs:text-3xl md:text-sm sm:text-2xl w-90 xs:w-90 text-primary">
+                  <h1 className="xs:pt-8 md:pt-8 sm:pt-2 text-9xl mx-auto xs:hidden sm:hidden xs:text-3xl md:text-sm sm:text-2xl w-90 xs:w-90 text-primary">
                     <img
                       src={Logo}
                       className="clip-full"
