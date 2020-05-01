@@ -15,10 +15,10 @@ const Main = props => (
         <div className="w-55 xs:w-100 xs:pt-0">
           <div className=" xs:pt-0">
             <div className="w-90 h-px-500 text-lg xs:pt-0 xs:w-100 font-light">
-              <h1 className="p-12 xs:pt-8 md:pt-8 sm:pt-2 text-9xl xs:text-3xl md:text-sm sm:text-2xl w-95 xs:w-90 text-primary">
+              <h1 className=" xs:pt-8 md:pt-8 sm:pt-2 text-9xl xs:text-3xl md:text-sm sm:text-2xl w-95 xs:w-90 text-primary">
                 <img src={Logo} className="clip-full" alt="" className="w-35" />
               </h1>
-              <div className="xl:leading-loose xs:text-base md:text-sm sm:text-sm xs:w-90">
+              <div className="xl:leading-loose xl:text-base xs:text-base md:text-sm sm:text-sm xs:w-90">
                 {ReactHtmlParser(props.children)}
               </div>
             </div>
