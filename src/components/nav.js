@@ -8,14 +8,14 @@ class Navbar extends React.Component {
     return (
       <nav className="z-99 transition-500ms xs:hidden w-100 text-primary fixed bg-white m-0 t-0 l-0 r-0  border-0 border-b-1 border-solid border-primary ">
         <div className="xl:w-90 lg:w-90 xs:w-90 sm:w-90 md:w-90 flex mx-auto py-0 mx-0">
-          <ul className="list text-left w-60 lg:w-90  mr-auto p-0 m-0 hidden xl:block lg:block md:block px-0 mr-0  text-sm">
+          <ul className="list text-left w-85 lg:w-90  mr-auto p-0 m-0 hidden xl:block lg:block md:block px-0 mr-0  text-sm">
             {/* <li className="inline-block  text-center m-0 py-0 text-base pr-2">
           <img src={Logo} alt="ad-summum-logo" width="70" />
         </li> */}
             {this.props.items.map((item, index) => (
               <li
                 key={index}
-                className="inline-block  text-center m-0 py-4 md:py-3 text-base hover:bg-primary hover:text-white"
+                className="inline-block  text-center m-0 py-4 w-20 md:py-3 text-base hover:bg-primary hover:text-white"
               >
                 <Link
                   to={item.link}
