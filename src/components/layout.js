@@ -32,14 +32,25 @@ const Layout = ({ children }) => {
           phone_number
         }
       }
+      navbar: allWordpressWpApiMenusMenusItems {
+        translations: nodes {
+          id
+          lang: name
+          slug
+          items {
+            url
+            title
+          }
+        }
+      }
     }
   `)
 
   return (
     <>
       <div className="relative">
-        <Navbar />
-        <NavMobile />
+        <Navbar details={data.navbar} />
+        <NavMobile details={data.navbar} />
         <main className="relative">{children}</main>
         <Footer
           siteTitle={data.site.name}

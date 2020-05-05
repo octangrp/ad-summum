@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { connect } from "react-redux"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
+import Translator from "../utils/translator"
 class NavMobile extends React.Component {
   constructor(props) {
     super(props)
@@ -21,16 +21,19 @@ class NavMobile extends React.Component {
   }
 
   render() {
+    const menu = Translator.process(
+      this.props.lang,
+      this.props.details.translations
+    )
     return (
       <div className="relative">
         <nav className="z-99 w-100 text-primary border-primary border-solid border-0 border-b-1 absolute xl:hidden lg:hidden md:hidden m-0 t-0 l-0 r-0">
           <div className="w-90 flex mx-auto py-2 mx-0">
             <ul className="w-50 list mx-0 px-0 text-left">
               <li className="w-25 xs:w-50 text-black mx-0 px-0">
-                <a href="#">
-                  {" "}
+                <Link to="/">
                   <img src={"/img/logo.png"} className="w-50" />
-                </a>
+                </Link>
               </li>
             </ul>
 
@@ -63,17 +66,17 @@ class NavMobile extends React.Component {
               </span>
             </div>
             <ul className="py-2 text-left text-white pt-2 -mt-3 p-0 pb-3 mx-auto w-80 relative xl:hidden lg:hidden md:hidden">
-              {this.props.items.map((item, index) => (
+              {menu.items.map((item, index) => (
                 <li
                   key={index}
                   className="inline-block  text-center m-0 py-4 text-base hover:bg-primary hover:text-white"
                   onClick={() => this.closeNav()}
                 >
                   <Link
-                    to={item.link}
+                    to={item.url}
                     className="inherit-color  px-12 no-underline leading-none"
                   >
-                    {item.label}
+                    {item.title}
                   </Link>
                 </li>
               ))}
@@ -131,4 +134,18 @@ NavMobile.defaultProps = {
   ],
 }
 
-export default NavMobile
+const mapStateToProps = state => ({
+  lang: state.lang,
+})
+
+const mapDispatchToProps = dispatch => {
+  return {
+    switchLanguage: lang =>
+      dispatch({
+        type: "SET_LANGUAGE",
+        lang: lang,
+      }),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavMobile)
