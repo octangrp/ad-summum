@@ -32,12 +32,12 @@ class Service extends Component {
                     />
                   </h1>
 
-                  <img src={"/img/Untitled-1.png"} className="" />
+                  <img src={"/img/Untitled-1.png"} className="w-80" />
                 </div>
 
                 <div className="w-60 xs:w-100 py-32 sm:py-12 xs:py-12 bg-primary-dark text-left text-white">
                   <div className="px-16">
-                    <h1 className="p-0 m-0 text-9xl sm:text-xl xs:text-2xl font-primary pb-24 xs:pb-0">
+                    <h1 className="p-0 m-0 text-5xl sm:text-2xl xs:text-2xl font-primary pb-24 xs:pb-0">
                       {post.title}
                     </h1>
                     <div className="text-left font-light leading-normal py-6 m-0 xs:text-sm sm:text-sm text-lg">
