@@ -11,13 +11,24 @@ const SectionWrapper = props => (
     ].join(" ")}
   >
     <div className="min-h-screen relative">
-      <div className="xs:block align-items-end relative w-90 mx-auto">
+      <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto  py-12">
         <div className=" xs:pt-0 ">
-          <div className="leafing-loose text-xl text-left text-light xs:pt-0 xs:w-100 ">
-            <h1 className="text-center font-semiBold text-6xl my-0 py-12 xs:pb-0">
+          <div className="leading-loosexs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100">
+            <h1 className="text-center font-semiBold text-6xl xs:text-3xl sm:text-xl md:text-3xl my-0 pb-12 xs:pb-12">
               {props.title}
             </h1>
-            <div className="text-lg font-light section-content mt-5">
+            <p
+              className={[
+                "text-base text-center w-80 xs:w-100 p-0 m-0 mx-auto xs:text-sm pb-32 ",
+                !props.showSubtitle ? "hidden" : null,
+              ].join(" ")}
+            >
+              ASC Ltd brings together with professional skills and extensive
+              experience in the areas of central banking, commercial banking and
+              financial system in general, legal issues and those related to
+              information technology and organization.
+            </p>
+            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0">
               {props.children}
             </div>
           </div>
@@ -30,11 +41,13 @@ const SectionWrapper = props => (
 SectionWrapper.propTypes = {
   title: PropTypes.string,
   backgroundClass: PropTypes.string,
+  showSubtitle: PropTypes.bool,
 }
 
 SectionWrapper.defaultProps = {
   title: ``,
   backgroundClass: `bg-white text-black`,
+  showSubtitle: true,
 }
 
 export default SectionWrapper

@@ -128,6 +128,8 @@ export const queries = graphql`
       filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
     ) {
       members: nodes {
+        id
+        slug
         translations: polylang_translations {
           lang: polylang_current_lang
           id

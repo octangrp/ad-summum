@@ -1,8 +1,5 @@
-import store from "../state/createStore"
-
 class Translator {
   static process(lang = "en_US", array) {
-    console.log(array)
     let translation = this.findTranslation(lang, array)
     return translation.lang ? translation : this.findTranslation("en_US", array)
   }
