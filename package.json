@@ -26,7 +26,7 @@
     "lint-staged": "^10.1.7",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
-    "og-css": "^3.0.3",
+    "og-css": "^3.0.4",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
