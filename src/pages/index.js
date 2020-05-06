@@ -25,6 +25,21 @@ class IndexPage extends React.Component {
       this.props.data.aboutUs.translations
     )
 
+    const servicesSection = Translator.process(
+      this.props.lang,
+      this.props.data.servicesSection.translations
+    )
+
+    const teamSection = Translator.process(
+      this.props.lang,
+      this.props.data.teamSection.translations
+    )
+
+    const valuesSection = Translator.process(
+      this.props.lang,
+      this.props.data.valuesSection.translations
+    )
+
     return (
       <Layout>
         <SEO title="Home" />
@@ -41,16 +56,23 @@ class IndexPage extends React.Component {
         <AnimationWrapper>
           <Service
             id="services"
-            title={this.props.data.serviceCategory.title}
+            title={servicesSection.title}
+            description={servicesSection.description}
             services={this.props.data.services.list}
           ></Service>
         </AnimationWrapper>
         <AnimationWrapper>
-          <Team id="team" members={this.props.data.team.members} />
+          <Team
+            id="team"
+            title={teamSection.title}
+            description={teamSection.description}
+            members={this.props.data.team.members}
+          />
         </AnimationWrapper>
         <AnimationWrapper>
           <Value
-            title="Gakindi Vincent"
+            title={valuesSection.title}
+            description={valuesSection.description}
             values={this.props.data.values.list}
           ></Value>
         </AnimationWrapper>
@@ -111,18 +133,21 @@ export const queries = graphql`
         }
       }
     }
-    serviceCategory: wordpressCategory(slug: { eq: "services" }) {
-      title: name
-    }
-    discoverContent: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "discover" } } } }
-    ) {
-      list: nodes {
-        content
+    servicesSection: wordpressPost(slug: { eq: "services-section" }) {
+      translations: polylang_translations {
+        lang: polylang_current_lang
+        id
+        title
+        description: content
       }
     }
-    discoverCategory: wordpressCategory {
-      title: name
+    teamSection: wordpressPost(slug: { eq: "team-section" }) {
+      translations: polylang_translations {
+        lang: polylang_current_lang
+        id
+        title
+        description: content
+      }
     }
     team: allWordpressPost(
       filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
@@ -143,6 +168,14 @@ export const queries = graphql`
             url: source_url
           }
         }
+      }
+    }
+    valuesSection: wordpressPost(slug: { eq: "values-section" }) {
+      translations: polylang_translations {
+        lang: polylang_current_lang
+        id
+        title
+        description: content
       }
     }
     values: allWordpressPost(
