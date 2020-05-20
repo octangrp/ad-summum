@@ -16,6 +16,7 @@ class Service extends React.Component {
       <SectionWrapper
         id={this.props.id}
         title={this.props.title}
+        description={this.props.description}
         backgroundClass="bg-white text-black"
       >
         <div className="xl:flex md:flex lg:flex sm:flex flex-wrap justify-center text-center w-100">
@@ -29,14 +30,16 @@ class Service extends React.Component {
 }
 
 Service.propTypes = {
-  siteTitle: PropTypes.string,
-  services: PropTypes.array,
   id: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  services: PropTypes.array,
 }
 
 Service.defaultProps = {
-  siteTitle: ``,
   id: null,
+  title: ``,
+  description: ``,
   services: [],
 }
 

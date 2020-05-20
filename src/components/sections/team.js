@@ -44,7 +44,8 @@ class Team extends React.Component {
     return (
       <SectionWrapper
         id={this.props.id}
-        title="Our Team"
+        title={this.props.title}
+        description={this.props.description}
         backgroundClass="bg-grey-lightest text-black"
       >
         <div className="w-100 relative text-center">
@@ -75,11 +76,13 @@ class Team extends React.Component {
 
 Team.propTypes = {
   title: PropTypes.string,
+  description: PropTypes.string,
   members: PropTypes.array,
 }
 
 Team.defaultProps = {
   title: ``,
+  description: ``,
   members: [],
 }
 
