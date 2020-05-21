@@ -46,16 +46,16 @@ class TeamList extends React.Component {
         id={this.props.id}
         title={this.props.title}
         description={this.props.description}
-        backgroundClass="bg-grey-lightest text-black"
+        backgroundClass="bg-white text-black"
       >
-        <div className="w-100 relative text-center">
+        <div className="w-100 relative">
           {this.props.members.map((member, index) => (
             <div
-              className="mx-4 xs:mx-0 sm:mx-2 pt-12 w-25 md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer"
+              className="mx-4 xs:mx-0 sm:mx-2 pt-12 w-30 md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer relative pb-24 mr-5"
               key={index}
             >
               <div
-                className="w-100 xs:hidden sm:hidden"
+                className="w-100 xs:hidden relative sm:hidden"
                 onClick={() => this.showMember(index)}
               >
                 <Member details={member} />
