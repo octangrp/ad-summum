@@ -20,7 +20,7 @@ const SectionWrapper = props => (
             <SectionTitle>{props.title}</SectionTitle>
             <div
               className={[
-                "text-base font-secondary w-50 tracking-wide ",
+                "text-base font-secondary w-50 tracking-wider leading-relaxed",
                 !props.showSubtitle ? "hidden" : null,
               ].join(" ")}
             >

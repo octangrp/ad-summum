@@ -20,7 +20,7 @@ const Main = props => (
           <div className=" xs:pt-0">
             <div className="w-90 h-px-500 text-lg xs:pt-0 xs:w-100 font-normal tracking-wide">
               <Logo />
-              <div className="xl:leading-loose xl:text-lg xs:text-base md:text-sm sm:text-sm xs:w-90">
+              <div className="xl:leading-relaxed tracking-wider xl:text-lg xs:text-base md:text-sm sm:text-sm xs:w-90">
                 {ReactHtmlParser(props.children)}
               </div>
             </div>

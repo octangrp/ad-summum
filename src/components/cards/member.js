@@ -15,7 +15,7 @@ class Member extends React.Component {
           <img src={details.image.url} alt="team-member" class="clip-full" />
         </div>
         <div className="bg-primary  text-white p-4 absolute r-10 -b-5 w-80">
-          <h5 className="mb-0 mt-0 text-xl my-0 uppercase text-center">
+          <h5 className="mb-0 mt-0 text-xl my-0 uppercase text-center leading-relaxed">
             {details.name}
           </h5>
           <div className="text-right relative">
