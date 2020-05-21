@@ -24,7 +24,7 @@ class Navbar extends React.Component {
               >
                 <Link
                   to={item.url}
-                  className="inherit-color  px-6 no-underline leading-sm uppercase"
+                  className="inherit-color  px-6 no-underline leading-sm uppercase track-wide"
                 >
                   {item.title}
                 </Link>
