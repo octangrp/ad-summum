@@ -13,7 +13,7 @@ const Service = props => (
           </div>
         </div>
         <div className="w-60 my-auto border-0 border-b-1 border-r-1  border-solid border-primary">
-          <div className="text-left my-auto py-4 px-4">
+          <div className="text-left my-auto p-12">
             <h1 className="text-xl font-primary font-semibold">ABOUT US</h1>
             <div className=" w-20 border-1 border-grey-light border-solid"></div>
             <p className="text-sm w-70">
@@ -22,6 +22,11 @@ const Service = props => (
               financial system in general, legal issues and those related to
               information technology and organization.
             </p>
+            <div className="w-30 pt-6 text-right ml-auto">
+              <button class="btn bg-none  py-2 px-4 text-black border-1 border-solid border-black text-xs text-light mx-auto">
+                Read More
+              </button>
+            </div>
           </div>
         </div>
       </div>
