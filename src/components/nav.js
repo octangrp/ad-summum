@@ -27,7 +27,7 @@ class Navbar extends React.Component {
               </li>
             ))}
           </ul>
-          <ul className="list w-10 text-left font-semibold mr-auto hidden xl:block lg:block px-0 mr-0  text-sm ">
+          <ul className="list w-20 text-left font-semibold mr-auto hidden xl:block lg:block px-0 mr-0  text-sm ">
             <li className="inline-block  m-0 py-4 px-3 text-xs">
               <img
                 src={"/img/united-states.svg"}
