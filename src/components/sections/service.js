@@ -34,7 +34,9 @@ class Service extends React.Component {
           <div className="w-70 absolute r-0 t-0 h-100">
             <img src={"/img/tim.png"} className="clip-full relative" />
             <div className="absolute r-5 b-5 text-right">
-              <Link className="uppercase text-white text-base">View more</Link>
+              <Link to="services" className="uppercase text-white text-base">
+                View more
+              </Link>
             </div>
           </div>
         </div>
