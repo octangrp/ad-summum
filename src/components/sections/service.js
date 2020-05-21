@@ -24,7 +24,7 @@ class Service extends React.Component {
               <div className="w-100 my-auto relative">
                 <div className="text-left my-auto">
                   <SectionTitle>{this.props.title}</SectionTitle>
-                  <div className="text-lg font-secondary w-100 tracking-wide">
+                  <div className="text-lg font-secondary w-100 tracking-wider leading-relaxed">
                     {ReactHtmlParser(this.props.description)}
                   </div>
                 </div>
@@ -34,7 +34,12 @@ class Service extends React.Component {
           <div className="w-70 absolute r-0 t-0 h-100">
             <img src={"/img/tim.png"} className="clip-full relative" />
             <div className="absolute r-5 b-5 text-right">
-              <Link className="uppercase text-white text-base">View more</Link>
+              <Link
+                to="services"
+                className="uppercase text-white text-base tracking-wider"
+              >
+                View more
+              </Link>
             </div>
           </div>
         </div>

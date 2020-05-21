@@ -27,10 +27,10 @@ const Team = props => (
           <img src={"/img/tim2.png"} className="clip-full relative" />
           <div className="absolute flex w-90 b-5 l-5">
             <div classsName="w-80 mx-auto">
-              <h2 className="p-0 m-0 font-primary font-bold text-3xl track-wider text-white uppercase">
+              <h2 className="p-0 m-0 font-primary font-bold text-3xl track-wider text-white uppercase leading-relaxed">
                 We behind all this
               </h2>
-              <p className="pt-2 m-0 font-primary text-sm text-white">
+              <p className="pt-2 m-0 font-primary text-sm text-white leading-relaxed">
                 ASC Ltd brings together with professional skills and extensive
                 experience in the areas of central banking, commercial banking
                 and financial.

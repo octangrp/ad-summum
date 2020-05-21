@@ -14,13 +14,13 @@ class Member extends React.Component {
         <div className="h-rem-84 w-rem-74 sm:h-64 sm:w-rem-64 xxs:h-48 xxs:w-rem-48 overflow-hidden relative centered  mb-0">
           <img src={details.image.url} alt="team-member" class="clip-full" />
         </div>
-        <div className="bg-primary  text-white py-3 absolute r-10 -b-5 w-80">
-          <h5 className="mb-2 mt-0 text-lg xs:text-xl md:text-xl sm:text-lg mx-5 my-0">
+        <div className="bg-primary  text-white p-4 absolute r-10 -b-5 w-80">
+          <h5 className="mb-0 mt-0 text-xl my-0 uppercase text-center leading-relaxed">
             {details.name}
           </h5>
           <div className="text-right relative">
-            <div className="line absolute bg-white mt-5 inline-block"></div>
-            <p className="font-light text-base xs:text-base md:text-base sm:text-sm my-2 inline-block mx-8">
+            <div className="line absolute bg-white mt-3 inline-block"></div>
+            <p className="text-lg xs:text-base md:text-base sm:text-sm my-0 inline-block mx-8">
               {details.attributes.position}
             </p>
           </div>
