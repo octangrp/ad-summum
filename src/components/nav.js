@@ -2,10 +2,14 @@ import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import PropTypes from "prop-types"
 import React from "react"
 import { connect } from "react-redux"
-import Logo from "../images/logo.png"
+import Translator from "../utils/translator"
 
 class Navbar extends React.Component {
   render() {
+    const menu = Translator.process(
+      this.props.lang,
+      this.props.details.translations
+    )
     return (
       <nav className="z-99 transition-500ms w-100 text-black fixed bg-white m-0 t-0 l-0 r-0 ">
         <div className="xl:w-90 lg:w-90 xs:w-90 sm:w-90 md:w-90 flex mx-auto py-0 mx-0">
@@ -13,22 +17,22 @@ class Navbar extends React.Component {
             {/* <li className="inline-block  text-center m-0 py-0 text-base pr-2">
               <img src={Logo} alt="ad-summum-logo" width="50" />
             </li> */}
-            {this.props.items.map((item, index) => (
+            {menu.items.map((item, index) => (
               <li
                 key={index}
-                className="inline-block  text-center m-0 py-4 text-sm "
+                className="inline-block  text-center m-0 py-4 text-base "
               >
                 <Link
-                  to={item.link}
-                  className="inherit-color  px-6 no-underline leading-sm"
+                  to={item.url}
+                  className="inherit-color  px-6 no-underline leading-sm uppercase"
                 >
-                  {item.label}
+                  {item.title}
                 </Link>
               </li>
             ))}
           </ul>
-          <ul className="list w-20 text-left font-semibold mr-auto hidden xl:block lg:block px-0 mr-0  text-sm ">
-            <li className="inline-block  m-0 py-4 px-3 text-xs">
+          <ul className="list text-left font-semibold hidden xl:block lg:block px-0 mr-0  text-sm ">
+            <li className="inline-block  m-0 py-3 px-3 text-sm">
               <img
                 src={"/img/united-states.svg"}
                 width="20"
@@ -36,9 +40,9 @@ class Navbar extends React.Component {
                 className="cursor-pointer"
                 alt="english-language"
               />
-              <span classNaeme="pl-2">EN</span>
+              <span className="pl-2 pt-3">EN</span>
             </li>
-            <li className="inline-block m-0 py-4 px-3 text-xs ">
+            <li className="inline-block m-0 py-4 px-3 text-sm ">
               <img
                 src={"/img/france.svg"}
                 width="20"
@@ -46,7 +50,7 @@ class Navbar extends React.Component {
                 className="cursor-pointer"
                 alt="french-language"
               />
-              FR
+              <span className="pl-2">FR</span>
             </li>
           </ul>
         </div>
@@ -57,34 +61,17 @@ class Navbar extends React.Component {
 
 Navbar.propTypes = {
   siteTitle: PropTypes.string,
-  items: PropTypes.array,
+  details: PropTypes.array,
 }
 
 Navbar.defaultProps = {
   siteTitle: ``,
-  items: [
-    {
-      label: "HOME",
-      link: "/",
-    },
-    {
-      label: "TEAM",
-      link: "/#team",
-    },
-    {
-      label: "SERVICES",
-      link: "/#services",
-    },
-    {
-      label: "ABOUT US",
-      link: "/#about-us",
-    },
-    {
-      label: "AS BULLETIN",
-      link: "/#bulletin",
-    },
-  ],
+  details: [],
 }
+
+const mapStateToProps = state => ({
+  lang: state.lang,
+})
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -96,4 +83,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(Navbar)
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)

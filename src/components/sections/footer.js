@@ -13,13 +13,13 @@ const Footer = ({ siteTitle, address, phoneNumber, email }) => (
         <div className="w-50">
           <p>{email}</p>
         </div>
-        <div className="w-50 xs:w-100 text-right">
+        <div className="w-50 xs:w-100 text-right text-lg">
           <p>{address}</p>
           <p>{phoneNumber}</p>
         </div>
       </div>
     </div>
-    <div className="w-100 bg-primary-darker text-center py-2 text-sm text-white">
+    <div className="w-100 bg-black opacity-30 text-center py-3 text-sm text-white">
       © 2020 {siteTitle}.
     </div>
   </div>
