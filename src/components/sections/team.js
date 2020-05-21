@@ -41,9 +41,11 @@ const Team = props => (
               </p>
             </div>
             <div className="w-20 text-right my-auto">
-              <button class="btn bg-none  py-2 px-4 text-white border-1 border-solid border-white text-xs text-light mx-auto">
-                Read More
-              </button>
+              <Link to="team">
+                <button class="btn bg-none  py-2 px-4 text-white border-1 border-solid border-white text-xs text-light mx-auto">
+                  Read More
+                </button>
+              </Link>
             </div>
           </div>
         </div>
