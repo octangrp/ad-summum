@@ -1,89 +1,65 @@
 import PropTypes from "prop-types"
 import React from "react"
-import Member from "../cards/member"
-import MemberExpanded from "../cards/memberExpanded"
-import SectionWrapper from "./sectionWrapper"
+import ReactHtmlParser from "react-html-parser"
 import { Link } from "gatsby"
 
-class Team extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      index: 0,
-      showModal: false,
-    }
-    this.showMember = this.showMember.bind(this)
-    this.closeModal = this.closeModal.bind(this)
-  }
-
-  showMember(index) {
-    this.setState({ index: index })
-    this.setState({ showModal: true })
-  }
-
-  currentMember() {
-    return this.props.members[this.state.index]
-  }
-
-  closeModal() {
-    return this.setState({ showModal: false })
-  }
-
-  renderModal() {
-    if (this.state.showModal) {
-      return (
-        <MemberExpanded
-          details={this.currentMember()}
-          onCloseModal={this.closeModal}
-        />
-      )
-    }
-    return null
-  }
-  render() {
-    return (
-      <SectionWrapper
-        id={this.props.id}
-        title={this.props.title}
-        description={this.props.description}
-        backgroundClass="bg-grey-lightest text-black"
-      >
-        <div className="w-100 relative text-center">
-          {this.props.members.map((member, index) => (
-            <div
-              className="mx-4 xs:mx-0 sm:mx-2 pt-12 w-25 md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer"
-              key={index}
-            >
-              <div
-                className="w-100 xs:hidden sm:hidden"
-                onClick={() => this.showMember(index)}
-              >
-                <Member details={member} />
-              </div>
-              <div class="hidden xs:block sm:block">
-                <Link to={`/members/${member.slug}`}>
-                  <Member details={member} />
-                </Link>
-              </div>
-            </div>
-          ))}
+const Team = props => (
+  <div className="w-100 relative bg-grey-lightest">
+    <div className="w-85 mx-auto py-16 relative">
+      <div className="flex ">
+        <div className="w-40">
+          <div className="text-left">
+            <img src={"/img/logo-full.png"} className="w-60" />
+          </div>
         </div>
-        {this.renderModal()}
-      </SectionWrapper>
-    )
-  }
-}
+        <div className="w-60 my-auto">
+          <div className="text-left my-auto">
+            <h1 className="text-xl font-primary font-semibold">OUR TEAM</h1>
+            <div className=" w-20 border-1 border-grey-light border-solid"></div>
+            <p className="text-sm w-60">
+              ASC Ltd brings together with professional skills and extensive
+              experience in the areas of central banking, commercial banking and
+              financial system in general, legal issues and those related to
+              information technology and organization.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="">
+        <div className="mx-auto pt-16 relative">
+          <img src={"/img/tim2.png"} className="clip-full relative" />
+          <div className="absolute flex w-90 b-5 l-5">
+            <div classsName="w-80 mx-auto">
+              <h2 className="p-0 m-0 font-primary text-white">
+                We behind all this
+              </h2>
+              <p className="pt-2 m-0 font-primary text-sm text-white">
+                ASC Ltd brings together with professional skills and extensive
+                experience in the areas of central banking, commercial banking
+                and financial.
+              </p>
+            </div>
+            <div className="w-20 text-right my-auto">
+              <button class="btn bg-none  py-2 px-4 text-white border-1 border-solid border-white text-xs text-light mx-auto">
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+)
 
 Team.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  members: PropTypes.array,
+  siteTitle: PropTypes.string,
+  buttonText: PropTypes.string,
 }
 
 Team.defaultProps = {
-  title: ``,
-  description: ``,
-  members: [],
+  siteTitle: ``,
+  buttonText: `Read more`,
 }
 
 export default Team

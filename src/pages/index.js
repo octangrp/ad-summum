@@ -49,11 +49,6 @@ class IndexPage extends React.Component {
           </Main>
         </AnimationWrapper>
         <AnimationWrapper>
-          <More id="about-us" title={aboutUs.title}>
-            {aboutUs.description}
-          </More>
-        </AnimationWrapper>
-        <AnimationWrapper>
           <Service
             id="services"
             title={servicesSection.title}
@@ -62,20 +57,21 @@ class IndexPage extends React.Component {
           ></Service>
         </AnimationWrapper>
         <AnimationWrapper>
-          <Team
-            id="team"
-            title={teamSection.title}
-            description={teamSection.description}
-            members={this.props.data.team.members}
-          />
+          <Team id="team" title={teamSection.title} />
         </AnimationWrapper>
         <AnimationWrapper>
+          <More id="about-us" title={aboutUs.title}>
+            {aboutUs.description}
+          </More>
+        </AnimationWrapper>
+
+        {/* <AnimationWrapper>
           <Value
             title={valuesSection.title}
             description={valuesSection.description}
             values={this.props.data.values.list}
           ></Value>
-        </AnimationWrapper>
+        </AnimationWrapper> */}
       </Layout>
     )
   }
