@@ -14,14 +14,10 @@ class ValueCard extends React.Component {
       <div className="pt-12 xl:w-30 xs:mx-auto lg:w-45 md:w-45 sm:w-45 md:mr-2 xs:w-80 rounded-lg overflow-hidden bg-grey xl:inline-block lg:inline-block md:inline-block sm:inline-block sm:m-2 xl:m-2 lg:m-2 ">
         <div className="panel-body bg-grey text-center pt-2 px-0">
           <h5 className="text-3xl md:text-xl sm:text-lg text-center my-2">
-            {/* {details.title} */}
-            Excellence
+            {details.title}
           </h5>
           <div className="w-100 text-center font-light text-lg md:text-base sm:text-sm">
-            {/* {ReactHtmlParser(details.description)} */}
-            ASC Ltd translates and revises documents from a wide variety of
-            fields, notably economic, financial, banking, legal and IT &
-            Organization.
+            {ReactHtmlParser(details.description)}
           </div>
         </div>
       </div>

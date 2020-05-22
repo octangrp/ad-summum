@@ -4,6 +4,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Translator from "../utils/translator"
+
 class NavMobile extends React.Component {
   constructor(props) {
     super(props)
