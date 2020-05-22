@@ -7,7 +7,7 @@ import SectionTitle from "../section-title"
 import TruncateHtml from "../utilities/TruncateHtml"
 
 const Service = props => (
-  <div className="w-100 relative bg-white relative">
+  <div id={props.id} className="w-100 relative bg-white relative">
     <div className="w-100 ml-auto relative overflow-hidden">
       <div className="flex w-85 mx-auto py-32">
         <div className="w-40">

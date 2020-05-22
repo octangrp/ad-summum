@@ -13,8 +13,11 @@ class ServiceCard extends React.Component {
     )
     return (
       <div className="w-30 xs:w-100 mb-10 mx-auto hover:shadow p-8 pb-18 relative hover:shadow-lg cursor-pointer transition-500ms border-1 border-solid boder-grey-lightest">
-        <div className="w-100 relative">
-          <img src={details.image ? details.image.url : ""} />
+        <div className="w-100 relative text-left mb-6">
+          <img
+            src={details.image ? details.image.url : ""}
+            className="w-rem-16"
+          />
         </div>
         <div className="text-left text-black mx-auto relative pb-12">
           <h4 className="text-xl text-grey-darker uppercase my-2 tracking-wider font-primary">

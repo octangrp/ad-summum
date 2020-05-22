@@ -6,7 +6,7 @@ import Logo from "../logo"
 import SectionTitle from "../section-title"
 
 const Team = props => (
-  <div className="w-100 relative bg-grey-lightest py-16">
+  <div id={props.id} className="w-100 relative bg-grey-lightest py-16">
     <div className="w-85 mx-auto  relative">
       <div className="flex ">
         <div className="w-40">
@@ -15,7 +15,7 @@ const Team = props => (
         <div className="w-60 my-auto">
           <div className="text-left my-auto">
             <SectionTitle>{props.title}</SectionTitle>
-            <div className="text-base font-secondary w-100 tracking-wide">
+            <div className="text-base font-secondary w-100 tracking-wider leading-relaxed">
               {ReactHtmlParser(props.description)}
             </div>
           </div>

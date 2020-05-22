@@ -26,7 +26,9 @@ class Service extends Component {
                   <div className="inline-block mx-auto mb-3">
                     <Logo />
                   </div>
-                  <img src={"/img/Untitled-1.png"} className="w-80" />
+                  <div className="w-100 pt-5">
+                    <img src={post.image.url} className="w-50" />
+                  </div>
                 </div>
 
                 <div className="w-60 xs:w-100 py-32 sm:py-12 xs:py-12 bg-grey-lighter text-left text-black">
@@ -66,6 +68,9 @@ export const postQuery = graphql`
         lang: polylang_current_lang
         title
         content
+        image: featured_media {
+          url: source_url
+        }
       }
     }
     site {

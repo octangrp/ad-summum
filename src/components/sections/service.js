@@ -15,7 +15,7 @@ class Service extends React.Component {
 
   render() {
     return (
-      <div className="w-100 relative bg-white relative">
+      <div id={this.props.id} className="w-100 relative bg-white relative">
         <div className="w-100 ml-auto  relative overflow-hidden">
           <div className="w-100 h-100 bg-white absolute t-10 z-5 rotate-60deg -l-30" />
           <div className="w-50 relative z-10">
@@ -32,13 +32,12 @@ class Service extends React.Component {
             </div>
           </div>
           <div className="w-70 absolute r-0 t-0 h-100">
-            <img src={"/img/tim.png"} className="clip-full relative" />
+            <img src={this.props.image.url} className="clip-full relative" />
             <div className="absolute r-5 b-5 text-right">
-              <Link
-                to="services"
-                className="uppercase text-white text-base tracking-wider"
-              >
-                View more
+              <Link to="services">
+                <button class="btn bg-white text-black  py-2 px-4 text-sm text-light mx-auto">
+                  Read More
+                </button>
               </Link>
             </div>
           </div>
