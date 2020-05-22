@@ -49,15 +49,17 @@ class MemberExpanded extends React.Component {
                     </div>
                   </div>
                   <div className="w-100 z-5 relative">
-                    <h4 className="text-5xl mt-0 mb-0 text-primary-darkest font-primary">
+                    <h4 className="text-2xl mt-0 mb-0 text-primary-darkest font-bold font-primary tracking-wider uppercase">
                       {details.name}
                     </h4>
                     <div className="">
-                      <h5 className="text-2xl m-0 xs:text-sm p-0 md:text-base text-grey-darker">
+                      <h5 className="text-xl m-0 xs:text-sm p-0 md:text-base font-semibold text-grey-darker tracking-wider">
                         {details.attributes.position}
                       </h5>
                       <TruncateMarkup lines={6}>
-                        <div>{ReactHtmlParser(details.description)}</div>
+                        <div className="font-normal text-lg tracking-wider">
+                          {ReactHtmlParser(details.description)}
+                        </div>
                       </TruncateMarkup>
                     </div>
                   </div>
