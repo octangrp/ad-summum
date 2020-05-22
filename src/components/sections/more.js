@@ -22,9 +22,11 @@ const Service = props => (
               </TruncateHtml>
             </div>
             <div className="w-30 pt-12 text-right ml-auto">
-              <button class="btn btn-outline-primary hover:text-white focus:text-white py-2 px-4 text-primary text-sm text-light mx-auto">
-                Read More
-              </button>
+              <Link to="about">
+                <button class="btn btn-outline-primary hover:text-white focus:text-white py-2 px-4 text-primary text-sm text-light mx-auto">
+                  Read More
+                </button>
+              </Link>
             </div>
           </div>
         </div>
