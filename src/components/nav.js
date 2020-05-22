@@ -34,7 +34,7 @@ class Navbar extends React.Component {
           <ul className="list text-left font-semibold hidden xl:block lg:block px-0 mr-0  text-sm ">
             <li className="inline-block  m-0 py-3 px-3 text-sm">
               <img
-                src={"/img/united-states.svg"}
+                src={"/img/england.svg"}
                 width="20"
                 onClick={() => this.props.switchLanguage("en_US")}
                 className="cursor-pointer"

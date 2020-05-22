@@ -65,6 +65,8 @@ class IndexPage extends React.Component {
             id="team"
             title={teamSection.title}
             description={teamSection.description}
+            caption={teamSection.caption}
+            image={teamSection.image}
           />
         </AnimationWrapper>
         <AnimationWrapper>
@@ -126,6 +128,9 @@ export const queries = graphql`
         id
         title
         description: content
+        button: acf {
+          text: button_text
+        }
         image: featured_media {
           url: source_url
         }
@@ -137,26 +142,15 @@ export const queries = graphql`
         id
         title
         description: content
-      }
-    }
-    team: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
-    ) {
-      members: nodes {
-        id
-        slug
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          id
-          slug
-          name: title
-          description: content
-          attributes: acf {
-            position
-          }
-          image: featured_media {
-            url: source_url
-          }
+        button: acf {
+          text: button_text
+        }
+        caption: acf {
+          title: picture_title
+          subtitle: picture_subtitle
+        }
+        image: featured_media {
+          url: source_url
         }
       }
     }

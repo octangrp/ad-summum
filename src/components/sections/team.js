@@ -24,17 +24,15 @@ const Team = props => (
 
       <div className="pb-6">
         <div className="mx-auto pt-6 relative">
-          <img src={"/img/tim2.png"} className="clip-full relative" />
-          <div className="absolute flex w-90 b-5 l-5">
-            <div classsName="w-80 mx-auto">
+          <img src={props.image.url} className="clip-full relative" />
+          <div className="absolute flex w-100 b-0 l-0 image-gradient px-12 pt-16 pb-12">
+            <div className="w-80 mx-auto ">
               <h2 className="p-0 m-0 font-primary font-bold text-3xl track-wider text-white uppercase leading-relaxed">
-                We behind all this
+                {props.caption.title}
               </h2>
-              <p className="pt-2 m-0 font-primary text-sm text-white leading-relaxed">
-                ASC Ltd brings together with professional skills and extensive
-                experience in the areas of central banking, commercial banking
-                and financial.
-              </p>
+              <div className="pt-2 m-0 font-primary text-sm text-white leading-relaxed">
+                {ReactHtmlParser(props.caption.subtitle)}
+              </div>
             </div>
             <div className="w-20 text-right my-auto">
               <Link to="team">
