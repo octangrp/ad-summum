@@ -7,7 +7,7 @@ import ReactHtmlParser from "react-html-parser"
 import AnimationWrapper from "../components/sections/animationWrapper"
 import { connect } from "react-redux"
 import Translator from "../utils/translator"
-import Logo from "../images/logo-full.png"
+import Logo from "../components/logo"
 
 class Service extends Component {
   render() {
@@ -23,24 +23,18 @@ class Service extends Component {
             <div className="w-100 mx-auto pt-3 text-center">
               <div className="xl:flex md:flex lg:flex sm:flex sm:pt-12 min-h-screen">
                 <div className="w-40 xs:w-90 py-18 sm:py-18 xs:py-12 xs:mx-auto">
-                  <h1 className="xs:pt-8 md:pt-8 sm:pt-2 text-9xl mx-auto xs:hidden sm:hidden xs:text-3xl md:text-sm sm:text-2xl w-90 xs:w-90 text-primary">
-                    <img
-                      src={Logo}
-                      className="clip-full"
-                      alt=""
-                      className="w-35"
-                    />
-                  </h1>
-
+                  <div className="inline-block mx-auto mb-3">
+                    <Logo />
+                  </div>
                   <img src={"/img/Untitled-1.png"} className="w-80" />
                 </div>
 
-                <div className="w-60 xs:w-100 py-32 sm:py-12 xs:py-12 bg-primary-dark text-left text-white">
+                <div className="w-60 xs:w-100 py-32 sm:py-12 xs:py-12 bg-grey-lighter text-left text-black">
                   <div className="px-16">
-                    <h1 className="p-0 m-0 text-5xl sm:text-2xl xs:text-2xl font-primary pb-24 xs:pb-0">
+                    <h1 className="p-0 m-0 text-2xl sm:text-2xl xs:text-2xl font-primary font-bold tracking-wider uppercase leading-relaxed pb-24 xs:pb-0">
                       {post.title}
                     </h1>
-                    <div className="text-left font-light leading-normal py-6 m-0 xs:text-sm sm:text-sm text-lg">
+                    <div className="text-left font-light leading-normal py-6 m-0 xs:text-sm sm:text-sm text-lg  tracking-wider leading-relaxed">
                       {ReactHtmlParser(post.content)}
                     </div>
                   </div>
