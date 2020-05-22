@@ -9,11 +9,11 @@ const Footer = ({ siteTitle, address, phoneNumber, email }) => (
           Let's Talk
         </h4>
       </div>
-      <div className="w-100 xl:flex md:flex lg:flex sm:flex font-secondary text-lg font-light">
+      <div className="w-100 xl:flex md:flex lg:flex sm:flex font-secondary text-lg font-light tracking-wider leading-relaxed">
         <div className="w-50">
           <p>{email}</p>
         </div>
-        <div className="w-50 xs:w-100 text-right text-lg">
+        <div className="w-50 xs:w-100 text-right text-lg tracking-wider leading-relaxed">
           <p>{address}</p>
           <p>{phoneNumber}</p>
         </div>

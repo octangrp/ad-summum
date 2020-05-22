@@ -44,7 +44,11 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title="Home" />
         <AnimationWrapper>
-          <Main title={mainSection.title} buttonText={mainSection.button.text}>
+          <Main
+            title={mainSection.title}
+            buttonText={mainSection.button.text}
+            image={mainSection.image}
+          >
             {mainSection.description}
           </Main>
         </AnimationWrapper>
@@ -53,11 +57,17 @@ class IndexPage extends React.Component {
             id="services"
             title={servicesSection.title}
             description={servicesSection.description}
-            services={this.props.data.services.list}
+            image={servicesSection.image}
           ></Service>
         </AnimationWrapper>
         <AnimationWrapper>
-          <Team id="team" title={teamSection.title} />
+          <Team
+            id="team"
+            title={teamSection.title}
+            description={teamSection.description}
+            caption={teamSection.caption}
+            image={teamSection.image}
+          />
         </AnimationWrapper>
         <AnimationWrapper>
           <More id="about-us" title={aboutUs.title}>
@@ -96,6 +106,9 @@ export const queries = graphql`
         button: acf {
           text: button_text
         }
+        image: featured_media {
+          url: source_url
+        }
       }
     }
     aboutUs: wordpressPost(slug: { eq: "about-us" }) {
@@ -109,32 +122,18 @@ export const queries = graphql`
         }
       }
     }
-    services: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
-    ) {
-      list: nodes {
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          id
-          slug
-          title
-          content
-          image: featured_media {
-            url: source_url
-          }
-          attributes: acf {
-            button_text
-            summary
-          }
-        }
-      }
-    }
     servicesSection: wordpressPost(slug: { eq: "services-section" }) {
       translations: polylang_translations {
         lang: polylang_current_lang
         id
         title
         description: content
+        button: acf {
+          text: button_text
+        }
+        image: featured_media {
+          url: source_url
+        }
       }
     }
     teamSection: wordpressPost(slug: { eq: "team-section" }) {
@@ -143,26 +142,15 @@ export const queries = graphql`
         id
         title
         description: content
-      }
-    }
-    team: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
-    ) {
-      members: nodes {
-        id
-        slug
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          id
-          slug
-          name: title
-          description: content
-          attributes: acf {
-            position
-          }
-          image: featured_media {
-            url: source_url
-          }
+        button: acf {
+          text: button_text
+        }
+        caption: acf {
+          title: picture_title
+          subtitle: picture_subtitle
+        }
+        image: featured_media {
+          url: source_url
         }
       }
     }
