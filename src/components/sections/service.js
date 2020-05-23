@@ -1,7 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
-import ServiceCard from "../cards/service"
-import SectionWrapper from "./sectionWrapper"
+import ReactHtmlParser from "react-html-parser"
+import { Link } from "gatsby"
+import Logo from "../logo"
+import SectionTitle from "../section-title"
 
 class Service extends React.Component {
   constructor(props) {
@@ -13,18 +15,34 @@ class Service extends React.Component {
 
   render() {
     return (
-      <SectionWrapper
-        id={this.props.id}
-        title={this.props.title}
-        description={this.props.description}
-        backgroundClass="bg-white text-black"
-      >
-        <div className="xl:flex md:flex lg:flex sm:flex flex-wrap justify-center text-center w-100">
-          {this.props.services.map((service, index) => (
-            <ServiceCard key={index} details={service} />
-          ))}
+      <div id={this.props.id} className="w-100 relative bg-white relative">
+        <div className="w-100 ml-auto  relative overflow-hidden">
+          <div className="w-100 h-100 bg-white absolute t-10 z-5 rotate-60deg -l-30" />
+          <div className="w-50 relative z-10">
+            <div className="w-90 ml-auto py-6">
+              <Logo />
+              <div className="w-100 my-auto relative">
+                <div className="text-left my-auto">
+                  <SectionTitle>{this.props.title}</SectionTitle>
+                  <div className="text-lg font-secondary w-100 tracking-wider leading-relaxed">
+                    {ReactHtmlParser(this.props.description)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-70 absolute r-0 t-0 h-100">
+            <img src={this.props.image.url} className="clip-full relative" />
+            <div className="absolute r-5 b-5 text-right">
+              <Link to="services">
+                <button class="btn bg-white text-black  py-2 px-4 text-sm text-light mx-auto">
+                  Read More
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
-      </SectionWrapper>
+      </div>
     )
   }
 }

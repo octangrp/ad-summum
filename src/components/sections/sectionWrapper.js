@@ -1,6 +1,8 @@
 import PropTypes from "prop-types"
 import React from "react"
 import ReactHtmlParser from "react-html-parser"
+import SectionTitle from "../section-title"
+import Logo from "../logo"
 
 const SectionWrapper = props => (
   <div
@@ -12,20 +14,19 @@ const SectionWrapper = props => (
   >
     <div className="min-h-screen relative">
       <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto  py-12">
+        <Logo />
         <div className=" xs:pt-0 ">
           <div className="leading-loosexs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100">
-            <h1 className="text-center font-semiBold text-6xl xs:text-3xl sm:text-xl md:text-3xl my-0 pb-12 xs:pb-12">
-              {props.title}
-            </h1>
+            <SectionTitle>{props.title}</SectionTitle>
             <div
               className={[
-                "text-base text-center w-80 xs:w-100 p-0 m-0 mx-auto xs:text-sm pb-32 ",
+                "text-base font-secondary w-50 tracking-wider leading-relaxed",
                 !props.showSubtitle ? "hidden" : null,
               ].join(" ")}
             >
               {ReactHtmlParser(props.description)}
             </div>
-            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0">
+            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0 my-12">
               {props.children}
             </div>
           </div>

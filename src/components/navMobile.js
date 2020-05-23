@@ -4,6 +4,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Translator from "../utils/translator"
+
 class NavMobile extends React.Component {
   constructor(props) {
     super(props)
@@ -84,7 +85,7 @@ class NavMobile extends React.Component {
               <li className="my-3 text-xl">
                 <div className="w-100 text-left ml-auto pt-2 px-0 mr-0  text-sm">
                   <img
-                    src={"/img/united-states.svg"}
+                    src={"/img/england.svg"}
                     width="20"
                     onClick={() => this.props.switchLanguage("en_US")}
                     className="mt-3 mx-4 cursor-pointer"
