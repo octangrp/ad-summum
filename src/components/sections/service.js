@@ -17,9 +17,9 @@ class Service extends React.Component {
     return (
       <div id={this.props.id} className="w-100 relative bg-white relative">
         <div className="w-100 ml-auto  relative overflow-hidden">
-          <div className="w-100 h-100 bg-white absolute t-10 z-5 rotate-60deg -l-30" />
+          <div className="w-100 h-100 bg-white absolute t-10 lg:t-20 z-5 rotate-60deg md:hidden xs:hidden -l-30" />
           <div
-            className="w-50 relative z-10 xs:w-90 xs:mx-auto
+            className="w-50 md:w-90 relative z-10 xs:w-90 xs:mx-auto
           "
           >
             <div className="w-90 ml-auto py-6">
@@ -31,12 +31,19 @@ class Service extends React.Component {
                     {ReactHtmlParser(this.props.description)}
                   </div>
                 </div>
+                <div className=" r-5 b-5 text-right ">
+                  <Link to="services">
+                    <button class="btn bg-white text-black border-black border-1 border-solid py-2 px-4 text-sm text-light mx-auto xl:hidden lg:hidden">
+                      Read More
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          <div className="w-70 absolute r-0 t-0 h-100 xs:hidden">
+          <div className="w-70 md:w-85 md:mx-auto xl:absolute lg:absolute r-0 t-0 h-100 xs:hidden">
             <img src={this.props.image.url} className="clip-full relative" />
-            <div className="absolute r-5 b-5 text-right">
+            <div className="absolute r-5 b-5 text-right md:hidden">
               <Link to="services">
                 <button class="btn bg-white text-black  py-2 px-4 text-sm text-light mx-auto">
                   Read More

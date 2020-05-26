@@ -8,7 +8,7 @@ import SectionTitle from "../section-title"
 const Team = props => (
   <div id={props.id} className="w-100 relative bg-grey-lightest py-16">
     <div className="w-85 mx-auto relative">
-      <div className="xl:flex ">
+      <div className="">
         <div className="w-40">
           <Logo />
         </div>
@@ -25,12 +25,12 @@ const Team = props => (
       <div className="pb-6">
         <div className="mx-auto pt-6 relative xs:h-px-300">
           <img src={props.image.url} className="clip-full relative" />
-          <div className="absolute xl:flex w-100 b-0 l-0 image-gradient px-12 xs:px-4 pt-16 pb-12 xs:pb-4">
+          <div className="absolute xl:flex lg:flex w-100 b-0 l-0 image-gradient px-12 xs:px-4 pt-16 pb-12 md:pb-8 xs:pb-4">
             <div className="w-80 xl:mx-auto xs:py-4">
-              <h2 className="p-0 m-0 font-primary font-bold text-3xl xs:text-sm track-wider text-white uppercase leading-relaxed">
+              <h2 className="p-0 m-0 font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-white uppercase leading-relaxed">
                 {props.caption.title}
               </h2>
-              <div className="pt-2 m-0 font-primary text-sm xs:text-xs text-white leading-relaxed">
+              <div className="pt-2 m-0 font-primary text-sm xs:text-xs md:text-xs text-white leading-relaxed">
                 {ReactHtmlParser(props.caption.subtitle)}
               </div>
             </div>
