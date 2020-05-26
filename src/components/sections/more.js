@@ -46,7 +46,7 @@ const Service = props => (
                   {props.children}
                 </TruncateHtml>
               </div>
-              <div className="absolute -r-10 b-5 text-right">
+              <div className="my-12">
                 <Link to="about">
                   <button class="btn bg-white border-1 border-primary border-solid text-primary text-black  py-2 px-4 text-sm text-light mx-auto">
                     Read More
