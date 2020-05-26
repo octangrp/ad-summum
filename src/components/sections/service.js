@@ -30,20 +30,13 @@ class Service extends React.Component {
                   <div className="text-lg font-secondary w-100 tracking-wider leading-relaxed">
                     {ReactHtmlParser(this.props.description)}
                   </div>
-                  <div className="absolute -r-30 b-5 text-right">
+                  <div className="mb-12">
                     <Link to="services">
-                      <button class="btn bg-white border-1 border-primary border-solid text-primary text-black  py-2 px-4 text-sm text-light mx-auto">
+                      <button class="btn bg-white text-black border-black border-1 border-solid py-2 px-4 text-sm text-light mx-auto">
                         Read More
                       </button>
                     </Link>
                   </div>
-                </div>
-                <div className=" r-5 b-5 text-right ">
-                  <Link to="services">
-                    <button class="btn bg-white text-black border-black border-1 border-solid py-2 px-4 text-sm text-light mx-auto xl:hidden lg:hidden">
-                      Read More
-                    </button>
-                  </Link>
                 </div>
               </div>
             </div>
