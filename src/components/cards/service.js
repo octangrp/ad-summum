@@ -20,16 +20,16 @@ class ServiceCard extends React.Component {
           />
         </div>
         <div className="text-left text-black mx-auto relative pb-12">
-          <h4 className="text-xl text-grey-darker uppercase my-2 tracking-wider font-primary">
+          <h4 className="text-xl xs:text-base text-grey-darker uppercase my-2 tracking-wider font-primary">
             {details.title}
           </h4>
-          <div className="w-100 text-lg my-5 tracking-wide ">
+          <div className="w-100 text-lg xs:text-sm my-5 tracking-wide ">
             <TruncateHtml length={80} tokenize={"words"}>
               {details.content}
             </TruncateHtml>
           </div>
         </div>
-        <div className="w-50 pt-4 text-right absolute b-10 r-0 px-8 pt-8">
+        <div className="w-50 pt-4 text-right absolute b-10 r-0 px-8 xs:px-4 pt-8">
           <Link
             to={`/service/${details.slug}`}
             className="uppercase text-sm text-primary-darkest font-bold font-primary"
