@@ -72,7 +72,7 @@ class BulletinPage extends React.Component {
               </div>
             </div>
 
-            <div class="w-85 flex">
+            <div class="w-85 flex mx-auto">
               <div class="w-50 pl-12">
                 <div class=" pt-12 pb-4 h-rem-86">
                   <img src={"/img/tim.png"} class="w-100 clip-full relative" />
