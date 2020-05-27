@@ -14,7 +14,7 @@ const SectionWrapper = props => (
   >
     <div className="min-h-screen relative">
       <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto  py-12">
-        <Logo />
+        {props.logo ? <Logo /> : ""}
         <div className=" xs:pt-0 ">
           <div className="leading-loosexs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100">
             <SectionTitle>{props.title}</SectionTitle>
@@ -41,6 +41,7 @@ SectionWrapper.propTypes = {
   description: PropTypes.string,
   backgroundClass: PropTypes.string,
   showSubtitle: PropTypes.bool,
+  logo: PropTypes.bool,
 }
 
 SectionWrapper.defaultProps = {
@@ -48,6 +49,7 @@ SectionWrapper.defaultProps = {
   description: ``,
   backgroundClass: `bg-white text-black`,
   showSubtitle: true,
+  logo: true,
 }
 
 export default SectionWrapper

@@ -48,7 +48,7 @@ const Service = props => (
               </div>
               <div className="my-12">
                 <Link to="about">
-                  <button class="btn bg-white border-1 border-primary border-solid text-primary text-black  py-2 px-4 text-sm text-light mx-auto">
+                  <button class="btn bg-white text-black hover:bg-black hover:text-white  border-black border-1 border-solid py-2 px-4 text-sm text-light mx-auto">
                     Read More
                   </button>
                 </Link>

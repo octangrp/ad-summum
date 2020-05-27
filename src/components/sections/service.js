@@ -32,7 +32,7 @@ class Service extends React.Component {
                   </div>
                   <div className="mb-12">
                     <Link to="services">
-                      <button class="btn bg-white text-black border-black border-1 border-solid py-2 px-4 text-sm text-light mx-auto">
+                      <button class="btn bg-white text-black hover:bg-black hover:text-white  border-black border-1 border-solid py-2 px-4 text-sm text-light mx-auto">
                         Read More
                       </button>
                     </Link>
