@@ -34,8 +34,8 @@ const Service = props => (
 
   <div id={props.id} className="w-100 relative bg-white relative">
     <div className="w-100 ml-auto  relative overflow-hidden">
-      <div className="w-100 h-100 bg-white absolute t-10 z-5 rotate-60deg -l-30 md:hidden xs:hidden sm:hidden" />
-      <div className="w-50 relative z-10 xs:w-100 sm:w-100">
+      <div className="w-100 h-100 bg-white absolute t-10 z-5 xl:rotate-60deg -l-30  lg:-l-50 lg:t-0 md:hidden xs:hidden sm:hidden" />
+      <div className="w-50 relative z-10 xs:w-100 sm:w-100 md:w-90">
         <div className="w-90 ml-auto py-6">
           <Logo />
           <div className="w-100 my-auto py-6 relative">
@@ -57,7 +57,7 @@ const Service = props => (
           </div>
         </div>
       </div>
-      <div className="w-70 xl:absolute lg:absolute r-0 t-0 h-100 xs:hidden sm:hidden">
+      <div className="w-70 md:w-85 md:mx-auto xl:absolute lg:absolute r-0 t-0 h-100 xs:hidden sm:hidden">
         <img src={"/img/tim.png"} className="clip-full relative" />
       </div>
     </div>
