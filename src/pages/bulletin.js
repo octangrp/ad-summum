@@ -15,7 +15,7 @@ class BulletinPage extends React.Component {
         <SEO title="ASC Bulletin" />
         <div className="w-100 relative bg-white py-16">
           <div className="w-90 mx-auto  relative">
-            <div className="flex ">
+            <div className="flex">
               <div className="w-40">
                 <Logo />
               </div>
@@ -43,7 +43,7 @@ class BulletinPage extends React.Component {
           <SectionWrapper logo={false} title="All services">
             <div>
               <div class="flex ">
-                <div class="w-40">
+                <div class="w-40  xs:w-100">
                   <div class=" py-12 h-rem-86">
                     <img
                       src={"/img/tim.png"}
