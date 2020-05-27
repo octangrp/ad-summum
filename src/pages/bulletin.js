@@ -22,7 +22,7 @@ class BulletinPage extends React.Component {
               <div className="w-60 my-auto">
                 <div className="text-left my-auto">
                   <h1 class="text-6xl uppercase font-bold tracking-wider">
-                    As Bulletin
+                    Asc Bulletin
                   </h1>
                 </div>
               </div>
