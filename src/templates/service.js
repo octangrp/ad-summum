@@ -27,7 +27,10 @@ class Service extends Component {
                     <Logo />
                   </div>
                   <div className="w-100 pt-5">
-                    <img src={post.image.url} className="w-50" />
+                    <img
+                      src={post.image && post.image.url ? post.image.url : null}
+                      className="w-50"
+                    />
                   </div>
                 </div>
 

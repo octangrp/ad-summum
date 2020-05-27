@@ -22,18 +22,18 @@ class BulletinPage extends React.Component {
               <div className="w-60 my-auto">
                 <div className="text-left my-auto">
                   <h1 class="text-6xl uppercase font-bold tracking-wider">
-                    As Bulletin
+                    Asc Bulletin
                   </h1>
                 </div>
               </div>
             </div>
 
-            <div className="pt-16">
+            <div className="pt-16 xs:pt-8">
               <div className="mx-auto pt-6 relative">
                 <img src={"/img/tim2.png"} class="w-100 relative" />
-                <div className="absolute flex w-100 b-0 l-0 image-gradient px-12 py-8">
-                  <div className="w-20 ml-auto text-white text-right mb-0 ">
-                    <h3 class="text-base ">jan-2-2020</h3>
+                <div className="absolute flex w-100 b-0 l-0 image-gradient px-12 xs:p-4 py-8">
+                  <div className="w-20 xs:w-50 ml-auto text-white text-right mb-0 ">
+                    <h3 class="text-base xs:text-xs">jan-2-2020</h3>
                   </div>
                 </div>
               </div>
