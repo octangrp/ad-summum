@@ -57,7 +57,7 @@ const Service = props => (
           </div>
         </div>
       </div>
-      <div className="w-70 absolute r-0 t-0 h-100">
+      <div className="w-70 md:w-85 md:mx-auto xl:absolute lg:absolute r-0 t-0 h-100 xs:hidden sm:hidden">
         <img src={"/img/tim.png"} className="clip-full relative" />
       </div>
     </div>
