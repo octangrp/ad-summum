@@ -42,7 +42,7 @@ class BulletinPage extends React.Component {
 
           <SectionWrapper logo={false} title="All services">
             <div>
-              <div className="xl:flex lg:flex">
+              <div className="xl:flex lg:flex md:flex">
                 <div class="w-40  xs:w-100">
                   <div class=" py-12 h-rem-86">
                     <img
@@ -76,10 +76,24 @@ class BulletinPage extends React.Component {
                   </div>
                 </div>
               </div>
+
+              <div>
+                <div class="flex w-5 lg:w-10 md:w-15 mx-auto">
+                  <div class="w-30">
+                    <div class="w-rem-3 h-rem-3 xs:w-rem-4 xs:h-rem-4 bg-white border-1 border-black border-solid my-auto rounded-full"></div>
+                  </div>
+                  <div class="w-30">
+                    <div class="w-rem-3 h-rem-3 xs:w-rem-4 xs:h-rem-4 bg-white border-1 border-black border-solid my-auto rounded-full"></div>
+                  </div>
+                  <div class="w-30">
+                    <div class="w-rem-3 h-rem-3 xs:w-rem-4 xs:h-rem-4 bg-white border-1 border-black border-solid my-auto rounded-full"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </SectionWrapper>
 
-          <div class="w-90 xl:flex lg:flex mx-auto">
+          <div class="w-90 xl:flex lg:flex md:flex mx-auto">
             <div class="w-50 xs:w-100 xs:pl-0 pl-12">
               <div class=" pt-12 pb-4 xs:pb-0 h-rem-86">
                 <img src={"/img/tim.png"} class="w-100 clip-full relative" />
@@ -89,14 +103,14 @@ class BulletinPage extends React.Component {
                   <div class="w-10 my-auto">
                     <div class="w-rem-5 h-rem-5 bg-primary my-auto rounded-full"></div>
                   </div>
-                  <div class="w-90">
-                    <h1 class="text-2xl xs:text-xl font-bold uppercase">
+                  <div class="w-90 xs:pt-4">
+                    <h1 class="text-2xl p-0 m-0 xs:text-xl md:text-base font-bold uppercase">
                       {" "}
                       Economics, Finance
                     </h1>
                   </div>
                 </div>
-                <div class="text-base p-0 m-0 font-secondary w-100 tracking-wider leading-relaxed">
+                <div class="text-base  md:text-xs pl-12 m-0 font-secondary w-100 tracking-wider leading-relaxed">
                   <p class="p-0 m-0 text-left">Jan-12-2020</p>
                 </div>
               </div>
@@ -110,14 +124,14 @@ class BulletinPage extends React.Component {
                   <div class="w-10 my-auto">
                     <div class="w-rem-5 h-rem-5 bg-primary my-auto rounded-full"></div>
                   </div>
-                  <div class="w-90">
-                    <h1 class="text-2xl xs:text-xl font-bold uppercase">
+                  <div class="w-90  xs:pt-4">
+                    <h1 class="text-2xl p-0 m-0 xs:text-xl  md:text-base font-bold uppercase">
                       {" "}
                       Economics, Finance
                     </h1>
                   </div>
                 </div>
-                <div class="text-base p-0 m-0 font-secondary w-100 tracking-wider leading-relaxed">
+                <div class="text-base pl-12 m-0  md:text-xs font-secondary w-100 tracking-wider leading-relaxed">
                   <p class="p-0 m-0 text-left">Jan-12-2020</p>
                 </div>
               </div>
