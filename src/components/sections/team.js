@@ -12,7 +12,7 @@ const Team = props => (
         <div className="w-40">
           <Logo />
         </div>
-        <div className="w-60 my-auto xs:w-100 xs:mx-auto">
+        <div className="w-60 md:w-100 lg:w-100 my-auto xs:w-100 xs:mx-auto">
           <div className="text-left my-auto">
             <SectionTitle>{props.title}</SectionTitle>
             <div className="text-base font-secondary w-70 tracking-wider leading-relaxed">

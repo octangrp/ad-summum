@@ -34,7 +34,7 @@ const Service = props => (
 
   <div id={props.id} className="w-100 relative bg-white relative">
     <div className="w-100 ml-auto  relative overflow-hidden">
-      <div className="w-100 h-100 bg-white absolute t-10 z-5 rotate-60deg -l-30" />
+      <div className="w-100 h-100 bg-white absolute t-10 z-5 xl:rotate-60deg lg:t-0 lg:-l-45 md:t-0 md:-l-45 -l-30" />
       <div className="w-50 relative z-10">
         <div className="w-90 ml-auto py-6">
           <Logo />
