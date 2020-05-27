@@ -11,7 +11,7 @@ class Member extends React.Component {
     )
     return (
       <div className="rounded-lg  bg-transparent w-100 relative">
-        <div className="h-rem-84 w-rem-74 sm:h-64 sm:w-rem-64 xxs:h-48 xxs:w-rem-48 overflow-hidden relative centered  mb-0">
+        <div className="h-rem-84 w-rem-74 xs:w-100 sm:h-64 sm:w-rem-64 xxs:h-48 xxs:w-rem-48 overflow-hidden relative centered  mb-0">
           <img src={details.image.url} alt="team-member" class="clip-full" />
         </div>
         <div className="bg-primary lg:h-rem-32 text-white p-4 absolute r-10 -b-5 w-80">
