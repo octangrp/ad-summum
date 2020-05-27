@@ -45,7 +45,7 @@ class AboutUsPage extends React.Component {
           <div class="w-100 relative bg-grey-lightest py-16">
             <div class="w-85 mx-auto  relative">
               <div class="flex pt-12">
-                <div class="w-40 relative">
+                <div class="w-40 relative xs:w-100">
                   <div class="w-rem-12 h-rem-12 bg-white z-99 shadow mx-auto rounded-full relative items-center justify-center flex">
                     <div class="w-rem-5 h-rem-5 bg-primary-darker text-center mx-auto rounded-full  items-center"></div>
                   </div>
@@ -81,7 +81,7 @@ class AboutUsPage extends React.Component {
         <SectionWrapper>
           <div class="w-100 relative bg-white py-16">
             <div class="w-100 mx-auto  relative">
-              <div class="w-40 my-auto">
+              <div class="w-40 my-auto  xs:w-100">
                 <div class="text-left my-auto">
                   <h1 class="font-semiBold text-3xl xs:text-3xl sm:text-xl md:text-3xl my-0 py-2 xs:pb-12">
                     Our Mission
@@ -99,7 +99,7 @@ class AboutUsPage extends React.Component {
                 </div>
               </div>
               <div class="flex pt-12">
-                <div class="w-30 pr-12">
+                <div class="w-30 pr-12  xs:w-100 xs:pr-0">
                   <div class="border-none rounded-lg bg-white shadow p-8">
                     <img src={"/img/target.png"} className="w-20 relative" />
 
