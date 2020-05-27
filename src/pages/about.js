@@ -45,21 +45,26 @@ class AboutUsPage extends React.Component {
           <div class="w-100 relative bg-grey-lightest py-16">
             <div class="w-85 mx-auto  relative">
               <div class="flex pt-12">
-                <div class="w-30 pr-12 relative">
-                  <div class="w-rem-12 h-rem-12 bg-white z-99 shadow mx-auto rounded-full relative items-center justify-center">
-                    <div class="w-rem-4 h-rem-4 bg-primary-darker text-center mx-auto rounded-full absolute t-35 l-35"></div>
+                <div class="w-40 relative">
+                  <div class="w-rem-12 h-rem-12 bg-white z-99 shadow mx-auto rounded-full relative items-center justify-center flex">
+                    <div class="w-rem-5 h-rem-5 bg-primary-darker text-center mx-auto rounded-full  items-center"></div>
+                  </div>
+                  <div className="flex">
+                    <div className="w-50">
+                      <div class=" ml-auto h-rem-20 border-0 border-l-1 border-solid border-black border-dashed -mt-6 rotate-30deg w-rem-0 mr-10"></div>
+                    </div>
+
+                    <div className="w-50">
+                      <div class="h-rem-20 border-0 border-l-1 border-solid border-black border-dashed -mt-6 -rotate-30deg w-rem-0 ml-10"></div>
+                    </div>
                   </div>
 
-                  <div class="bg-grey-dark  w-60 h-rem-1 rounded-full relative t-5 -r-40 rotate-45deg"></div>
-
-                  <div class="bg-grey-dark  w-60 h-rem-1 rounded-full relative t-5 r-0 -rotate-45deg"></div>
-
-                  <div class="border-none rounded-lg bg-white shadow mt-12 px-4 z-999">
-                    <div class="py-4">
-                      <h2 class="text-left text-xl font-primary my-auto">
+                  <div class="border-none rounded-lg bg-white shadow px-8 py-6 z-999 relative -mt-3">
+                    <div>
+                      <h2 class="text-left text-xl uppercase font-medium my-auto tracking-wider leading-relaxed">
                         Excellence
                       </h2>
-                      <p class="text-xs font-secondary">
+                      <p class="text-xs font-secondary text-sm font-secondary tracking-wider leading-relaxed">
                         {" "}
                         ASC Ltd brings together with professional skills and
                         extensive experience in the areas of central banking,
