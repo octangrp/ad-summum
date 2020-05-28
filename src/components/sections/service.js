@@ -22,7 +22,7 @@ class Service extends React.Component {
             className="w-50 md:w-90 relative z-10 xs:w-90 xs:mx-auto
           "
           >
-            <div className="w-90 ml-auto py-6">
+            <div className="w-90 xs:w-100 ml-auto py-6">
               <Logo />
               <div className="w-100 my-auto relative">
                 <div className="text-left my-auto">

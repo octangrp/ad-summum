@@ -42,9 +42,11 @@ const Service = props => (
             <div className="text-left w-80 my-auto">
               <SectionTitle>{props.title}</SectionTitle>
               <div className="text-lg font-secondary w-100 tracking-wider leading-relaxed">
-                <TruncateHtml length={350} tokenize={"words"}>
-                  {props.children}
-                </TruncateHtml>
+                <p>
+                  <TruncateHtml length={350} tokenize={"words"}>
+                    {props.children}
+                  </TruncateHtml>
+                </p>
               </div>
               <div className="my-12">
                 <Link to="about">
