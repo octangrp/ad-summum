@@ -18,13 +18,13 @@ class Member extends React.Component {
             class="clip-full"
           />
         </div>
-        <div className="bg-primary lg:h-rem-32 text-white p-4 absolute r-10 -b-5 w-80">
-          <h5 className="mb-0 mt-0 text-xl my-0 uppercase text-center leading-relaxed">
+        <div className="bg-primary lg:h-rem-24 text-white p-4 absolute r-10 -b-5 w-80">
+          <h5 className="mb-0 mt-0 text-xl lg:text-sm my-0 uppercase text-center leading-relaxed">
             {details.name}
           </h5>
           <div className="text-right relative">
             <div className="line absolute bg-white mt-3 inline-block"></div>
-            <p className="text-lg xs:text-base md:text-base sm:text-sm my-0 inline-block mx-8">
+            <p className="text-lg lg:w-100 xs:text-base lg:text-xs md:text-base sm:text-sm my-0 inline-block mx-8 lg:mx-2">
               {details.attributes.position}
             </p>
           </div>
