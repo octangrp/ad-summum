@@ -36,7 +36,11 @@ class MemberExpanded extends React.Component {
                 <div className="w-40 xs:w-100 xs:p-4 flex items-center justify-center">
                   <div className="w-rem-64 h-rem-64 rounded-full overflow-hidden">
                     <img
-                      src={details.image.url}
+                      src={
+                        details.image && details.image.url
+                          ? details.image.url
+                          : null
+                      }
                       className="clip-full "
                       alt="team-member"
                     />
