@@ -27,7 +27,7 @@ class AboutUsPage extends React.Component {
       <Layout>
         <SEO title="Team" />
         <SectionWrapper title={aboutUs.title}>
-          <div class="text-lg tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-90 ml-auto">
+          <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-90 ml-auto">
             {ReactHtmlParser(aboutUs.description)}
           </div>
         </SectionWrapper>
@@ -79,7 +79,7 @@ class AboutUsPage extends React.Component {
         </SectionWrapper>
 
         <SectionWrapper>
-          <div class="w-100 relative bg-white py-16">
+          <div class="w-100 relative bg-white py-16 lg:">
             <div class="w-100 mx-auto  relative">
               <div class="w-40 my-auto  xs:w-100">
                 <div class="text-left my-auto">
