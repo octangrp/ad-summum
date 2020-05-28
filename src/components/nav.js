@@ -31,7 +31,7 @@ class Navbar extends React.Component {
               </li>
             ))}
           </ul>
-          <ul className="list text-left font-semibold hidden xl:block lg:block md:block px-0 mr-0 lg:w-20 md:w-30 text-sm ">
+          <ul className="list text-right font-semibold hidden xl:block lg:block md:block px-0 mr-0 lg:w-20 md:w-30 text-sm ">
             <li className="inline-block  m-0 py-3 px-3 text-sm lg:text-xs">
               <img
                 src={"/img/england.svg"}

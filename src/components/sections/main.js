@@ -6,7 +6,7 @@ import Logo from "../logo"
 const Main = props => (
   <div className="panel z-10 px-0 pt-32 xs:pt-0 sm:pt-12 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto sm:h-auto">
     <div className="min-h-screen  sm:min-h-auto xs:min-h-auto h-100 w-95 lg:w-90 -mt-24 lg:-mt-32 md:-mt-3 xs:pt-0 xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 ml-auto md:w-95 xs:w-100 sm:w-95 xl:flex md:flex  lg:flex sm:flex relative">
-      <div className="text-left -l-10 xs:-l-15 xs:-t-5 lg:-l-15 md:b-30 absolute">
+      <div className="text-left z-999 -l-10 xs:-l-15 xs:-t-5 lg:-l-15 lg:t-10 md:b-30 absolute">
         <img src={"/img/shapes.png"} className="w-100 relative" />
       </div>
 
@@ -28,7 +28,7 @@ const Main = props => (
           <div className="w-100 pt-16 xs:pt-5 text-right xs:text-left"></div>
         </div>
         <div className="w-45  xs:hidden text-right">
-          <div className="text-right">
+          <div className="text-right lg:pt-12">
             <img src={props.image.url} className="clip-full" />
           </div>
         </div>
