@@ -64,7 +64,7 @@ class AboutUsPage extends React.Component {
                       <h2 class="text-left text-xl uppercase font-medium my-auto tracking-wider leading-relaxed">
                         Excellence
                       </h2>
-                      <p class="text-xs font-secondary text-sm font-secondary tracking-wider leading-relaxed">
+                      <p class="text-xs font-secondary text-sm tracking-wider leading-relaxed">
                         {" "}
                         ASC Ltd brings together with professional skills and
                         extensive experience in the areas of central banking,
