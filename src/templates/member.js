@@ -30,7 +30,11 @@ class Member extends Component {
 
                   <div className="w-rem-84 h-rem-84 xs:w-rem-54 xs:h-rem-54 md:w-rem-54 md:h-rem-54 sm:w-rem-54 sm:h-rem-54  mx-auto rounded-full overflow-hidden">
                     <img
-                      src={member.image.url}
+                      src={
+                        member.image && member.image.url
+                          ? member.image.url
+                          : null
+                      }
                       className="clip-full "
                       alt="team-member"
                     />
