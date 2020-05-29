@@ -16,7 +16,7 @@ class Service extends React.Component {
   render() {
     return (
       <div id={this.props.id} className="w-100 relative bg-white relative">
-        <div className="w-100 ml-auto lg:w-90 lg:mx-auto  relative overflow-hidden">
+        <div className="w-100 ml-auto lg:w-95 lg:ml-auto  relative overflow-hidden">
           <div className="w-100 h-100 bg-white absolute t-10 z-5 xl:rotate-60deg lg:t-0 lg:-l-45 md:hidden xs:hidden -l-30" />
           <div
             className="w-50 md:w-90 relative z-10 xs:w-90 xs:mx-auto
