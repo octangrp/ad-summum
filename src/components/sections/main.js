@@ -13,7 +13,10 @@ const Main = props => (
       <div className="xl:flex md:flex lg:flex sm:flex xs:block align-items-end relative pt-16 sm:pt-0 md:pt-12 w-100 md:w-100 pb-4 xs:w-90 xs:ml-auto ml-auto">
         <div className="w-100 xl:hidden lg:hidden md:hidden sm:hidden text-right xs:hidden">
           <div className="text-right">
-            <img src={props.image.url} className="clip-full" />
+            <img
+              src={props.image && props.image.url ? props.image.url : null}
+              className="clip-full"
+            />
           </div>
         </div>
         <div className="w-55 xs:w-100 xs:pt-0">
@@ -29,7 +32,10 @@ const Main = props => (
         </div>
         <div className="w-45  xs:hidden text-right">
           <div className="text-right lg:pt-12">
-            <img src={props.image.url} className="clip-full" />
+            <img
+              src={props.image && props.image.url ? props.image.url : null}
+              className="clip-full"
+            />
           </div>
         </div>
       </div>

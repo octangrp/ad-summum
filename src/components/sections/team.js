@@ -24,7 +24,10 @@ const Team = props => (
 
       <div className="pb-6">
         <div className="mx-auto pt-6 relative xs:h-px-300">
-          <img src={props.image.url} className="clip-full relative" />
+          <img
+            src={props.image && props.image.url ? props.image.url : null}
+            className="clip-full relative"
+          />
           <div className="absolute xl:flex lg:flex w-100 b-0 l-0 image-gradient px-12 xs:px-4 pt-16 pb-12 md:pb-8 xs:pb-4">
             <div className="w-80 xl:mx-auto xs:py-4">
               <h2 className="p-0 m-0 font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-white uppercase leading-relaxed">
