@@ -129,7 +129,7 @@ export default AboutUsPage
 
 export const queries = graphql`
   query about {
-    aboutUs: wordpressPost(slug: { eq: "about-us" }) {
+    aboutUs: wordpressPost(slug: { eq: "about-us-main" }) {
       translations: polylang_translations {
         lang: polylang_current_lang
         id
