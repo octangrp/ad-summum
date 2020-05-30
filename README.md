@@ -26,7 +26,7 @@ $ gatsby develop
 $ gatsby build
 
 # serve the production build locally
-$ npm run start
+$ gatsby serve
 ```
 
 For detailed explanation on how things work, check out [Gatsby.js docs](https://www.gatsbyjs.org/docs).
