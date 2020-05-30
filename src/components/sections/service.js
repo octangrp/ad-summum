@@ -42,7 +42,14 @@ class Service extends React.Component {
             </div>
           </div>
           <div className="w-70 md:w-85 md:mx-auto xl:absolute lg:absolute r-0 t-0 h-100 xs:hidden">
-            <img src={this.props.image.url} className="clip-full relative" />
+            <img
+              src={
+                this.props.image && this.props.image.url
+                  ? this.props.image.url
+                  : null
+              }
+              className="clip-full relative"
+            />
           </div>
         </div>
       </div>
