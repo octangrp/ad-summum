@@ -28,7 +28,12 @@ class Service extends Component {
                   </div>
                   <div className="w-100 pt-5">
                     <img
-                      src={post.image && post.image.url ? post.image.url : null}
+                      src={
+                        this.props.data.wordpressPost.image &&
+                        this.props.data.wordpressPost.image.url
+                          ? this.props.data.wordpressPost.image.url
+                          : null
+                      }
                       className="w-50"
                     />
                   </div>
@@ -71,9 +76,9 @@ export const postQuery = graphql`
         lang: polylang_current_lang
         title
         content
-        image: featured_media {
-          url: source_url
-        }
+      }
+      image: featured_media {
+        url: source_url
       }
     }
     site {

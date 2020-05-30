@@ -31,8 +31,9 @@ class Member extends Component {
                   <div className="w-rem-84 h-rem-84 xs:w-rem-54 xs:h-rem-54 md:w-rem-54 md:h-rem-54 sm:w-rem-54 sm:h-rem-54  mx-auto rounded-full overflow-hidden">
                     <img
                       src={
-                        member.image && member.image.url
-                          ? member.image.url
+                        this.props.data.wordpressPost.image &&
+                        this.props.data.wordpressPost.image.url
+                          ? this.props.data.wordpressPost.image.url
                           : null
                       }
                       className="clip-full "
@@ -86,9 +87,9 @@ export const postQuery = graphql`
         attributes: acf {
           position
         }
-        image: featured_media {
-          url: source_url
-        }
+      }
+      image: featured_media {
+        url: source_url
       }
     }
     site {

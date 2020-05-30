@@ -23,6 +23,11 @@ class MemberExpanded extends React.Component {
       this.props.lang,
       this.props.details.translations
     )
+
+    const defaultTranslation = Translator.process(
+      "en_US",
+      this.props.details.translations
+    )
     return (
       <div className="w-100 z-9999 overflow-hidden min-h-screen fixed t-0 l-0">
         <div className="z-10 relative w-100 min-h-screen flex items-center justify-center">
@@ -37,8 +42,8 @@ class MemberExpanded extends React.Component {
                   <div className="w-rem-64 h-rem-64 rounded-full overflow-hidden">
                     <img
                       src={
-                        details.image && details.image.url
-                          ? details.image.url
+                        defaultTranslation.image && defaultTranslation.image.url
+                          ? defaultTranslation.image.url
                           : null
                       }
                       className="clip-full "
@@ -84,7 +89,9 @@ class MemberExpanded extends React.Component {
                       </a>
                     </div>
                     <div className="text-blue text-right ml-auto w-100 underline flex items-end justify-end">
-                      <Link to={`/members/${details.slug}`}>Read more</Link>
+                      <Link to={`/members/${defaultTranslation.slug}`}>
+                        Read more
+                      </Link>
                     </div>
                   </div>
                 </div>

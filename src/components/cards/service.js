@@ -11,11 +11,15 @@ class ServiceCard extends React.Component {
       this.props.lang,
       this.props.details.translations
     )
+    const defaultTranslation = Translator.process(
+      "en_US",
+      this.props.details.translations
+    )
     return (
       <div className="w-30 xs:w-100 mb-10 mx-auto hover:shadow p-8 pb-18 relative hover:shadow-lg cursor-pointer transition-500ms border-1 border-solid boder-grey-lightest">
         <div className="w-100 relative text-left mb-6">
           <img
-            src={details.image ? details.image.url : ""}
+            src={defaultTranslation.image ? defaultTranslation.image.url : ""}
             className="w-rem-16"
           />
         </div>
@@ -31,7 +35,7 @@ class ServiceCard extends React.Component {
         </div>
         <div className="w-50 pt-4 text-right absolute b-10 r-0 px-8 xs:px-4 lg:px-4 pt-8">
           <Link
-            to={`/service/${details.slug}`}
+            to={`/service/${defaultTranslation.slug}`}
             className="uppercase text-sm text-primary-darkest font-bold font-primary"
           >
             {details.attributes.button_text}

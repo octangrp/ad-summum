@@ -47,7 +47,7 @@ class IndexPage extends React.Component {
           <Main
             title={mainSection.title}
             buttonText={mainSection.button.text}
-            image={mainSection.image}
+            image={this.props.data.mainSection.image}
           >
             {mainSection.description}
           </Main>
@@ -57,7 +57,7 @@ class IndexPage extends React.Component {
             id="services"
             title={servicesSection.title}
             description={servicesSection.description}
-            image={servicesSection.image}
+            image={this.props.data.servicesSection.image}
           ></Service>
         </AnimationWrapper>
         <AnimationWrapper>
@@ -66,11 +66,15 @@ class IndexPage extends React.Component {
             title={teamSection.title}
             description={teamSection.description}
             caption={teamSection.caption}
-            image={teamSection.image}
+            image={this.props.data.teamSection.image}
           />
         </AnimationWrapper>
         <AnimationWrapper>
-          <More id="about-us" title={aboutUs.title}>
+          <More
+            id="about-us"
+            title={aboutUs.title}
+            image={this.props.data.aboutUs.image}
+          >
             {aboutUs.description}
           </More>
         </AnimationWrapper>
@@ -106,9 +110,9 @@ export const queries = graphql`
         button: acf {
           text: button_text
         }
-        image: featured_media {
-          url: source_url
-        }
+      }
+      image: featured_media {
+        url: source_url
       }
     }
     aboutUs: wordpressPost(slug: { eq: "about-us" }) {
@@ -121,6 +125,9 @@ export const queries = graphql`
           text: button_text
         }
       }
+      image: featured_media {
+        url: source_url
+      }
     }
     servicesSection: wordpressPost(slug: { eq: "services-section" }) {
       translations: polylang_translations {
@@ -131,9 +138,9 @@ export const queries = graphql`
         button: acf {
           text: button_text
         }
-        image: featured_media {
-          url: source_url
-        }
+      }
+      image: featured_media {
+        url: source_url
       }
     }
     teamSection: wordpressPost(slug: { eq: "team-section" }) {
@@ -149,9 +156,9 @@ export const queries = graphql`
           title: picture_title
           subtitle: picture_subtitle
         }
-        image: featured_media {
-          url: source_url
-        }
+      }
+      image: featured_media {
+        url: source_url
       }
     }
     valuesSection: wordpressPost(slug: { eq: "values-section" }) {
