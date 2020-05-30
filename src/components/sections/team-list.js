@@ -61,7 +61,7 @@ class TeamList extends React.Component {
                 <Member details={member} />
               </div>
               <div class="hidden xs:block sm:block">
-                <Link to={`/members/${member.slug}`}>
+                <Link to={`/members/${member.translations[0].slug}`}>
                   <Member details={member} />
                 </Link>
               </div>
@@ -78,12 +78,14 @@ TeamList.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   members: PropTypes.array,
+  defaultTranslation: PropTypes.object,
 }
 
 TeamList.defaultProps = {
   title: ``,
   description: ``,
   members: [],
+  defaultTranslation: {},
 }
 
 export default TeamList

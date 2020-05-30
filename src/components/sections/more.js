@@ -6,32 +6,7 @@ import Logo from "../logo"
 import SectionTitle from "../section-title"
 import TruncateHtml from "../utilities/TruncateHtml"
 
-const Service = props => (
-  // <div id={props.id} className="w-100 relative bg-white relative">
-  //   <div className="w-100 ml-auto relative overflow-hidden">
-  /* <div className="flex w-85 mx-auto py-32">
-        <div className="w-40">
-          <Logo />
-        </div>
-        <div className="w-60 my-auto border-0 border-b-1 border-r-1  border-solid border-primary">
-          <div className="text-left my-auto px-12 py-18">
-            <SectionTitle>{props.title}</SectionTitle>
-            <div className="text-lg font-secondary w-100 tracking-wider leading-relaxed">
-              <TruncateHtml length={350} tokenize={"words"}>
-                {props.children}
-              </TruncateHtml>
-            </div>
-            <div className="w-30 pt-12 text-right ml-auto">
-              <Link to="about">
-                <button class="btn btn-outline-primary hover:text-white focus:text-white py-2 px-4 text-primary text-sm text-light mx-auto">
-                  Read More
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div> */
-
+const More = props => (
   <div id={props.id} className="w-100 relative bg-white relative">
     <div className="w-100 ml-auto lg:w-95 lg:ml-auto relative overflow-hidden">
       <div className="w-100 h-100 bg-white absolute t-10 z-5 xl:rotate-60deg lg:t-0 lg:-l-45 md:t-0 md:-l-45 -l-30" />
@@ -60,20 +35,23 @@ const Service = props => (
         </div>
       </div>
       <div className="w-70 md:w-85 md:mx-auto xl:absolute lg:absolute r-0 t-0 h-100 xs:hidden sm:hidden">
-        <img src={"/img/tim.png"} className="clip-full relative" />
+        <img
+          src={props.image && props.image.url ? props.image.url : null}
+          className="clip-full relative"
+        />
       </div>
     </div>
   </div>
 )
 
-Service.propTypes = {
+More.propTypes = {
   siteTitle: PropTypes.string,
   buttonText: PropTypes.string,
 }
 
-Service.defaultProps = {
+More.defaultProps = {
   siteTitle: ``,
   buttonText: `Read more`,
 }
 
-export default Service
+export default More
