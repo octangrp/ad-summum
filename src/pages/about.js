@@ -4,11 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import SectionWrapper from "../components/sections/sectionWrapper"
-import ValueCard from "../components/cards/value"
 import { graphql } from "gatsby"
 import Translator from "../utils/translator"
-import { connect } from "react-redux"
-import value from "../components/cards/value"
 import ReactHtmlParser from "react-html-parser"
 
 class AboutUsPage extends React.Component {
