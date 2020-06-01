@@ -29,20 +29,27 @@ class BlogPage extends React.Component {
 
             <div className="pt-16 xs:pt-8">
               <div className="mx-auto pt-6 relative">
-                <img src={"/img/tim2.png"} class="w-100 relative" />
-                <div class="w-20 xs:w-100 ml-auto text-right pt-12">
-                  <h1 class="text-base xs:text-xxs text-black text-light mx-auto">
-                    Janvier-12-2020
-                  </h1>
+                <div class=" xl:flex lg:flex w-100">
+                  <div class="w-80 xl:mx-auto pb-12">
+                    <h2 class="p-0 m-0 font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-black uppercase leading-relaxed">
+                      We are behind all this
+                    </h2>
+                  </div>
+                  <div class="w-20 xs:w-100 ml-auto text-right">
+                    <h1 class="text-base xs:text-xxs text-black text-light mx-auto">
+                      Janvier-12-2020
+                    </h1>
+                  </div>
                 </div>
+                <img src={"/img/tim.png"} class="w-100 relative" />
                 <div class="w-80 b-0 l-0 pt-12 pb-12 xs:py-0 md:pb-8">
-                  <h2 class="p-0 m-0 font-primary text-black font-bold text-3xl xs:text-sm md:text-xl track-wider uppercase leading-relaxed">
+                  <h1 class="p-0 m-0 font-primary text-black font-bold text-3xl xs:text-sm md:text-xl track-wider uppercase leading-relaxed">
                     We are behind all this and we the one in charge in all,We
                     are behind all this and we the one in charge in all
-                  </h2>
+                  </h1>
                 </div>
                 <div>
-                  <p>
+                  <p class="p-0 m-0">
                     Working with Breaks Agency, an independent creative agency
                     based in London, with clients such as Nike and Dr. Martens
                     (snap), we designed and built an engaging digital time

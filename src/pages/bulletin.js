@@ -36,9 +36,13 @@ class BulletinPage extends React.Component {
                     <h2 class="p-0 m-0 font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-white uppercase leading-relaxed">
                       We are behind all this
                     </h2>
+                    <p class="w-80 p-0 m-0 text-white">
+                      We are behind all this and we the one in charge in all,We
+                      are behind all this and we the one in charge in all
+                    </p>
                   </div>
-                  <div class="w-20 xs:w-100 text-right my-3">
-                    <h1 class="text-sm xs:text-xxs text-white text-light mx-auto">
+                  <div class="w-20 xs:w-100 text-right mt-auto">
+                    <h1 class="text-sm xs:text-xxs p-0 m-0 text-white text-light mx-auto">
                       Janvier-12-2020
                     </h1>
                   </div>
