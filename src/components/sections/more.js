@@ -38,7 +38,7 @@ const Service = props => (
       <div className="w-50 relative z-10">
         <div className="w-90 lg:w-100 ml-auto py-6">
           <Logo />
-          <div className="w-100 my-auto py-6 relative">
+          <div className="w-100 my-auto py-0 relative">
             <div className="text-left w-80 my-auto">
               <SectionTitle>{props.title}</SectionTitle>
               <div className="text-lg lg:text-sm font-secondary w-100 tracking-wider leading-relaxed">
