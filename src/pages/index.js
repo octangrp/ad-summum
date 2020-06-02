@@ -5,10 +5,10 @@ import SEO from "../components/seo"
 
 import Main from "../components/sections/main"
 import More from "../components/sections/more"
-import Service from "../components/sections/service"
+import ServiceList from "../components/sections/service-list"
 import AnimationWrapper from "../components/sections/animationWrapper"
 
-import Team from "../components/sections/team"
+import TeamList from "../components/sections/team-list"
 import Value from "../components/sections/value"
 import { graphql } from "gatsby"
 import Translator from "../utils/translator"
@@ -53,20 +53,19 @@ class IndexPage extends React.Component {
           </Main>
         </AnimationWrapper>
         <AnimationWrapper>
-          <Service
+          <ServiceList
             id="services"
             title={servicesSection.title}
             description={servicesSection.description}
-            image={this.props.data.servicesSection.image}
-          ></Service>
+            services={this.props.data.services.list}
+          ></ServiceList>
         </AnimationWrapper>
         <AnimationWrapper>
-          <Team
+          <TeamList
             id="team"
             title={teamSection.title}
             description={teamSection.description}
-            caption={teamSection.caption}
-            image={this.props.data.teamSection.image}
+            members={this.props.data.team.members}
           />
         </AnimationWrapper>
         <AnimationWrapper>
@@ -99,9 +98,7 @@ export default connect(mapStateToProps)(IndexPage)
 
 export const queries = graphql`
   query data {
-    mainSection: wordpressPost(
-      categories: { elemMatch: { slug: { eq: "main-section" } } }
-    ) {
+    mainSection: wordpressPost(slug: { eq: "main-section" }) {
       translations: polylang_translations {
         lang: polylang_current_lang
         id
@@ -143,6 +140,26 @@ export const queries = graphql`
         url: source_url
       }
     }
+    services: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
+    ) {
+      list: nodes {
+        translations: polylang_translations {
+          lang: polylang_current_lang
+          id
+          slug
+          title
+          content
+          image: featured_media {
+            url: source_url
+          }
+          attributes: acf {
+            button_text
+            summary
+          }
+        }
+      }
+    }
     teamSection: wordpressPost(slug: { eq: "team-section" }) {
       translations: polylang_translations {
         lang: polylang_current_lang
@@ -159,6 +176,27 @@ export const queries = graphql`
       }
       image: featured_media {
         url: source_url
+      }
+    }
+    team: allWordpressPost(
+      filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
+    ) {
+      members: nodes {
+        id
+        slug
+        translations: polylang_translations {
+          lang: polylang_current_lang
+          id
+          slug
+          name: title
+          description: content
+          attributes: acf {
+            position
+          }
+          image: featured_media {
+            url: source_url
+          }
+        }
       }
     }
     valuesSection: wordpressPost(slug: { eq: "values-section" }) {
