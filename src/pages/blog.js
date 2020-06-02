@@ -29,14 +29,17 @@ class BlogPage extends React.Component {
 
             <div className="pt-16 xs:pt-8">
               <div className="mx-auto pt-6 relative">
+                <div className="w-40">
+                  <Logo />
+                </div>
                 <div class=" xl:flex lg:flex w-100">
-                  <div class="w-80 xl:mx-auto pb-12">
-                    <h2 class="p-0 m-0 font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-black uppercase leading-relaxed">
+                  <div class="w-80 xl:mx-auto pb-12 md:pb-2 sm:pb-0 xs:pb-0">
+                    <h2 class="p-0 m-0 xs:py-4 sm:text-base font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-black uppercase leading-relaxed">
                       We are behind all this
                     </h2>
                   </div>
                   <div class="w-20 xs:w-100 ml-auto text-right">
-                    <h1 class="text-base xs:text-xxs text-black text-light mx-auto">
+                    <h1 class="text-base xs:text-xxs sm:text-xs text-black text-light mx-auto">
                       Janvier-12-2020
                     </h1>
                   </div>
