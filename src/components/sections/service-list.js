@@ -17,7 +17,7 @@ class ServiceList extends React.Component {
         id={this.props.id}
         title={this.props.title}
         description={this.props.description}
-        backgroundClass="bg-white text-black"
+        backgroundClass="bg-grey-lightest text-black"
       >
         <div className="xl:flex md:flex lg:flex sm:flex flex-wrap justify-center text-center w-100">
           {this.props.services.map((service, index) => (

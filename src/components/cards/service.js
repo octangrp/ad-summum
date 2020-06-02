@@ -16,7 +16,7 @@ class ServiceCard extends React.Component {
       this.props.details.translations
     )
     return (
-      <div className="w-30 xs:w-100 mb-10 mx-auto hover:shadow p-8 pb-18 relative hover:shadow-lg cursor-pointer transition-500ms border-1 border-solid boder-grey-lightest">
+      <div className="w-30 xs:w-100 mb-10 mx-auto hover:shadow p-8 pb-18 relative hover:shadow-lg cursor-pointer transition-500ms border-1 border-solid border-grey-light bg-white">
         <div className="w-100 relative text-left mb-6">
           <img
             src={defaultTranslation.image ? defaultTranslation.image.url : ""}
