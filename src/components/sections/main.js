@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import ReactHtmlParser from "react-html-parser"
 import Logo from "../logo"
+import SectionTitle from "../section-title"
 
 const Main = props => (
   <div className="panel z-10 px-0 pt-32 xs:pt-0 sm:pt-12 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto sm:h-auto">
@@ -23,6 +24,7 @@ const Main = props => (
           <div className=" xs:pt-0">
             <div className="w-90 h-px-500 text-lg xs:pt-0 xs:w-100 font-normal tracking-wide">
               <Logo />
+              <SectionTitle>{props.title}</SectionTitle>
               <div className="xl:leading-relaxed tracking-wider xl:text-lg lg:text-sm xs:text-base md:text-sm sm:text-sm xs:w-90">
                 {ReactHtmlParser(props.children)}
               </div>

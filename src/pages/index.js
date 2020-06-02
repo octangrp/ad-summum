@@ -98,9 +98,7 @@ export default connect(mapStateToProps)(IndexPage)
 
 export const queries = graphql`
   query data {
-    mainSection: wordpressPost(
-      categories: { elemMatch: { slug: { eq: "main-section" } } }
-    ) {
+    mainSection: wordpressPost(slug: { eq: "main-section" }) {
       translations: polylang_translations {
         lang: polylang_current_lang
         id
