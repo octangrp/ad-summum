@@ -13,7 +13,7 @@ const Footer = ({ siteTitle, address, phoneNumber, email }) => (
         <div className="w-50">
           <p>{email}</p>
         </div>
-        <div className="w-50 xs:w-100 text-right sm:text-left sm:text-sm text-lg tracking-wider leading-relaxed">
+        <div className="w-50 xs:w-100 text-right sm:text-left xs:text-left sm:text-sm text-lg tracking-wider leading-relaxed">
           <p>{address}</p>
           <p>{phoneNumber}</p>
         </div>

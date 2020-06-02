@@ -28,7 +28,7 @@ class BulletinPage extends React.Component {
               </div>
             </div>
 
-            <div className="pt-16 xs:pt-8">
+            <div className=" xs:pt-8">
               <div className="mx-auto pt-6 relative">
                 <img src={"/img/tim2.png"} class="w-100 relative" />
                 <div class="absolute xl:flex lg:flex w-100 b-0 l-0 image-gradient px-12 xs:px-4 pt-16 pb-12 xs:py-0 md:pb-8">
@@ -36,9 +36,13 @@ class BulletinPage extends React.Component {
                     <h2 class="p-0 m-0 font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-white uppercase leading-relaxed">
                       We are behind all this
                     </h2>
+                    <p class="w-80 p-0 m-0 text-white">
+                      We are behind all this and we the one in charge in all,We
+                      are behind all this and we the one in charge in all
+                    </p>
                   </div>
-                  <div class="w-20 xs:w-100 text-right my-3">
-                    <h1 class="text-sm xs:text-xxs text-white text-light mx-auto">
+                  <div class="w-20 xs:w-100 text-right mt-auto">
+                    <h1 class="text-sm xs:text-xxs p-0 m-0 text-white text-light mx-auto">
                       Janvier-12-2020
                     </h1>
                   </div>

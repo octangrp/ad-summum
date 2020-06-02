@@ -13,7 +13,7 @@ class Navbar extends React.Component {
     return (
       <nav className="z-99 transition-500ms w-100 text-black fixed bg-white m-0 t-0 l-0 r-0 ">
         <div className="xl:w-90 lg:w-90 md:w-70 xs:w-90 sm:w-90 md:w-90 flex mx-auto py-0 mx-0">
-          <ul className="list text-right w-80 lg:w-90 font-primary font-semibold text-xs ml-auto p-0 m-0 hidden xl:block lg:block md:block px-0 mr-0  text-sm">
+          <ul className="list text-right font-primary font-semibold text-xs ml-auto p-0 m-0 hidden xl:block lg:block md:block px-0 mr-0  text-sm">
             {/* <li className="inline-block  text-center m-0 py-0 text-base pr-2">
               <img src={Logo} alt="ad-summum-logo" width="50" />
             </li> */}
@@ -24,15 +24,15 @@ class Navbar extends React.Component {
               >
                 <Link
                   to={item.url}
-                  className="inherit-color  px-6 no-underline leading-sm uppercase track-wide"
+                  className="inherit-color md:px-4 px-6 no-underline leading-sm uppercase track-wide"
                 >
                   {item.title}
                 </Link>
               </li>
             ))}
           </ul>
-          <ul className="list text-right font-semibold hidden xl:block lg:block md:block px-0 mr-0 lg:w-20 md:w-30 text-sm ">
-            <li className="inline-block  m-0 py-3 px-3 text-sm lg:text-xs">
+          <ul className="list text-right font-semibold hidden xl:block lg:block md:block px-0 mr-0 text-sm ">
+            <li className="inline-block  m-0 py-3 px-3 text-sm lg:text-sm">
               <img
                 src={"/img/england.svg"}
                 width="20"
@@ -40,7 +40,7 @@ class Navbar extends React.Component {
                 className="cursor-pointer"
                 alt="english-language"
               />
-              <span className="pl-2 pt-3">EN</span>
+              <span className="pl-2">EN</span>
             </li>
             <li className="inline-block m-0 py-4 px-3 text-sm ">
               <img
