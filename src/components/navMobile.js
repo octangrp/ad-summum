@@ -75,7 +75,7 @@ class NavMobile extends React.Component {
                 >
                   <Link
                     to={item.url}
-                    className="inherit-color  px-12 no-underline leading-none"
+                    className="inherit-color  px-10 no-underline leading-none"
                   >
                     {item.title}
                   </Link>
@@ -83,12 +83,12 @@ class NavMobile extends React.Component {
               ))}
 
               <li className="my-3 text-xl">
-                <div className="w-100 text-left ml-auto pt-2 px-0 mr-0  text-sm">
+                <div className="w-80 sm:w-45 text-center sm:text-left pt-2 px-0 mr-0  text-sm">
                   <img
                     src={"/img/england.svg"}
                     width="20"
                     onClick={() => this.props.switchLanguage("en_US")}
-                    className="mt-3 mx-4 cursor-pointer"
+                    className="mt-3 mr-4 cursor-pointer"
                     alt="english-language"
                   />
                   <img

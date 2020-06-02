@@ -24,7 +24,7 @@ class AboutUsPage extends React.Component {
       <Layout>
         <SEO title="Team" />
         <SectionWrapper title={aboutUs.title}>
-          <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-90 ml-auto">
+          <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-90 mx-auto">
             {ReactHtmlParser(aboutUs.description)}
           </div>
         </SectionWrapper>
@@ -75,42 +75,30 @@ class AboutUsPage extends React.Component {
           </div>
         </SectionWrapper>
 
-        <SectionWrapper>
-          <div class="w-100 relative bg-white py-16 lg:">
-            <div class="w-100 mx-auto  relative">
-              <div class="w-40 my-auto  xs:w-100">
-                <div class="text-left my-auto">
-                  <h1 class="font-semiBold text-3xl xs:text-3xl sm:text-xl md:text-3xl my-0 py-2 xs:pb-12">
-                    Our Mission
-                  </h1>
-                  <div class=" w-25 border-2 border-grey-light border-solid"></div>
-                  <div class="text-base w-90 p-0 m-0 xs:text-sm ">
-                    <p class="my-6">
+        <SectionWrapper
+          title="Our Mission"
+          description="ASC Ltd brings together with professional skills and
+        extensive experience in the areas of central banking,
+        commercial banking and financial system in general, legal
+        issues and those related to information technology and
+        organization."
+        >
+          <div class="w-100 relative bg-white">
+            <div class="flex pt-12">
+              <div class="w-30 pr-12 lg:pr-0 xs:w-100 xs:pr-0">
+                <div class="border-none rounded-lg bg-white shadow p-8 lg:p-6">
+                  <img src={"/img/target.png"} className="w-20 relative" />
+
+                  <div class="pt-6">
+                    <h2 class="text-left text-xl font-primary my-auto">
+                      Excellence
+                    </h2>
+                    <p class="text-sm">
+                      {" "}
                       ASC Ltd brings together with professional skills and
                       extensive experience in the areas of central banking,
-                      commercial banking and financial system in general, legal
-                      issues and those related to information technology and
-                      organization.
+                      commercial banking and financial system in general
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div class="flex pt-12">
-                <div class="w-30 pr-12  xs:w-100 xs:pr-0">
-                  <div class="border-none rounded-lg bg-white shadow p-8">
-                    <img src={"/img/target.png"} className="w-20 relative" />
-
-                    <div class="pt-6">
-                      <h2 class="text-left text-xl font-primary my-auto">
-                        Excellence
-                      </h2>
-                      <p class="text-sm">
-                        {" "}
-                        ASC Ltd brings together with professional skills and
-                        extensive experience in the areas of central banking,
-                        commercial banking and financial system in general
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
