@@ -28,7 +28,7 @@ class BulletinPage extends React.Component {
               </div>
             </div>
 
-            <div className="pt-16 xs:pt-8">
+            <div className=" xs:pt-8">
               <div className="mx-auto pt-6 relative">
                 <img src={"/img/tim2.png"} class="w-100 relative" />
                 <div class="absolute xl:flex lg:flex w-100 b-0 l-0 image-gradient px-12 xs:px-4 pt-16 pb-12 xs:py-0 md:pb-8">

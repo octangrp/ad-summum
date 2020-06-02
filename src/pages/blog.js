@@ -45,13 +45,8 @@ class BlogPage extends React.Component {
                   </div>
                 </div>
                 <img src={"/img/tim.png"} class="w-100 relative" />
-                <div class="w-80 b-0 l-0 pt-12 pb-12 xs:py-0 md:pb-8">
-                  <h1 class="p-0 m-0 font-primary text-black font-bold text-3xl xs:text-sm md:text-xl track-wider uppercase leading-relaxed">
-                    We are behind all this and we the one in charge in all,We
-                    are behind all this and we the one in charge in all
-                  </h1>
-                </div>
-                <div>
+
+                <div class="py-12">
                   <p class="p-0 m-0">
                     Working with Breaks Agency, an independent creative agency
                     based in London, with clients such as Nike and Dr. Martens
