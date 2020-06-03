@@ -8,7 +8,7 @@ import { connect } from "react-redux"
 import Logo from "../components/logo"
 import SectionWrapper from "../components/sections/sectionWrapper"
 import { graphql } from "gatsby"
-import Headline from "src/components/sections/blog/headline"
+import HeadlineSection from "src/components/sections/blog/headline"
 import DiscoverSection from "src/components/sections/blog/discover-section"
 import Post from "src/components/sections/blog/post"
 
@@ -31,7 +31,7 @@ class BulletinPage extends React.Component {
                 </div>
               </div>
             </div>
-            <Headline details={this.props.data.headlines} />
+            <HeadlineSection details={this.props.data.headlines} />
           </div>
           <DiscoverSection list={this.props.data.discover.list} />
           <div class="w-90 xl:flex lg:flex md:flex mx-auto">

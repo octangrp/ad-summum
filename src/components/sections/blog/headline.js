@@ -6,7 +6,7 @@ import TruncateHtml from "src/components/utilities/TruncateHtml"
 import { Link } from "gatsby"
 import moment from "moment"
 
-class Headline extends React.Component {
+class HeadlineSection extends React.Component {
   render() {
     let details = {}
     let image = {}
@@ -19,8 +19,8 @@ class Headline extends React.Component {
     }
 
     return (
-      <Link to={`/bulletin/post/${details.slug}`}>
-        <div className=" xs:pt-8">
+      <div className=" xs:pt-8">
+        <Link to={`/bulletin/${details.slug}`}>
           <div className="mx-auto pt-6 relative">
             <img src={image.url} class="w-100 relative" />
             <div class="absolute xl:flex lg:flex w-100 b-0 l-0 image-gradient px-12 xs:px-4 pt-16 pb-12 xs:py-0 md:pb-8">
@@ -41,17 +41,17 @@ class Headline extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
     )
   }
 }
 
-Headline.propTypes = {
+HeadlineSection.propTypes = {
   details: PropTypes.object,
 }
 
-Headline.defaultProps = {
+HeadlineSection.defaultProps = {
   details: {
     translations: [],
     image: {},
@@ -62,4 +62,4 @@ const mapStateToProps = state => ({
   lang: state.lang,
 })
 
-export default connect(mapStateToProps)(Headline)
+export default connect(mapStateToProps)(HeadlineSection)

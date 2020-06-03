@@ -98,7 +98,7 @@ exports.createPages = async ({ graphql, actions }) => {
   results.data.bulletin.posts.forEach(edge => {
     createPage({
       // will be the url for the page
-      path: "/bulletin/post/" + edge.slug,
+      path: "/bulletin/" + edge.slug,
       // specify the component template of your choice
       component: slash(blogTemplate),
       // In the ^template's GraphQL query, 'id' will be available
