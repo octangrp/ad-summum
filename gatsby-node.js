@@ -46,6 +46,22 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      bulletin: allWordpressPost(
+        filter: { categories: { elemMatch: { slug: { eq: "bulletin" } } } }
+      ) {
+        posts: nodes {
+          id
+          slug
+          name: title
+          description: content
+          attributes: acf {
+            position
+          }
+          image: featured_media {
+            url: source_url
+          }
+        }
+      }
     }
   `)
   const serviceTemplate = path.resolve(`./src/templates/service.js`)
@@ -70,6 +86,21 @@ exports.createPages = async ({ graphql, actions }) => {
       path: "/members/" + edge.slug,
       // specify the component template of your choice
       component: slash(memberTemplate),
+      // In the ^template's GraphQL query, 'id' will be available
+      // as a GraphQL variable to query for this posts's data.
+      context: {
+        id: edge.id,
+      },
+    })
+  })
+
+  const blogTemplate = path.resolve(`./src/templates/blog.js`)
+  results.data.bulletin.posts.forEach(edge => {
+    createPage({
+      // will be the url for the page
+      path: "/bulletin/" + edge.slug,
+      // specify the component template of your choice
+      component: slash(blogTemplate),
       // In the ^template's GraphQL query, 'id' will be available
       // as a GraphQL variable to query for this posts's data.
       context: {
