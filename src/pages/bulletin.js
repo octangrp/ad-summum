@@ -71,6 +71,7 @@ export const queries = graphql`
           slug
           title
           content
+          date
         }
         image: featured_media {
           url: source_url
@@ -95,6 +96,7 @@ export const queries = graphql`
           slug
           title
           content
+          date
         }
         image: featured_media {
           url: source_url
@@ -119,6 +121,7 @@ export const queries = graphql`
           slug
           title
           content
+          date
         }
         image: featured_media {
           url: source_url
