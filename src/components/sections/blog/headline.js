@@ -19,7 +19,7 @@ class Headline extends React.Component {
     }
 
     return (
-      <Link to={`/bulletin/${details.slug}`}>
+      <Link to={`/bulletin/post/${details.slug}`}>
         <div className=" xs:pt-8">
           <div className="mx-auto pt-6 relative">
             <img src={image.url} class="w-100 relative" />
