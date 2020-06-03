@@ -9,7 +9,7 @@ import ServiceList from "../components/sections/service-list"
 import AnimationWrapper from "../components/sections/animationWrapper"
 
 import TeamList from "../components/sections/team-list"
-import Value from "../components/sections/value"
+import Value from "../components/sections/values"
 import { graphql } from "gatsby"
 import Translator from "../utils/translator"
 import { connect } from "react-redux"

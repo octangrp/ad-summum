@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import ReactHtmlParser from "react-html-parser"
-import Translator from "../../utils/translator"
+import Translator from "src/utils/translator"
 import { connect } from "react-redux"
 
 class ValueCard extends React.Component {
@@ -11,13 +11,28 @@ class ValueCard extends React.Component {
       this.props.details.translations
     )
     return (
-      <div className="pt-12 xl:w-30 xs:mx-auto lg:w-45 md:w-45 sm:w-45 md:mr-2 xs:w-80 rounded-lg overflow-hidden bg-grey xl:inline-block lg:inline-block md:inline-block sm:inline-block sm:m-2 xl:m-2 lg:m-2 ">
-        <div className="panel-body bg-grey text-center pt-2 px-0">
-          <h5 className="text-3xl md:text-xl sm:text-lg text-center my-2">
-            {details.title}
-          </h5>
-          <div className="w-100 text-center font-light text-lg md:text-base sm:text-sm">
-            {ReactHtmlParser(details.description)}
+      <div class="w-30 relative xs:w-100 mr-auto pt-8">
+        <div class="w-rem-12 h-rem-12 bg-white z-99 shadow mx-auto rounded-full relative items-center justify-center flex">
+          <div class="w-rem-5 h-rem-5 bg-primary-darker text-center mx-auto rounded-full  items-center"></div>
+        </div>
+        <div className="flex">
+          <div className="w-50">
+            <div class=" ml-auto h-rem-20 border-0 border-l-1 border-solid border-black border-dashed -mt-6 rotate-30deg w-rem-0 mr-10"></div>
+          </div>
+
+          <div className="w-50">
+            <div class="h-rem-20 border-0 border-l-1 border-solid border-black border-dashed -mt-6 -rotate-30deg w-rem-0 ml-10"></div>
+          </div>
+        </div>
+
+        <div class="border-none rounded-lg bg-white shadow px-8 py-6 z-999 relative -mt-3 h-rem-48">
+          <div>
+            <h2 class="text-left text-xl uppercase font-semibold my-auto tracking-wider leading-relaxed">
+              {details.title}
+            </h2>
+            <p class="text-sm tracking-wider leading-relaxed">
+              {ReactHtmlParser(details.description)}
+            </p>
           </div>
         </div>
       </div>

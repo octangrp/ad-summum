@@ -4,9 +4,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import SectionWrapper from "../components/sections/sectionWrapper"
+import ValuesSection from "../components/sections/values"
 import { graphql } from "gatsby"
 import Translator from "../utils/translator"
 import ReactHtmlParser from "react-html-parser"
+import MissionCard from "src/components/cards/mission"
 
 class AboutUsPage extends React.Component {
   render() {
@@ -24,56 +26,15 @@ class AboutUsPage extends React.Component {
       <Layout>
         <SEO title="Team" />
         <SectionWrapper title={aboutUs.title}>
-          <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-90 mx-auto">
+          <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-95 ml-auto">
             {ReactHtmlParser(aboutUs.description)}
           </div>
         </SectionWrapper>
-        <SectionWrapper
+        <ValuesSection
           title={valuesSection.title}
           description={valuesSection.description}
-          backgroundClass="bg-grey-lightest"
-        >
-          {/* <ValueCard
-            title={valuesSection.title}
-            description={valuesSection.description}
-            values={this.props.data.values.list}
-          ></ValueCard> */}
-
-          <div class="w-100 relative bg-grey-lightest py-16">
-            <div class="w-85 mx-auto  relative">
-              <div class="flex pt-12">
-                <div class="w-40 relative xs:w-100">
-                  <div class="w-rem-12 h-rem-12 bg-white z-99 shadow mx-auto rounded-full relative items-center justify-center flex">
-                    <div class="w-rem-5 h-rem-5 bg-primary-darker text-center mx-auto rounded-full  items-center"></div>
-                  </div>
-                  <div className="flex">
-                    <div className="w-50">
-                      <div class=" ml-auto h-rem-20 border-0 border-l-1 border-solid border-black border-dashed -mt-6 rotate-30deg w-rem-0 mr-10"></div>
-                    </div>
-
-                    <div className="w-50">
-                      <div class="h-rem-20 border-0 border-l-1 border-solid border-black border-dashed -mt-6 -rotate-30deg w-rem-0 ml-10"></div>
-                    </div>
-                  </div>
-
-                  <div class="border-none rounded-lg bg-white shadow px-8 py-6 z-999 relative -mt-3">
-                    <div>
-                      <h2 class="text-left text-xl uppercase font-medium my-auto tracking-wider leading-relaxed">
-                        Excellence
-                      </h2>
-                      <p class="text-xs font-secondary text-sm tracking-wider leading-relaxed">
-                        {" "}
-                        ASC Ltd brings together with professional skills and
-                        extensive experience in the areas of central banking,
-                        commercial banking and financial system{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SectionWrapper>
+          values={this.props.data.values.list}
+        ></ValuesSection>
 
         <SectionWrapper
           title="Our Mission"
@@ -83,25 +44,11 @@ class AboutUsPage extends React.Component {
         issues and those related to information technology and
         organization."
         >
-          <div class="w-100 relative bg-white">
+          <div class="w-95 ml-auto relative bg-white">
             <div class="flex pt-12">
-              <div class="w-30 pr-12 lg:pr-0 xs:w-100 xs:pr-0">
-                <div class="border-none rounded-lg bg-white shadow p-8 lg:p-6">
-                  <img src={"/img/target.png"} className="w-20 relative" />
-
-                  <div class="pt-6">
-                    <h2 class="text-left text-xl font-primary my-auto">
-                      Excellence
-                    </h2>
-                    <p class="text-sm">
-                      {" "}
-                      ASC Ltd brings together with professional skills and
-                      extensive experience in the areas of central banking,
-                      commercial banking and financial system in general
-                    </p>
-                  </div>
-                </div>
-              </div>
+              {this.props.data.strategies.list.map((item, index) => (
+                <MissionCard key={index} details={item} />
+              ))}
             </div>
           </div>
         </SectionWrapper>
@@ -114,7 +61,7 @@ export default AboutUsPage
 
 export const queries = graphql`
   query about {
-    aboutUs: wordpressPost(slug: { eq: "about-us-main" }) {
+    aboutUs: wordpressPost(slug: { eq: "about-us" }) {
       translations: polylang_translations {
         lang: polylang_current_lang
         id
@@ -135,6 +82,22 @@ export const queries = graphql`
     }
     values: allWordpressPost(
       filter: { categories: { elemMatch: { slug: { eq: "values-section" } } } }
+    ) {
+      list: nodes {
+        translations: polylang_translations {
+          lang: polylang_current_lang
+          title
+          description: content
+          image: featured_media {
+            url: source_url
+          }
+        }
+      }
+    }
+    strategies: allWordpressPost(
+      filter: {
+        categories: { elemMatch: { slug: { eq: "company-strategy" } } }
+      }
     ) {
       list: nodes {
         translations: polylang_translations {
