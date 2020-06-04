@@ -27,7 +27,7 @@ class Service extends React.Component {
               <div className="w-100 my-auto relative">
                 <div className="text-left my-auto">
                   <SectionTitle>{this.props.title}</SectionTitle>
-                  <div className="text-lg lg:text-sm font-secondary w-100 tracking-wider leading-relaxed">
+                  <div className="text-lg lg:text-sm font-secondary w-100 tracking-wider leading-relaxed pb-16 pr-16">
                     {ReactHtmlParser(this.props.description)}
                   </div>
                 </div>
