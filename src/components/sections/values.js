@@ -10,7 +10,7 @@ class ValuesSection extends React.Component {
         id={this.props.id}
         title={this.props.title}
         description={this.props.description}
-        backgroundClass="bg-grey-lightest text-black"
+        backgroundClass="bg-white text-black"
       >
         <div className="xl:flex md:flex lg:flex flex-wrap justify-center w-95 ml-auto ">
           {this.props.values.map((item, index) => (
