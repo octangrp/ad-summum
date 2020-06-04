@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Main from "../components/sections/main"
 import More from "../components/sections/more"
 import ServiceList from "../components/sections/service-list"
+import Service from "../components/sections/service"
 import AnimationWrapper from "../components/sections/animationWrapper"
 import SectionWrapper from "../components/sections/sectionWrapper"
 
@@ -57,8 +58,13 @@ class IndexPage extends React.Component {
           </Main>
         </AnimationWrapper>
         <AnimationWrapper>
-          <ServiceList
+          <Service
             id="services"
+            title={servicesSection.title}
+            description={servicesSection.description}
+            image={this.props.data.servicesSection.image}
+          ></Service>
+          <ServiceList
             title={servicesSection.title}
             description={servicesSection.description}
             services={this.props.data.services.list}
@@ -83,21 +89,15 @@ class IndexPage extends React.Component {
           </SectionWrapper>
           <ValuesSection
             title={valuesSection.title}
-            description={valuesSection.description}
             values={this.props.data.values.list}
           ></ValuesSection>
 
           <SectionWrapper
-            title="Our Mission"
-            description="ASC Ltd brings together with professional skills and
-        extensive experience in the areas of central banking,
-        commercial banking and financial system in general, legal
-        issues and those related to information technology and
-        organization."
+            title="Our Vision"
             backgroundClass="bg-grey-lightest text-black"
           >
             <div class="w-95 ml-auto relative">
-              <div class="flex pt-12">
+              <div class="flex pt-12 flex-wrap">
                 {this.props.data.strategies.list.map((item, index) => (
                   <MissionCard key={index} details={item} />
                 ))}

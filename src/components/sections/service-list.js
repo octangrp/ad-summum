@@ -15,8 +15,7 @@ class ServiceList extends React.Component {
     return (
       <SectionWrapper
         id={this.props.id}
-        title={this.props.title}
-        description={this.props.description}
+        logo={false}
         backgroundClass="bg-grey-lightest text-black"
       >
         <div className="xl:flex md:flex lg:flex sm:flex flex-wrap justify-center text-center w-100">
