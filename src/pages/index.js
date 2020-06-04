@@ -88,6 +88,7 @@ class IndexPage extends React.Component {
             </div>
           </SectionWrapper>
           <ValuesSection
+            id="about-us"
             title={valuesSection.title}
             values={this.props.data.values.list}
           ></ValuesSection>
