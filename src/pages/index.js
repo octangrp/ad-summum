@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Main from "../components/sections/main"
 import More from "../components/sections/more"
 import ServiceList from "../components/sections/service-list"
+import Service from "../components/sections/service"
 import AnimationWrapper from "../components/sections/animationWrapper"
 import SectionWrapper from "../components/sections/sectionWrapper"
 
@@ -57,8 +58,12 @@ class IndexPage extends React.Component {
           </Main>
         </AnimationWrapper>
         <AnimationWrapper>
-          <ServiceList
+          <Service
             id="services"
+            title={servicesSection.title}
+            description={servicesSection.description}
+          ></Service>
+          <ServiceList
             title={servicesSection.title}
             description={servicesSection.description}
             services={this.props.data.services.list}

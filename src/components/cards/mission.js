@@ -11,7 +11,7 @@ class MissionCard extends React.Component {
       this.props.details.translations
     )
     return (
-      <div class="w-30 lg:pr-0 xs:w-100 xs:pr-0 mr-auto border-none rounded-lg bg-white shadow p-8 lg:p-6">
+      <div class="w-30 lg:pr-0 xs:w-100 xs:pr-0 mr-4 border-none rounded-lg bg-white shadow p-8 lg:p-6">
         <img src={"/img/target.png"} className="w-20 relative" />
 
         <div class="pt-6">
