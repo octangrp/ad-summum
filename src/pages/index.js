@@ -7,12 +7,16 @@ import Main from "../components/sections/main"
 import More from "../components/sections/more"
 import ServiceList from "../components/sections/service-list"
 import AnimationWrapper from "../components/sections/animationWrapper"
+import SectionWrapper from "../components/sections/sectionWrapper"
 
 import TeamList from "../components/sections/team-list"
 import Value from "../components/sections/values"
 import { graphql } from "gatsby"
 import Translator from "../utils/translator"
 import { connect } from "react-redux"
+import ReactHtmlParser from "react-html-parser"
+import ValuesSection from "../components/sections/values"
+import MissionCard from "src/components/cards/mission"
 
 class IndexPage extends React.Component {
   render() {
@@ -69,13 +73,37 @@ class IndexPage extends React.Component {
           />
         </AnimationWrapper>
         <AnimationWrapper>
-          <More
-            id="about-us"
+          <SectionWrapper
+            backgroundClass="bg-grey-lightest text-black"
             title={aboutUs.title}
-            image={this.props.data.aboutUs.image}
           >
-            {aboutUs.description}
-          </More>
+            <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-95 ml-auto">
+              {ReactHtmlParser(aboutUs.description)}
+            </div>
+          </SectionWrapper>
+          <ValuesSection
+            title={valuesSection.title}
+            description={valuesSection.description}
+            values={this.props.data.values.list}
+          ></ValuesSection>
+
+          <SectionWrapper
+            title="Our Mission"
+            description="ASC Ltd brings together with professional skills and
+        extensive experience in the areas of central banking,
+        commercial banking and financial system in general, legal
+        issues and those related to information technology and
+        organization."
+            backgroundClass="bg-grey-lightest text-black"
+          >
+            <div class="w-95 ml-auto relative">
+              <div class="flex pt-12">
+                {this.props.data.strategies.list.map((item, index) => (
+                  <MissionCard key={index} details={item} />
+                ))}
+              </div>
+            </div>
+          </SectionWrapper>
         </AnimationWrapper>
 
         {/* <AnimationWrapper>
@@ -193,6 +221,22 @@ export const queries = graphql`
           attributes: acf {
             position
           }
+          image: featured_media {
+            url: source_url
+          }
+        }
+      }
+    }
+    strategies: allWordpressPost(
+      filter: {
+        categories: { elemMatch: { slug: { eq: "company-strategy" } } }
+      }
+    ) {
+      list: nodes {
+        translations: polylang_translations {
+          lang: polylang_current_lang
+          title
+          description: content
           image: featured_media {
             url: source_url
           }
