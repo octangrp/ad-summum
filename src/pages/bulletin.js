@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 import { connect } from "react-redux"
 
 import Logo from "../components/logo"
-import SectionWrapper from "../components/sections/sectionWrapper"
 import { graphql } from "gatsby"
 import HeadlineSection from "src/components/sections/blog/headline"
 import DiscoverSection from "src/components/sections/blog/discover-section"
@@ -54,14 +53,7 @@ export default connect(mapStateToProps)(BulletinPage)
 export const queries = graphql`
   query bulletin {
     headlines: allWordpressPost(
-      filter: {
-        categories: {
-          elemMatch: {
-            slug: { eq: "headline" }
-            parent_element: { slug: { eq: "bulletin" } }
-          }
-        }
-      }
+      filter: { categories: { elemMatch: { slug: { eq: "headline" } } } }
       sort: { fields: date }
     ) {
       list: nodes {
@@ -79,14 +71,7 @@ export const queries = graphql`
       }
     }
     discover: allWordpressPost(
-      filter: {
-        categories: {
-          elemMatch: {
-            slug: { eq: "discover" }
-            parent_element: { slug: { eq: "bulletin" } }
-          }
-        }
-      }
+      filter: { categories: { elemMatch: { slug: { eq: "discover" } } } }
       sort: { fields: date }
     ) {
       list: nodes {
