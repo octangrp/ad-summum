@@ -89,21 +89,15 @@ class IndexPage extends React.Component {
           </SectionWrapper>
           <ValuesSection
             title={valuesSection.title}
-            description={valuesSection.description}
             values={this.props.data.values.list}
           ></ValuesSection>
 
           <SectionWrapper
-            title="Our Mission"
-            description="ASC Ltd brings together with professional skills and
-        extensive experience in the areas of central banking,
-        commercial banking and financial system in general, legal
-        issues and those related to information technology and
-        organization."
+            title="Our Vision"
             backgroundClass="bg-grey-lightest text-black"
           >
             <div class="w-95 ml-auto relative">
-              <div class="flex pt-12">
+              <div class="flex pt-12 flex-wrap">
                 {this.props.data.strategies.list.map((item, index) => (
                   <MissionCard key={index} details={item} />
                 ))}
