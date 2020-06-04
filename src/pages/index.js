@@ -62,6 +62,7 @@ class IndexPage extends React.Component {
             id="services"
             title={servicesSection.title}
             description={servicesSection.description}
+            image={this.props.data.servicesSection.image}
           ></Service>
           <ServiceList
             title={servicesSection.title}
