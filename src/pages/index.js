@@ -141,7 +141,7 @@ export const queries = graphql`
         url: source_url
       }
     }
-    aboutUs: wordpressPost(slug: { eq: "about-us" }) {
+    aboutUs: wordpressPost(slug: { eq: "about-us-main" }) {
       translations: polylang_translations {
         lang: polylang_current_lang
         id
