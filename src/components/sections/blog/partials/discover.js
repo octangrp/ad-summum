@@ -33,7 +33,7 @@ class Discover extends React.Component {
                 </h1>
               </div>
               <div class="text-base font-secondary w-80 xs:p-0 xsm-0">
-                <div class="font-secondary xs:text-xs tracking-wider leading-relaxed font-normal">
+                <div class="font-secondary xs:text-xs text-base tracking-wider leading-relaxed font-normal">
                   <TruncateHtml length={500} tokenize={"words"}>
                     {details.content}
                   </TruncateHtml>

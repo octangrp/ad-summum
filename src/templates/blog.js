@@ -33,7 +33,9 @@ class BlogPage extends React.Component {
                   </div>
                   <div class="w-20 xs:w-100 ml-auto text-right">
                     <h1 class="text-base xs:text-xxs sm:text-xs text-black text-light mx-auto">
-                      {moment(post.date).format("dddd, MMM Do YYYY")}
+                      {moment(this.props.data.post.date).format(
+                        "dddd, MMM Do YYYY"
+                      )}
                     </h1>
                   </div>
                 </div>
@@ -46,7 +48,9 @@ class BlogPage extends React.Component {
                   class="w-100 relative"
                 />
 
-                <div class="py-12">{ReactHtmlParser(post.description)}</div>
+                <div class="py-8 text-lg lg:text-sm tracking-wider leading-relaxed w-100">
+                  {ReactHtmlParser(post.description)}
+                </div>
               </div>
             </div>
           </div>
