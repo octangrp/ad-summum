@@ -25,7 +25,7 @@ class ValueCard extends React.Component {
           </div>
         </div>
 
-        <div class="border-none rounded-lg bg-white shadow px-8 py-6 z-999 relative -mt-3">
+        <div class="border-none rounded-lg bg-white shadow px-8 h-rem-64 overflow-hidden py-6 z-999 relative -mt-3">
           <div>
             <h2 class="text-left text-xl text-center uppercase font-semibold my-auto tracking-wider leading-relaxed">
               {details.title}
