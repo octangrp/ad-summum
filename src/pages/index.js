@@ -11,7 +11,7 @@ import AnimationWrapper from "../components/sections/animationWrapper"
 import SectionWrapper from "../components/sections/sectionWrapper"
 
 import TeamList from "../components/sections/team-list"
-import Value from "../components/sections/values"
+import Founders from "src/components/sections/founders"
 import { graphql } from "gatsby"
 import Translator from "../utils/translator"
 import { connect } from "react-redux"
@@ -28,6 +28,11 @@ class IndexPage extends React.Component {
     const aboutUs = Translator.process(
       this.props.lang,
       this.props.data.aboutUs.translations
+    )
+
+    const founders = Translator.process(
+      this.props.lang,
+      this.props.data.founders.translations
     )
 
     const servicesSection = Translator.process(
@@ -87,16 +92,22 @@ class IndexPage extends React.Component {
               {ReactHtmlParser(aboutUs.description)}
             </div>
           </SectionWrapper>
+        </AnimationWrapper>
+        <AnimationWrapper>
+          <Founders
+            title={founders.title}
+            image={this.props.data.founders.image}
+            description={founders.description}
+          />
+        </AnimationWrapper>
+        <AnimationWrapper>
           <ValuesSection
             id="about-us"
             title={valuesSection.title}
             values={this.props.data.values.list}
           ></ValuesSection>
 
-          <SectionWrapper
-            title="Our Vision"
-            backgroundClass="bg-grey-lightest text-black"
-          >
+          <SectionWrapper title="Our Vision">
             <div class="w-95 ml-auto relative">
               <div class="flex pt-12 flex-wrap">
                 {this.props.data.strategies.list.map((item, index) => (
@@ -141,7 +152,21 @@ export const queries = graphql`
         url: source_url
       }
     }
-    aboutUs: wordpressPost(slug: { eq: "about-us" }) {
+    aboutUs: wordpressPost(slug: { eq: "about-us-main" }) {
+      translations: polylang_translations {
+        lang: polylang_current_lang
+        id
+        title
+        description: content
+        button: acf {
+          text: button_text
+        }
+      }
+      image: featured_media {
+        url: source_url
+      }
+    }
+    founders: wordpressPost(slug: { eq: "founders" }) {
       translations: polylang_translations {
         lang: polylang_current_lang
         id
