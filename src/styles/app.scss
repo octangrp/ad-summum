@@ -28,3 +28,20 @@
 .image-gradient {
   background: linear-gradient(180deg, rgba(5, 74, 145, 0) 0%, #054A91 100%);
 }
+
+.width-card {
+  width: calc(100% / 3);
+
+  &:nth-child(3n+0) {
+    justify-content: flex-end;
+  }
+
+  &:nth-child(3n+2) {
+    justify-content: center;
+  }
+}
+
+.text-justified {
+  text-align: justify;
+  text-justify: inter-word;
+}

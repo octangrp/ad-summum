@@ -9,7 +9,7 @@ class Founders extends React.Component {
   render() {
     return (
       <SectionWrapper title={this.props.title}>
-        <div className="w-95 ml-auto">
+        <div className="w-100 ml-auto xs:m-0 xs:w-100">
           <div className="w-100">
             <img
               src={
@@ -20,7 +20,7 @@ class Founders extends React.Component {
               className="relative"
             />
           </div>
-          <div className="w-100 my-6 text-lg tracking-wider leading-relaxed ">
+          <div className="w-100 my-6 text-lg tracking-wider leading-relaxed text-justified">
             {ReactHtmlParser(this.props.description)}
           </div>
         </div>

@@ -30,7 +30,7 @@ class ValueCard extends React.Component {
             <h2 class="text-left text-xl text-center uppercase font-semibold my-auto tracking-wider leading-relaxed">
               {details.title}
             </h2>
-            <p class="text-sm tracking-wider leading-relaxed">
+            <p class="text-sm tracking-wider leading-relaxed text-justified">
               {ReactHtmlParser(details.description)}
             </p>
           </div>

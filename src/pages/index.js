@@ -88,7 +88,7 @@ class IndexPage extends React.Component {
             backgroundClass="bg-grey-lightest text-black"
             title={aboutUs.title}
           >
-            <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-95 ml-auto">
+            <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-100 ml-auto">
               {ReactHtmlParser(aboutUs.description)}
             </div>
           </SectionWrapper>
@@ -108,7 +108,7 @@ class IndexPage extends React.Component {
           ></ValuesSection>
 
           <SectionWrapper title="Our Vision">
-            <div class="w-95 ml-auto relative">
+            <div class="w-100 ml-auto relative xs:w-100 xs:m-0">
               <div class="flex pt-12 flex-wrap">
                 {this.props.data.strategies.list.map((item, index) => (
                   <MissionCard key={index} details={item} />

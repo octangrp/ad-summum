@@ -15,7 +15,7 @@ const Team = props => (
         <div className="w-60 md:w-100 lg:w-100 my-auto xs:w-100 xs:mx-auto">
           <div className="text-left my-auto">
             <SectionTitle>{props.title}</SectionTitle>
-            <div className="text-base font-secondary w-70 xs:w-100 tracking-wider leading-relaxed">
+            <div className="text-base font-secondary w-70 xs:w-100 tracking-wider leading-relaxed text-justified">
               {ReactHtmlParser(props.description)}
             </div>
           </div>
