@@ -20,7 +20,7 @@ class Founders extends React.Component {
               className="relative"
             />
           </div>
-          <div className="w-100 my-6 text-lg tracking-wider leading-relaxed ">
+          <div className="w-100 my-6 text-lg tracking-wider leading-relaxed text-justified">
             {ReactHtmlParser(this.props.description)}
           </div>
         </div>

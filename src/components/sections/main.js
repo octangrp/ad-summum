@@ -25,7 +25,7 @@ const Main = props => (
             <div className="w-90 h-px-500 text-lg xs:pt-0 xs:w-100 font-normal tracking-wide">
               <Logo />
               <SectionTitle>{props.title}</SectionTitle>
-              <div className="xl:leading-relaxed tracking-wider xl:text-lg lg:text-sm xs:text-base md:text-sm sm:text-sm xs:w-90">
+              <div className="xl:leading-relaxed tracking-wider xl:text-lg lg:text-sm xs:text-base md:text-sm sm:text-sm xs:w-90 text-justified">
                 {ReactHtmlParser(props.children)}
               </div>
             </div>

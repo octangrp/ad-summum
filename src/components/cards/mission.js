@@ -18,7 +18,7 @@ class MissionCard extends React.Component {
           <h2 class="text-left text-xl font-primary font-semibold my-auto uppercase tracking-wider leading-relaxed">
             {details.title}
           </h2>
-          <p class="text-sm tracking-wider leading-relaxed">
+          <p class="text-sm tracking-wider leading-relaxed text-justified">
             {ReactHtmlParser(details.description)}
           </p>
         </div>
