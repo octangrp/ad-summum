@@ -9,7 +9,7 @@ class Founders extends React.Component {
   render() {
     return (
       <SectionWrapper title={this.props.title}>
-        <div className="w-95 ml-auto">
+        <div className="w-100 ml-auto xs:m-0 xs:w-100">
           <div className="w-100">
             <img
               src={

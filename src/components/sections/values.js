@@ -12,7 +12,7 @@ class ValuesSection extends React.Component {
         description={this.props.description}
         backgroundClass="bg-grey-lightest text-black"
       >
-        <div className="xl:flex md:flex lg:flex flex-wrap justify-center w-95 ml-auto ">
+        <div className="xl:flex md:flex lg:flex flex-wrap justify-center w-100 ml-auto xs:w-100 xs:m-0">
           {this.props.values.map((item, index) => (
             <ValueCard key={index} details={item} />
           ))}

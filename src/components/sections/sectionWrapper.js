@@ -26,7 +26,7 @@ const SectionWrapper = props => (
             >
               {ReactHtmlParser(props.description)}
             </div>
-            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0 my-12">
+            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0 mb-12 mt-4">
               {props.children}
             </div>
           </div>

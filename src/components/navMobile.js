@@ -29,7 +29,7 @@ class NavMobile extends React.Component {
     return (
       <div className="relative">
         <nav className="z-99 w-100 text-primary border-primary border-solid border-0 border-b-1 absolute xl:hidden lg:hidden md:hidden m-0 t-0 l-0 r-0">
-          <div className="w-90 flex mx-auto py-2 mx-0">
+          <div className="w-85 mx-auto flex mx-auto py-2 mx-0">
             <ul className="w-50 list mx-0 px-0 text-left">
               <li className="w-25 xs:w-50 text-black mx-0 px-0">
                 <Link to="/">
