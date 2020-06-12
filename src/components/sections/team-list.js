@@ -51,7 +51,7 @@ class TeamList extends React.Component {
         <div className="w-100 lg:text-center relative">
           {this.props.members.map((member, index) => (
             <div
-              className=" xs:mx-0 lg:mx-8 sm:mx-2 pt-12 width-card md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer relative pb-24"
+              className=" xs:mx-0 lg:mx-8 sm:mx-2 pt-12 width-card md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer relative pb-24 md:mr-24"
               key={index}
             >
               <div

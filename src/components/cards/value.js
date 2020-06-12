@@ -11,7 +11,7 @@ class ValueCard extends React.Component {
       this.props.details.translations
     )
     return (
-      <div class="w-30 relative xs:w-100 mr-auto pt-8">
+      <div class="w-30 relative xs:w-100 mr-auto pt-8 mb-8 xs:mb-0">
         <div class="w-rem-12 h-rem-12 bg-white z-99 shadow mx-auto rounded-full relative items-center justify-center flex">
           <div class="w-rem-5 h-rem-5 bg-primary-darker text-center mx-auto rounded-full  items-center"></div>
         </div>
