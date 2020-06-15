@@ -8,7 +8,7 @@ const Main = props => (
   <div className="panel z-10 px-0 pt-32 xs:pt-0 sm:pt-12 bg-white t-0 overflow-hidden relative min-h-screen md:h-auto sm:h-auto sm:h-auto">
     <div className="min-h-screen  sm:min-h-auto xs:min-h-auto h-100 w-95 lg:w-90 lg:mx-auto -mt-24 lg:-mt-32 md:-mt-3 xs:pt-0 xs:mt-5 lg:mt-3 lg:pt-3 p-0 sm:mt-5 ml-auto md:w-95 xs:w-100 sm:w-95 xl:flex md:flex  lg:flex sm:flex relative">
       <div className="text-left z-999 -l-5 t-5 md:t-0 xs:-l-15 xs:-t-5 lg:-l-15 lg:t-10 md:b-30 absolute">
-        <img src={"/img/shapes.png"} className="w-85 relative" />
+        <img src={"/img/shapes.png"} className="w-85 sm:w-55 relative" />
       </div>
 
       <div className="xl:flex md:flex lg:flex sm:flex xs:block align-items-end relative pt-16 sm:pt-0 md:pt-12 w-100 md:w-100 pb-4 xs:w-85 xs:mx-auto ml-auto">
@@ -43,7 +43,7 @@ const Main = props => (
       </div>
 
       <div className="text-left r-0 b-0 xs:-r-15 absolute">
-        <img src={"/img/shapes.png"} className="w-85 relative" />
+        <img src={"/img/shapes.png"} className="w-85 sm:w-55 relative" />
       </div>
     </div>
   </div>
