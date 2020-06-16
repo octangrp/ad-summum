@@ -15,7 +15,7 @@ class Post extends React.Component {
     )
 
     return (
-      <div class="w-50 xs:w-100 xs:pl-0 pl-10 sm:pl-0">
+      <div class="w-50 xs:w-100 xs:pl-0 mr-10 sm:pl-0">
         <Link to={`/bulletin/${details.slug}`}>
           <div class="xs:pb-0 h-rem-86 xs:h-rem-42">
             <img

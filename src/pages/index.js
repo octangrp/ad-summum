@@ -100,7 +100,7 @@ class IndexPage extends React.Component {
             description={founders.description}
           />
         </AnimationWrapper>
-        <AnimationWrapper>
+        {/* <AnimationWrapper>
           <ValuesSection
             id="about-us"
             title={valuesSection.title}
@@ -116,7 +116,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </SectionWrapper>
-        </AnimationWrapper>
+        </AnimationWrapper> */}
 
         {/* <AnimationWrapper>
           <Value

@@ -20,13 +20,13 @@ const SectionWrapper = props => (
             <SectionTitle>{props.title}</SectionTitle>
             <div
               className={[
-                "text-base font-secondary w-50 xs:w-100 tracking-wider leading-relaxed text-justified",
+                "text-base font-secondary w-50 xs:w-100 tracking-wider leading-relaxed",
                 !props.showSubtitle ? "hidden" : null,
               ].join(" ")}
             >
               {ReactHtmlParser(props.description)}
             </div>
-            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0 mb-12 mt-4 text-justified">
+            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0 mb-12 mt-4">
               {props.children}
             </div>
           </div>
