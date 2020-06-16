@@ -20,7 +20,7 @@ class DiscoverSection extends React.Component {
 
   render() {
     return (
-      <SectionWrapper logo={false} title="All services">
+      <SectionWrapper logo={false}>
         <div>
           {this.list()}
           <div>

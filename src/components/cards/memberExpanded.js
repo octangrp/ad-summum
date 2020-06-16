@@ -30,7 +30,7 @@ class MemberExpanded extends React.Component {
     )
     return (
       <div className="w-100 z-9999 overflow-hidden min-h-screen fixed t-0 l-0">
-        <div className="z-10 relative w-100 min-h-screen flex items-center justify-center">
+        <div className="z-10 relative w-100 min-h-screen flex items-center">
           <div
             onClick={this.closeModal}
             className="bg-black-darkest z-0 absolute h-100 w-100 opacity-50"
@@ -38,7 +38,7 @@ class MemberExpanded extends React.Component {
           <div className="w-70 lg:w-100 panel-default py-5 relative z-10">
             <div className="w-100 lg:w-80 md:w-85 sm:w-90 xs:w-100 bg-white mx-auto shadow-lg border-1 border-grey border-solid">
               <div className="xl:flex sm:flex lg:flex md:flex xs:p-0">
-                <div className="w-40 xs:w-100 xs:p-4 flex items-center justify-center">
+                <div className="w-40 xs:w-100 xs:p-4 flex items-center">
                   <div className="w-rem-64 h-rem-64 rounded-full overflow-hidden">
                     <img
                       src={
