@@ -36,9 +36,9 @@ class ServiceCard extends React.Component {
         <div className="w-50 md:w-100 pt-4 text-right absolute b-10 r-0 px-8 xs:px-4 lg:px-4 pt-8">
           <Link
             to={`/service/${defaultTranslation.slug}`}
-            className="uppercase text-sm text-primary-darkest font-bold font-primary"
+            className="uppercase text-sm text-primary-darkest cursor-pointer font-bold font-primary"
           >
-            {details.attributes.button_text}
+            {this.props.lang == "en_US" ? "Read more" : "Suite"}
           </Link>
         </div>
       </div>
