@@ -88,9 +88,12 @@ class MemberExpanded extends React.Component {
                         </button>
                       </a>
                     </div>
-                    <div className="text-blue text-right ml-auto w-100 underline flex items-end justify-end">
-                      <Link to={`/members/${defaultTranslation.slug}`}>
-                        Read more
+                    <div className="text-right ml-auto w-100  flex items-end justify-end">
+                      <Link
+                        to={`/members/${defaultTranslation.slug}`}
+                        className="uppercase text-sm text-primary-darkest cursor-pointer font-bold font-primary"
+                      >
+                        {this.props.lang == "en_US" ? "Read more" : "Suite"}
                       </Link>
                     </div>
                   </div>
