@@ -23,11 +23,11 @@ class BulletinPage extends React.Component {
                 <Logo />
               </div>
               <div className="w-60 my-auto">
-                <div className="text-left my-auto">
+                {/* <div className="text-left my-auto">
                   <h1 class="text-6xl xs:text-3xl uppercase font-bold tracking-wider">
                     Asc Bulletin
                   </h1>
-                </div>
+                </div> */}
               </div>
             </div>
             <HeadlineSection details={this.props.data.headlines} />
