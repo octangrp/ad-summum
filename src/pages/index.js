@@ -75,14 +75,12 @@ class IndexPage extends React.Component {
             services={this.props.data.services.list}
           ></ServiceList>
         </AnimationWrapper>
-        <AnimationWrapper>
-          <TeamList
-            id="team"
-            title={teamSection.title}
-            description={teamSection.description}
-            members={this.props.data.team.members}
-          />
-        </AnimationWrapper>
+        <TeamList
+          id="team"
+          title={teamSection.title}
+          description={teamSection.description}
+          members={this.props.data.team.members}
+        />
         <AnimationWrapper>
           <SectionWrapper
             backgroundClass="bg-grey-lightest text-black"
