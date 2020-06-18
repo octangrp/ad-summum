@@ -4,6 +4,7 @@ import Member from "../cards/member"
 import MemberExpanded from "../cards/memberExpanded"
 import SectionWrapper from "./sectionWrapper"
 import { Link } from "gatsby"
+import AnimationWrapper from "src/components/sections/animationWrapper"
 
 class TeamList extends React.Component {
   constructor(props) {
@@ -42,34 +43,38 @@ class TeamList extends React.Component {
   }
   render() {
     return (
-      <SectionWrapper
-        id={this.props.id}
-        title={this.props.title}
-        description={this.props.description}
-        backgroundClass="bg-white text-black"
-      >
-        <div className="w-100 lg:text-center relative">
-          {this.props.members.map((member, index) => (
-            <div
-              className=" xs:mx-0 lg:mx-8 sm:mx-2 pt-12 width-card md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer relative pb-24 md:mr-24"
-              key={index}
-            >
-              <div
-                className="w-100 lg:mx-auto xs:hidden relative sm:hidden"
-                onClick={() => this.showMember(index)}
-              >
-                <Member details={member} />
-              </div>
-              <div class="hidden xs:block sm:block">
-                <Link to={`/members/${member.translations[0].slug}`}>
-                  <Member details={member} />
-                </Link>
-              </div>
+      <div className="relative">
+        <AnimationWrapper>
+          <SectionWrapper
+            id={this.props.id}
+            title={this.props.title}
+            description={this.props.description}
+            backgroundClass="bg-white text-black"
+          >
+            <div className="w-100 lg:text-center relative">
+              {this.props.members.map((member, index) => (
+                <div
+                  className=" xs:mx-0 lg:mx-8 sm:mx-2 pt-12 width-card md:w-35 sm:w-40 xs:w-100 inline-block cursor-pointer relative pb-24 md:mr-24"
+                  key={index}
+                >
+                  <div
+                    className="w-100 lg:mx-auto xs:hidden relative sm:hidden"
+                    onClick={() => this.showMember(index)}
+                  >
+                    <Member details={member} />
+                  </div>
+                  <div class="hidden xs:block sm:block">
+                    <Link to={`/members/${member.translations[0].slug}`}>
+                      <Member details={member} />
+                    </Link>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </SectionWrapper>
+        </AnimationWrapper>
         {this.renderModal()}
-      </SectionWrapper>
+      </div>
     )
   }
 }

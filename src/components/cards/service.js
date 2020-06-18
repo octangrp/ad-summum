@@ -27,7 +27,7 @@ class ServiceCard extends React.Component {
           <h4 className="text-xl sm:text-lg xs:text-base xs:text-lg text-grey-darker uppercase my-2 tracking-wider font-primary">
             {details.title}
           </h4>
-          <div className="w-100 text-lg sm:text-base lg:text-sm xs:text-sm my-5 tracking-wide">
+          <div className="w-100 text-lg relative sm:text-base lg:text-sm xs:text-sm my-5 tracking-wide">
             <TruncateHtml length={80} tokenize={"words"}>
               {details.content}
             </TruncateHtml>
