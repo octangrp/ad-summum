@@ -36,11 +36,11 @@ class Post extends React.Component {
               </TruncateHtml>
             </div>
           </div>
-          <div class="text-sm  md:text-xs m-0 font-secondary w-100 tracking-wider leading-relaxed text-right">
+          {/* <div class="text-sm  md:text-xs m-0 font-secondary w-100 tracking-wider leading-relaxed text-right">
             <p class="p-0 m-0 xs:text-xxs">
               {moment(details.date).format("dddd, MMM Do YYYY")}
             </p>
-          </div>
+          </div> */}
         </Link>
       </div>
     )
