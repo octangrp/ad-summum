@@ -1,7 +1,7 @@
 import React from "react"
 
 const SectionTitle = ({ children }) => (
-  <div class="inline-block mb-6">
+  <div class="inline-block mb-6 relative">
     <h1 className="text-2xl font-primary font-bold uppercase tracking-wider">
       {children}
     </h1>

@@ -15,8 +15,8 @@ const SectionWrapper = props => (
     <div className="min-h-screen relative">
       <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto  py-12">
         {props.logo ? <Logo /> : ""}
-        <div className=" xs:pt-0 ">
-          <div className="leading-loosexs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100">
+        <div className=" xs:pt-0 relative">
+          <div className="leading-loose xs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100 relative">
             <SectionTitle>{props.title}</SectionTitle>
             <div
               className={[

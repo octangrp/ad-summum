@@ -18,7 +18,7 @@ class BulletinPage extends React.Component {
         <SEO title="ASC Bulletin" />
         <div className="w-100 relative bg-white py-16">
           <div className="w-90 mx-auto  relative">
-            <div className="xl:flex lg:flex">
+            <div className="xl:flex lg:flex relative">
               <div className="w-40">
                 <Logo />
               </div>
