@@ -17,7 +17,7 @@ class Service extends React.Component {
     return (
       <div id={this.props.id} className="w-100 relative bg-white relative">
         <div className="w-100 ml-auto lg:w-95 lg:ml-auto  relative overflow-hidden">
-          <div className="w-100 h-100 bg-white absolute t-10 z-5 xl:rotate-60deg lg:t-0 lg:-l-45 md:hidden xs:hidden -l-30" />
+          <div className="w-100 h-100 bg-white absolute t-0 z-5 lg:t-0 lg:-l-45 md:hidden xs:hidden -l-55" />
           <div
             className="w-50 md:w-90 relative z-10 sm:mx-auto sm:w-85 xs:w-85 xs:mx-auto
           "
@@ -34,14 +34,14 @@ class Service extends React.Component {
               </div>
             </div>
           </div>
-          <div className="w-70 md:w-85 md:mx-auto xl:absolute lg:absolute r-0 t-0 h-100 xs:hidden">
+          <div className="w-70 md:w-85 md:mx-auto xl:absolute lg:absolute -r-15 t-0 h-100 xs:hidden">
             <img
               src={
                 this.props.image && this.props.image.url
                   ? this.props.image.url
                   : null
               }
-              className="clip-full relative"
+              className="w-80 relative"
             />
           </div>
         </div>

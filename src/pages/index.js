@@ -87,6 +87,7 @@ class IndexPage extends React.Component {
           <SectionWrapper
             backgroundClass="bg-grey-lightest text-black"
             title={aboutUs.title}
+            id="about-us"
           >
             <div class="text-lg lg:text-sm tracking-wider leading-relaxed xs:w-100 p-0 mr-10 m-0 xs:text-sm pb-32 w-100 ml-auto">
               {ReactHtmlParser(aboutUs.description)}
