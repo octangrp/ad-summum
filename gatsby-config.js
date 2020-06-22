@@ -79,5 +79,12 @@ module.exports = {
         windowKey: "__PRELOADED_STATE__",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-170332971-1",
+      },
+    },
   ],
 }
