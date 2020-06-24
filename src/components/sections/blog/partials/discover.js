@@ -16,7 +16,7 @@ class Discover extends React.Component {
     return (
       <Link to={`/bulletin/${details.slug}`}>
         <div className="xl:flex lg:flex md:flex ">
-          <div class="w-40  xs:w-100">
+          <div class="w-40 xs:w-100">
             <div class="h-rem-86 xs:h-rem-42">
               <img
                 src={image ? image.url : null}

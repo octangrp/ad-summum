@@ -32,11 +32,11 @@ class BlogPage extends React.Component {
                     </h1>
                   </div>
                   <div class="w-20 xs:w-100 ml-auto text-right">
-                    <h1 class="text-base xs:text-xxs sm:text-xs text-black text-light mx-auto">
+                    {/* <h1 class="text-base xs:text-xxs sm:text-xs text-black text-light mx-auto">
                       {moment(this.props.data.post.date).format(
                         "dddd, MMM Do YYYY"
                       )}
-                    </h1>
+                    </h1> */}
                   </div>
                 </div>
                 <img

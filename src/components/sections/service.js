@@ -34,7 +34,7 @@ class Service extends React.Component {
               </div>
             </div>
           </div>
-          <div className="w-70 md:w-85 md:mx-auto xl:absolute lg:absolute -r-15 t-0 h-100 xs:hidden">
+          <div className="w-60 md:w-85 md:mx-auto xl:absolute lg:absolute -r-15 t-0 h-100 xs:hidden">
             <img
               src={
                 this.props.image && this.props.image.url
