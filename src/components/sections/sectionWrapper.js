@@ -7,16 +7,13 @@ import Logo from "../logo"
 const SectionWrapper = props => (
   <div
     id={props.id}
-    className={[
-      "z-10 px-0 t-0 relative min-h-screen",
-      props.backgroundClass,
-    ].join(" ")}
+    className={["z-10 px-0 t-0 relative ", props.backgroundClass].join(" ")}
   >
-    <div className="min-h-screen relative">
+    <div className=" relative">
       <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto  py-12">
         {props.logo ? <Logo /> : ""}
         <div className=" xs:pt-0 ">
-          <div className="leading-loosexs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100">
+          <div className="leading-loose xs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100">
             <SectionTitle>{props.title}</SectionTitle>
             <div
               className={[
