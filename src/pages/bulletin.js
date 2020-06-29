@@ -34,9 +34,9 @@ class BulletinPage extends React.Component {
           </div>
           <DiscoverSection list={this.props.data.discover.list} />
           <div class="w-100 bg-grey-lightest">
-            <div class="w-90 xl:flex lg:flex md:flex mx-auto py-16">
+            <div class="">
               {this.props.data.post.list.map((post, index) => (
-                <Post details={post} />
+                <DiscoverSection list={this.props.data.discover.list} />
               ))}
             </div>
           </div>
