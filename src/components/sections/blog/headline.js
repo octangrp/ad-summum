@@ -22,7 +22,7 @@ class HeadlineSection extends React.Component {
       <div className=" xs:pt-8">
         <Link to={`/bulletin/${details.slug}`}>
           <div className="mx-auto pt-6 relative">
-            <div class="xl:flex lg:flex w-100 b-0 l-0 xs:px-4 pt-12 pb-12 xs:py-0 md:pb-8">
+            <div class="xl:flex lg:flex w-100 b-0 l-0 xs:px-4 pt-12 xs:py-0 md:pb-8">
               <div class="w-100 xl:mx-auto">
                 <h2 class="py-12 m-0 font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-black uppercase leading-relaxed">
                   {details.title}
@@ -39,7 +39,7 @@ class HeadlineSection extends React.Component {
                 </h1>
               </div> */}
             </div>
-            <img src={image ? image.url : null} class="w-100 relative" />
+            {/* <img src={image ? image.url : null} class="w-100 relative" /> */}
           </div>
         </Link>
       </div>

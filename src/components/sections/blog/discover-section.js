@@ -13,7 +13,7 @@ class DiscoverSection extends React.Component {
 
   list() {
     if (this.props.list.length) {
-      return <Discover details={this.props.list[this.state.index]} />
+      return
     }
     return null
   }
@@ -21,16 +21,11 @@ class DiscoverSection extends React.Component {
   render() {
     return (
       <SectionWrapper logo={false}>
-        {/* <div>
-          {this.list()} */}
-        {/* <div>
-            <div class="w-100 pt-24 xs:pt-12 w-5 xs:w-25 lg:w-10 md:w-15 mx-auto text-center">
-              {this.props.list.map(index => (
-                <div class="w-rem-3 h-rem-3 xs:w-rem-4 xs:h-rem-4 inline-block bg-white border-1 border-black border-solid my-auto rounded-full cursor-pointer hover:bg-black"></div>
-              ))}
-            </div>
-          </div> */}
-        {/* </div> */}
+        <div>
+          {this.props.list.map((post, i) => (
+            <Discover key={i} details={post} />
+          ))}
+        </div>
       </SectionWrapper>
     )
   }

@@ -10,7 +10,7 @@ const SectionWrapper = props => (
     className={["z-10 px-0 t-0 relative ", props.backgroundClass].join(" ")}
   >
     <div className=" relative">
-      <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto  py-12">
+      <div className="xs:block align-items-end relative w-90 xs:w-85 mx-auto py-12">
         {props.logo ? <Logo /> : ""}
         <div className=" xs:pt-0 ">
           <div className="leading-loose xs:leading-normal text-xl text-left text-light xs:pt-0 xs:w-100">
@@ -23,7 +23,7 @@ const SectionWrapper = props => (
             >
               {ReactHtmlParser(props.description)}
             </div>
-            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0 mb-12 mt-4">
+            <div className="text-lg sm:text-sm font-light section-content sm:mt-0 md:text-0 mt-4">
               {props.children}
             </div>
           </div>
