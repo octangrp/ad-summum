@@ -22,22 +22,11 @@ class BulletinPage extends React.Component {
               <div className="w-40">
                 <Logo />
               </div>
-              <div className="w-60 my-auto">
-                {/* <div className="text-left my-auto">
-                  <h1 class="text-6xl xs:text-3xl uppercase font-bold tracking-wider">
-                    Asc Bulletin
-                  </h1>
-                </div> */}
-              </div>
             </div>
-            <HeadlineSection details={this.props.data.headlines} />
           </div>
-          <DiscoverSection list={this.props.data.discover.list} />
           <div class="w-100 bg-grey-lightest">
             <div class="">
-              {this.props.data.post.list.map((post, index) => (
-                <DiscoverSection list={this.props.data.discover.list} />
-              ))}
+              <DiscoverSection list={this.props.data.post.list} />
             </div>
           </div>
         </div>
@@ -54,51 +43,8 @@ export default connect(mapStateToProps)(BulletinPage)
 
 export const queries = graphql`
   query bulletin {
-    headlines: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "headline" } } } }
-      sort: { fields: date }
-    ) {
-      list: nodes {
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          id
-          slug
-          title
-          content
-          date
-        }
-        image: featured_media {
-          url: source_url
-        }
-      }
-    }
-    discover: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "discover" } } } }
-      sort: { fields: date }
-    ) {
-      list: nodes {
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          id
-          slug
-          title
-          content
-          date
-        }
-        image: featured_media {
-          url: source_url
-        }
-      }
-    }
     post: allWordpressPost(
-      filter: {
-        categories: {
-          elemMatch: {
-            parent_element: { slug: { ne: "bulletin" } }
-            slug: { eq: "bulletin" }
-          }
-        }
-      }
+      filter: { categories: { elemMatch: { slug: { eq: "bulletin" } } } }
       sort: { fields: date }
     ) {
       list: nodes {
