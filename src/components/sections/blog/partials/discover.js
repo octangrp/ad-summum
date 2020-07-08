@@ -15,11 +15,11 @@ class Discover extends React.Component {
 
     return (
       <Link to={`/bulletin/${details.slug}`}>
-        <div className="xl:flex lg:flex md:flex sm:flex">
+        <div className="xl:flex pb-24 lg:flex md:flex sm:flex">
           <div class="w-40 md:w-50 sm:w-50 xs:w-100">
             <div class="w-100 pb-8 xs:pt-2 font-primary">
-              <div class="w-rem-6 h-rem-6 xs:w-rem-4 xs:h-rem-4 bg-primary mt-1 inline-block mr-3 rounded-full"></div>
-              <h1 class="text-2xl my-0 xs:text-lg font-bold uppercase leading-none inline-block">
+              <div class="w-rem-6 h-rem-6 xs:w-rem-4 xs:h-rem-4 bg-primary inline-block mr-3 rounded-full"></div>
+              <h1 class="text-2xl sm:text-xl md:text-xl my-0 xs:text-lg font-bold uppercase leading-none inline-block">
                 {details.title}
               </h1>
             </div>
