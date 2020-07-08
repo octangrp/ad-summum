@@ -24,10 +24,10 @@ class HeadlineSection extends React.Component {
           <div className="mx-auto pt-6 relative">
             <div class="xl:flex lg:flex w-100 b-0 l-0 xs:px-4 pt-12 xs:py-0 md:pb-8">
               <div class="w-100 xl:mx-auto">
-                <h2 class="py-12 m-0 font-primary font-bold text-3xl xs:text-sm md:text-xl track-wider text-black uppercase leading-relaxed">
+                <h2 class="py-12 m-0 font-primary font-bold text-3xl xs:text-lg md:text-xl track-wider text-black uppercase leading-relaxed">
                   {details.title}
                 </h2>
-                <div class="w-80 p-0 m-0 text-black text-base tracking-wider leading-relaxed ">
+                <div class="w-80 xs:w-100 p-0 m-0 xs:text-sm text-black text-base tracking-wider leading-relaxed ">
                   <TruncateHtml length={250} tokenize={"words"}>
                     {details.content}
                   </TruncateHtml>
