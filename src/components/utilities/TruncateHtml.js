@@ -6,6 +6,7 @@ class TruncateHtml extends React.Component {
   truncate() {
     let children = this.props.children ? this.props.children : ""
     let stripedHtml = children.replace(/<[^>]+>/g, "")
+    stripedHtml = stripedHtml.replace(/&#8211;/g, "")
     return LodashTruncate(stripedHtml, {
       length: this.props.length,
     })
