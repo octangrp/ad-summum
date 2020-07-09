@@ -37,7 +37,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${data.wordpress.title}`}
+      titleTemplate={`%s | ${data.wordpress.name}`}
       meta={[
         {
           name: `description`,
