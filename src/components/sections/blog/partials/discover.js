@@ -14,9 +14,15 @@ class Discover extends React.Component {
     )
 
     return (
-      <Link to={`/bulletin/${details.slug}`} className="mb-18 block">
-        <div className="xl:flex lg:flex md:flex ">
-          <div class="w-40 xs:w-100">
+      <Link to={`/bulletin/${details.slug}`}>
+        <div className="xl:flex pb-24 lg:flex md:flex sm:flex">
+          <div class="w-40 md:w-50 sm:w-50 xs:w-100">
+            <div class="w-100 pb-8 xs:pt-2 font-primary">
+              <div class="w-rem-6 h-rem-6 xs:w-rem-4 xs:h-rem-4 bg-primary inline-block mr-3 rounded-full"></div>
+              <h1 class="text-2xl sm:text-xl md:text-xl my-0 xs:text-lg font-bold uppercase leading-none inline-block">
+                {details.title}
+              </h1>
+            </div>
             <div class="h-rem-86 xs:h-rem-42">
               <img
                 src={image ? image.url : null}
@@ -24,16 +30,10 @@ class Discover extends React.Component {
               />
             </div>
           </div>
-          <div class="w-60 xs:w-100 xs:pl-0  pl-10">
+          <div class="w-60 xs:w-100 md:w-50 sm:w-50 xs:pl-0 pt-20 xs:pt-8 pl-10">
             <div class="text-left my-auto">
-              <div class="w-100 xs:pt-2 font-primary">
-                <div class="w-rem-6 h-rem-6 xs:w-rem-4 xs:h-rem-4 bg-primary mt-1 inline-block mr-3 rounded-full"></div>
-                <h1 class="text-2xl xs:text-lg font-bold uppercase leading-none inline-block">
-                  {details.title}
-                </h1>
-              </div>
-              <div class="text-base font-secondary w-80 xs:p-0 xsm-0">
-                <div class="font-secondary xs:text-xs text-base tracking-wider leading-relaxed font-normal">
+              <div class="text-base font-secondary w-80 sm:w-100 md:w-100 xs:w-100 xs:p-0 xsm-0">
+                <div class="font-secondary xs:text-sm text-base tracking-wider leading-relaxed font-normal">
                   <TruncateHtml length={500} tokenize={"words"}>
                     {details.content}
                   </TruncateHtml>
