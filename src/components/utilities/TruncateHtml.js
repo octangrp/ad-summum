@@ -1,19 +1,19 @@
 import PropTypes from "prop-types"
 import React from "react"
+import ReactHtmlParser from "react-html-parser"
 import { truncate as LodashTruncate } from "lodash"
 
 class TruncateHtml extends React.Component {
   truncate() {
-    let children = this.props.children ? this.props.children : ""
-    let stripedHtml = children.replace(/<[^>]+>/g, "")
-    stripedHtml = stripedHtml.replace(/&#8211;/g, "")
+    let stripedHtml = this.props.children ? this.props.children : ""
+    // let stripedHtml = children.replace(/<[^>]+>/g, "")
     return LodashTruncate(stripedHtml, {
       length: this.props.length,
     })
   }
 
   render() {
-    return this.truncate()
+    return ReactHtmlParser(this.truncate())
   }
 }
 
@@ -22,7 +22,7 @@ TruncateHtml.propTypes = {
 }
 
 TruncateHtml.defaultProps = {
-  length: 24,
+  length: 30,
 }
 
 export default TruncateHtml
