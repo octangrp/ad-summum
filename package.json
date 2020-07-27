@@ -41,7 +41,7 @@
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",
     "sass": "^1.26.9",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^9.0.2"
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
