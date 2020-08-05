@@ -24,7 +24,7 @@
     "gatsby-plugin-sharp": "^2.6.24",
     "gatsby-source-filesystem": "^2.3.20",
     "gatsby-source-wordpress": "^3.3.25",
-    "gatsby-transformer-sharp": "^2.3.13",
+    "gatsby-transformer-sharp": "^2.5.12",
     "lint-staged": "^10.2.11",
     "lodash": "^4.17.15",
     "moment": "^2.27.0",
