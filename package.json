@@ -23,7 +23,7 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.24",
     "gatsby-source-filesystem": "^2.3.23",
-    "gatsby-source-wordpress": "^3.3.26",
+    "gatsby-source-wordpress": "^3.3.28",
     "gatsby-transformer-sharp": "^2.5.12",
     "lint-staged": "^10.2.11",
     "lodash": "^4.17.19",
