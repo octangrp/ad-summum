@@ -30,14 +30,15 @@ class Discover extends React.Component {
               />
             </div>
           </div>
-          <div class="w-60 xs:w-100 md:w-50 sm:w-50 xs:pl-0 pt-20 xs:pt-8 pl-10">
+          <div class="w-60 xs:w-100 md:w-50 sm:w-50 xs:pl-0 pt-16 xs:pt-8 pl-10">
             <div class="text-left my-auto">
               <div class="text-base font-secondary w-80 sm:w-100 md:w-100 xs:w-100 xs:p-0 xsm-0">
                 <div class="font-secondary xs:text-sm text-base tracking-wider leading-relaxed font-normal">
-                  <TruncateHtml length={500} tokenize={"words"}>
+                  <TruncateHtml length={650} tokenize={"words"}>
                     {details.content}
                   </TruncateHtml>
                 </div>
+                <div class="text-blue font-bold mt-3">read more</div>
               </div>
             </div>
           </div>
