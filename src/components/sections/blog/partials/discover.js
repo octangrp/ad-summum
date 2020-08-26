@@ -58,7 +58,7 @@ Discover.defaultProps = {
   },
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   lang: state.lang,
 })
 

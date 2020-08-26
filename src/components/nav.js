@@ -69,13 +69,13 @@ Navbar.defaultProps = {
   details: [],
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   lang: state.lang,
 })
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    switchLanguage: lang =>
+    switchLanguage: (lang) =>
       dispatch({
         type: "SET_LANGUAGE",
         lang: lang,

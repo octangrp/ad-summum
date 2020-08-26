@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import Logo from "../logo"
 import SectionTitle from "../section-title"
 
-const Team = props => (
+const Team = (props) => (
   <div id={props.id} className="w-100 relative bg-grey-lightest py-16">
     <div className="w-90 mx-auto relative">
       <div className="">

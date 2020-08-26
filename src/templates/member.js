@@ -69,7 +69,7 @@ Member.propTypes = {
   edges: PropTypes.array,
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   lang: state.lang,
 })
 
