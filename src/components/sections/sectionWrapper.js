@@ -4,7 +4,7 @@ import ReactHtmlParser from "react-html-parser"
 import SectionTitle from "../section-title"
 import Logo from "../logo"
 
-const SectionWrapper = props => (
+const SectionWrapper = (props) => (
   <div
     id={props.id}
     className={["z-10 px-0 t-0 relative ", props.backgroundClass].join(" ")}

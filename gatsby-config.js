@@ -54,6 +54,7 @@ module.exports = {
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
         useACF: true,
+        minimizeDeprecationNotice: true,
       },
     },
     `gatsby-plugin-anchor-links`,

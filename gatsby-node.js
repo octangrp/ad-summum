@@ -65,7 +65,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
   const serviceTemplate = path.resolve(`./src/templates/service.js`)
-  results.data.services.list.forEach(edge => {
+  results.data.services.list.forEach((edge) => {
     createPage({
       // will be the url for the page
       path: "/service/" + edge.slug,
@@ -80,7 +80,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   const memberTemplate = path.resolve(`./src/templates/member.js`)
-  results.data.team.members.forEach(edge => {
+  results.data.team.members.forEach((edge) => {
     createPage({
       // will be the url for the page
       path: "/members/" + edge.slug,
@@ -95,7 +95,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   const blogTemplate = path.resolve(`./src/templates/blog.js`)
-  results.data.bulletin.posts.forEach(edge => {
+  results.data.bulletin.posts.forEach((edge) => {
     createPage({
       // will be the url for the page
       path: "/bulletin/" + edge.slug,

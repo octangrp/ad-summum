@@ -36,7 +36,7 @@ MissionCard.defaultProps = {
     translations: [],
   },
 }
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   lang: state.lang,
 })
 
