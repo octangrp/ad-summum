@@ -48,8 +48,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your WordPress source
-        baseUrl: `adsummum.live-website.com/`,
-        protocol: `https`,
+        url: `https://adsummum.live-website.com/graphql`,
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
