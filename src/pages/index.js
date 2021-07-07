@@ -136,170 +136,204 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps)(IndexPage)
 
 export const queries = graphql`
-  query data {
-    mainSection: wordpressPost(slug: { eq: "main-section" }) {
-      translations: polylang_translations {
-        lang: polylang_current_lang
-        id
-        title
-        description: content
-        button: acf {
-          text: button_text
-        }
-      }
-      image: featured_media {
-        url: source_url
-      }
-    }
-    aboutUs: wordpressPost(slug: { eq: "about-us-main" }) {
-      translations: polylang_translations {
-        lang: polylang_current_lang
-        id
-        title
-        description: content
-        button: acf {
-          text: button_text
-        }
-      }
-      image: featured_media {
-        url: source_url
-      }
-    }
-    founders: wordpressPost(slug: { eq: "founders" }) {
-      translations: polylang_translations {
-        lang: polylang_current_lang
-        id
-        title
-        description: content
-        button: acf {
-          text: button_text
-        }
-      }
-      image: featured_media {
-        url: source_url
-      }
-    }
-    servicesSection: wordpressPost(slug: { eq: "services-section" }) {
-      translations: polylang_translations {
-        lang: polylang_current_lang
-        id
-        title
-        description: content
-        button: acf {
-          text: button_text
-        }
-      }
-      image: featured_media {
-        url: source_url
-      }
-    }
-    services: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "services" } } } }
-    ) {
-      list: nodes {
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          id
-          slug
-          title
-          content
-          image: featured_media {
-            url: source_url
-          }
-          attributes: acf {
-            button_text
-            summary
-          }
-        }
-      }
-    }
-    teamSection: wordpressPost(slug: { eq: "team-section" }) {
-      translations: polylang_translations {
-        lang: polylang_current_lang
-        id
-        title
-        description: content
-        button: acf {
-          text: button_text
-        }
-        caption: acf {
-          title: picture_title
-          subtitle: picture_subtitle
-        }
-      }
-      image: featured_media {
-        url: source_url
-      }
-    }
-    team: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "team-member" } } } }
-    ) {
-      members: nodes {
-        id
+query data {
+  mainSection: wpPost(slug: {eq: "main-section"}) {
+    translations {
+      lang: language {
         slug
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          id
-          slug
-          name: title
-          description: content
-          attributes: acf {
-            position
-          }
-          image: featured_media {
-            url: source_url
-          }
-        }
       }
-    }
-    strategies: allWordpressPost(
-      filter: {
-        categories: { elemMatch: { slug: { eq: "company-strategy" } } }
+      id
+      title
+      description: content
+      button: acf {
+        text: button_text
       }
-    ) {
-      list: nodes {
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          title
-          description: content
-          image: featured_media {
-            url: source_url
-          }
-        }
-      }
-    }
-    valuesSection: wordpressPost(slug: { eq: "values-section" }) {
-      translations: polylang_translations {
-        lang: polylang_current_lang
-        id
-        title
-        description: content
-      }
-    }
-    values: allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "values-section" } } } }
-    ) {
-      list: nodes {
-        translations: polylang_translations {
-          lang: polylang_current_lang
-          title
-          description: content
-          image: featured_media {
-            url: source_url
-          }
-        }
-      }
-    }
-    footer: wordpressPost(slug: { eq: "footer" }) {
-      translations: polylang_translations {
-        lang: polylang_current_lang
-        id
-        title
-        description: content
-        button: acf {
-          text: button_text
+      images: featuredImage {
+        node {
+          url: sourceUrl
         }
       }
     }
   }
+  aboutUs: wpPost(slug: {eq: "about-us-main"}) {
+    translations {
+      lang: language {
+        slug
+      }
+      id
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+      images: featuredImage {
+        node {
+          url: sourceUrl
+        }
+      }
+    }
+  }
+  founders: wpPost(slug: {eq: "founders"}) {
+    translations {
+      lang: language {
+        slug
+      }
+      id
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+      images: featuredImage {
+        node {
+          url: sourceUrl
+        }
+      }
+    }
+  }
+  servicesSection: wpPost(slug: {eq: "services-section"}) {
+    translations {
+      lang: language {
+        slug
+      }
+      id
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+      images: featuredImage {
+        node {
+          url: sourceUrl
+        }
+      }
+    }
+  }
+  services: allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "services"}}}}}) {
+    list: nodes {
+      translations {
+        lang: language {
+          slug
+        }
+        id
+        slug
+        title
+        content
+        images: featuredImage {
+          node {
+            url: sourceUrl
+          }
+        }
+        attributes: acf {
+          button_text
+          summary
+        }
+      }
+    }
+  }
+  teamSection: wpPost(slug: {eq: "team-section"}) {
+    translations {
+      lang: language {
+        slug
+      }
+      id
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+      images: featuredImage {
+        node {
+          url: sourceUrl
+        }
+      }
+    }
+  }
+  team: allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "team-member"}}}}}) {
+    members: nodes {
+      id
+      slug
+      translations {
+        lang: language {
+          slug
+        }
+        id
+        slug
+        name: title
+        description: content
+        attributes: acf {
+          position
+        }
+        images: featuredImage {
+          node {
+            url: sourceUrl
+          }
+        }
+      }
+    }
+  }
+  strategies: allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "company-strategy"}}}}}) {
+    list: nodes {
+      translations {
+        lang: language {
+          slug
+        }
+        title
+        description: content
+        images: featuredImage {
+          node {
+            url: sourceUrl
+          }
+        }
+      }
+    }
+  }
+  valuesSection: wpPost(slug: {eq: "values-section"}) {
+    translations {
+      lang: language {
+        slug
+      }
+      id
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+      images: featuredImage {
+        node {
+          url: sourceUrl
+        }
+      }
+    }
+  }
+  values: allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "values-section"}}}}}) {
+    list: nodes {
+      translations {
+        lang: language {
+          slug
+        }
+        title
+        description: content
+      }
+    }
+  }
+  footer: wpPost(slug: {eq: "footer"}) {
+    translations {
+      lang: language {
+        slug
+      }
+      id
+      title
+      description: content
+      button: acf {
+        text: button_text
+      }
+      images: featuredImage {
+        node {
+          url: sourceUrl
+        }
+      }
+    }
+  }
+}
 `
